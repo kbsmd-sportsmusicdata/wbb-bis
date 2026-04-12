@@ -69,8 +69,8 @@ TEAM_BOX_FILE_FULL    = RAW_DIR / "team_box_2026_final.parquet"
 
 # ── Postseason raw files ──────────────────────────────────────────────────────
 POSTSEASON_PBP_FILE  = POSTSEASON_DIR / "march_pbp_2026.parquet"
-POSTSEASON_BOX_FILE  = POSTSEASON_DIR / "player_box_2026_march.parquet"
-POSTSEASON_CLEAN_BOX = POSTSEASON_DIR / "clean_player_box_march.parquet"
+POSTSEASON_BOX_FILE  = POSTSEASON_DIR / "player_box_2026_postseason.parquet"
+POSTSEASON_CLEAN_BOX = POSTSEASON_DIR / "clean_player_box_postseason.parquet"
 CONF_PBP_FILE        = POSTSEASON_DIR / "clean_conference_pbp.parquet"
 
 # ── Static / reference files (rarely change) ─────────────────────────────────
