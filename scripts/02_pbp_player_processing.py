@@ -46,6 +46,7 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 from typing import Optional
+import sys
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 
@@ -53,7 +54,13 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 # CONFIGURATION
 # =============================================================================
 
-DATA_DIR = Path(__file__).parent
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_DIR.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from config import PBP_FILE, PROCESSED_DIR
+
 MIN_FGM_ASSISTED = 10    # Minimum made FGs for assisted rate reliability
 
 CLUTCH_QUARTER = 4
@@ -70,7 +77,7 @@ def load_pbp_data(path: Optional[Path] = None) -> pd.DataFrame:
     Load play-by-play data from parquet.
     Only loads columns we actually need to minimize memory footprint.
     """
-    fpath = path or DATA_DIR / "play_by_play_2026_sdv_espn.parquet"
+    fpath = path or PBP_FILE
 
     # Only read columns we need (saves ~60% memory)
     needed_cols = [
@@ -478,7 +485,8 @@ def merge_and_label(shot_profiles: pd.DataFrame,
 
 def export_pbp_metrics(df: pd.DataFrame, output_dir: Optional[Path] = None):
     """Export final PBP player metrics."""
-    out = output_dir or DATA_DIR
+    out = output_dir or PROCESSED_DIR
+    out.mkdir(parents=True, exist_ok=True)
     fpath = out / "pbp_player_metrics.csv"
     df.to_csv(fpath, index=False)
     print(f"  ✓ Exported: {fpath.name}  ({len(df):,} rows, {len(df.columns)} cols)")

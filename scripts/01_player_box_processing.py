@@ -34,6 +34,7 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 from typing import Optional
+import sys
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 
@@ -41,7 +42,19 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 # CONFIGURATION
 # =============================================================================
 
-DATA_DIR = Path(__file__).parent
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_DIR.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from config import (
+    PLAYER_BOX_FILE,
+    NET_FILE,
+    SCHEDULE_FILE,
+    BENCHMARKS_FILE,
+    PROCESSED_DIR,
+)
+
 MIN_MINUTES_SEASON = 50       # Minimum season minutes for inclusion
 MIN_MINUTES_GAME = 5          # Minimum game minutes to count in rolling stats
 MIN_GAMES_PERCENTILE = 10     # Minimum games for percentile ranking
@@ -71,11 +84,7 @@ def load_player_box(path: Optional[Path] = None) -> pd.DataFrame:
     Returns a DataFrame with one row per player-game, filtered to
     players who actually played (did_not_play == False, minutes > 0).
     """
-    # Support both naming conventions
-    _candidates = ["player_box_2026.parquet", "player_box_2026.parquet"]
-    _default = next((DATA_DIR/f for f in _candidates if (DATA_DIR/f).exists()),
-                    DATA_DIR / "player_box_2026.parquet")
-    fpath = path or _default
+    fpath = path or PLAYER_BOX_FILE
     print(f"Loading player box scores from {fpath.name}...")
     df = pd.read_parquet(fpath)
     print(f"  Raw rows: {len(df):,}")
@@ -107,16 +116,7 @@ def load_player_box(path: Optional[Path] = None) -> pd.DataFrame:
 
 def load_net_rankings(path: Optional[Path] = None) -> pd.DataFrame:
     """Load NET rankings and create team-to-NET lookup."""
-    if path is None:
-        import glob, re
-        _candidates = sorted(
-            glob.glob(str(DATA_DIR / "net_rankings_*.csv")),
-            key=lambda x: re.search(r'\d{8}', x).group() if re.search(r'\d{8}', x) else '0',
-            reverse=True
-        )
-        fpath = Path(_candidates[0]) if _candidates else DATA_DIR / "net_rankings_manual_20260316.csv"
-    else:
-        fpath = path
+    fpath = path or NET_FILE
     print(f"Loading NET rankings from {fpath.name}...")
     net = pd.read_csv(fpath)
     print(f"  Teams loaded: {len(net)}")
@@ -125,16 +125,7 @@ def load_net_rankings(path: Optional[Path] = None) -> pd.DataFrame:
 
 def load_schedule(path: Optional[Path] = None) -> pd.DataFrame:
     """Load filtered schedule for game context."""
-    if path is None:
-        import glob, re
-        _candidates = sorted(
-            glob.glob(str(DATA_DIR / "schedule_filtered_*.csv")),
-            key=lambda x: re.search(r'\d{8}', x).group() if re.search(r'\d{8}', x) else '0',
-            reverse=True
-        )
-        fpath = Path(_candidates[0]) if _candidates else DATA_DIR / "schedule_filtered_20260309.csv"
-    else:
-        fpath = path
+    fpath = path or SCHEDULE_FILE
     print(f"Loading schedule from {fpath.name}...")
     sched = pd.read_csv(fpath)
     sched["game_date"] = pd.to_datetime(sched["date"]).dt.date
@@ -144,7 +135,7 @@ def load_schedule(path: Optional[Path] = None) -> pd.DataFrame:
 
 def load_benchmarks(path: Optional[Path] = None) -> pd.DataFrame:
     """Load prior-season D1 benchmarks for breakout comparison."""
-    fpath = path or DATA_DIR / "d1_player_benchmarks_2025.csv"
+    fpath = path or BENCHMARKS_FILE
     if not fpath.exists():
         print(f"  ⚠️  Benchmarks file not found ({fpath.name}) — breakout signals will use intra-season percentiles.")
         return pd.DataFrame()
@@ -888,7 +879,8 @@ def export_datasets(season_df: pd.DataFrame,
       1. player_box_advanced_metrics.csv  (season-level, one row per player)
       2. player_game_log_enriched.csv     (game-level with rolling features)
     """
-    out = output_dir or DATA_DIR
+    out = output_dir or PROCESSED_DIR
+    out.mkdir(parents=True, exist_ok=True)
     print("Exporting datasets...")
 
     # --- Season-level export ---

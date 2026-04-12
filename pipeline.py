@@ -26,6 +26,7 @@ Author: Krystal B Creative — Sports Analytics Portfolio
 Date:   2026-04-11
 """
 
+import argparse
 import subprocess
 import sys
 from pathlib import Path
@@ -73,7 +74,7 @@ def run(label: str, script: Path, extra_args: list = None):
 # MAIN PIPELINE
 # =============================================================================
 
-def run_pipeline():
+def run_pipeline(skip_dashboard: bool = False):
     print("\n" + "╔"+"═"*62+"╗")
     print("║   WBB DASHBOARD — ONE-CLICK UPDATE PIPELINE              ║")
     print("╚"+"═"*62+"╝")
@@ -107,12 +108,19 @@ def run_pipeline():
     else:
         print("\n⚠️  Skipping scouting merge — using existing player_scouting_top50.csv")
 
-    # ── Step 4: rebuild dashboard ─────────────────────────────────────────────
-    run("Build Dashboard HTML", SCRIPTS_DIR / "07_build_dashboard.py")
+    # ── Step 4: rebuild dashboard (optional) ─────────────────────────────────
+    if skip_dashboard:
+        print("\n⚠️  Skipping dashboard build (--skip-dashboard).")
+        print("   Data refresh steps completed; dashboard outputs unchanged.")
+        print("\n" + "╔"+"═"*62+"╗")
+        print("║   ✅  PIPELINE COMPLETE — data refreshed (dashboard skipped) ║")
+        print("╚"+"═"*62+"╝\n")
+    else:
+        run("Build Dashboard HTML", SCRIPTS_DIR / "07_build_dashboard.py")
 
-    print("\n" + "╔"+"═"*62+"╗")
-    print("║   ✅  PIPELINE COMPLETE — dashboard refreshed!            ║")
-    print("╚"+"═"*62+"╝\n")
+        print("\n" + "╔"+"═"*62+"╗")
+        print("║   ✅  PIPELINE COMPLETE — dashboard refreshed!            ║")
+        print("╚"+"═"*62+"╝\n")
 
 
 # =============================================================================
@@ -120,4 +128,13 @@ def run_pipeline():
 # =============================================================================
 
 if __name__ == "__main__":
-    run_pipeline()
+    parser = argparse.ArgumentParser(
+        description="Run the WBB BIS pipeline. Use --skip-dashboard to bypass script 07 while dashboard rebuild is unavailable."
+    )
+    parser.add_argument(
+        "--skip-dashboard",
+        action="store_true",
+        help="Skip scripts/07_build_dashboard.py and run only data-refresh steps.",
+    )
+    args = parser.parse_args()
+    run_pipeline(skip_dashboard=args.skip_dashboard)
