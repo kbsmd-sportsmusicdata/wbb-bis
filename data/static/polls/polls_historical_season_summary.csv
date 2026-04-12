@@ -1,0 +1,236 @@
+season,team,conference,preseason_rank,best_rank,worst_rank,avg_rank_when_ranked,final_rank,weeks_in_top25,peak_streak,first_ranked_week,last_ranked_week
+2021,Arizona,Pac 12,7.0,6.0,11.0,8.6,11.0,17,17,Pre,Final
+2021,Arkansas,SEC,14.0,10.0,19.0,14.8,15.0,17,17,Pre,Final
+2021,Baylor,Big 12,4.0,4.0,9.0,6.87,5.0,17,17,Pre,Final
+2021,DePaul,Big East,19.0,17.0,25.0,20.57,,15,15,Pre,3/1
+2021,Florida Gulf Coast,ASUN,,24.0,24.0,24.0,24.0,2,2,3/8,Final
+2021,Georgia,SEC,,12.0,25.0,20.0,10.0,9,9,1/18,Final
+2021,Gonzaga,WCC,21.0,16.0,25.0,20.0,14.0,17,17,Pre,Final
+2021,Indiana,Big Ten,16.0,9.0,20.0,15.13,12.0,17,17,Pre,Final
+2021,Iowa State,Big 12,15.0,23.0,24.0,23.5,,3,3,Pre,1/18
+2021,Kentucky,SEC,11.0,9.0,20.0,14.0,18.0,17,17,Pre,Final
+2021,Louisville,ACC,5.0,1.0,7.0,2.93,8.0,17,17,Pre,Final
+2021,Maryland,Big Ten,12.0,7.0,14.0,10.4,7.0,17,17,Pre,Final
+2021,Michigan,Big Ten,25.0,11.0,24.0,14.6,16.0,17,17,Pre,Final
+2021,Michigan State,Big Ten,,23.0,25.0,24.33,,3,3,12/21,1/4
+2021,Mississippi State,SEC,6.0,6.0,24.0,14.7,,11,11,Pre,2/1
+2021,Missouri State,MVC,24.0,20.0,25.0,22.91,20.0,13,13,Pre,Final
+2021,NC State,ACC,8.0,2.0,8.0,3.53,3.0,17,17,Pre,Final
+2021,Northwestern,Big Ten,17.0,15.0,24.0,19.42,,13,13,Pre,2/15
+2021,Notre Dame,ACC,22.0,,,,,1,1,Pre,Pre
+2021,Ohio State,Big Ten,20.0,11.0,22.0,16.4,22.0,17,17,Pre,Final
+2021,Oregon,Pac 12,10.0,8.0,23.0,11.93,23.0,17,17,Pre,Final
+2021,Oregon State,Pac 12,18.0,15.0,21.0,17.67,,4,4,Pre,12/14
+2021,Rutgers,Big Ten,,19.0,25.0,22.67,21.0,4,4,2/22,Final
+2021,South Carolina,SEC,1.0,1.0,7.0,4.07,6.0,17,17,Pre,Final
+2021,South Dakota State,Summit,,21.0,25.0,23.0,25.0,9,9,12/7,Final
+2021,South Florida,AAC,,12.0,23.0,16.38,19.0,14,14,12/14,Final
+2021,Stanford,Pac 12,2.0,1.0,6.0,3.07,2.0,17,17,Pre,Final
+2021,Syracuse,ACC,23.0,18.0,24.0,21.88,,9,9,Pre,1/18
+2021,Tennessee,SEC,,14.0,25.0,19.0,13.0,10,10,1/11,Final
+2021,Texas,Big 12,,17.0,25.0,21.0,,7,7,11/30,1/11
+2021,Texas A&M,SEC,13.0,2.0,12.0,7.2,4.0,17,17,Pre,Final
+2021,UCLA,Pac 12,9.0,5.0,11.0,8.67,9.0,17,17,Pre,Final
+2021,UConn,Big East,3.0,1.0,4.0,2.53,1.0,17,17,Pre,Final
+2021,Washington State,Pac 12,,25.0,25.0,25.0,,1,1,1/11,1/11
+2021,West Virginia,Big 12,,17.0,24.0,19.71,17.0,8,8,1/25,Final
+2022,Arizona,Pac 12,22.0,4.0,20.0,8.35,19.0,19,19,Pre,Final
+2022,BYU,WCC,,15.0,21.0,18.0,20.0,16,16,11/29,Final
+2022,Baylor,Big 12,7.0,4.0,15.0,8.29,7.0,19,19,Pre,Final
+2022,Colorado,Pac 12,,22.0,25.0,23.0,,3,3,12/6,1/17
+2022,Duke,ACC,,15.0,21.0,17.5,,8,8,12/6,1/24
+2022,Florida,SEC,,15.0,23.0,18.5,,4,4,2/7,2/28
+2022,Florida Gulf Coast,ASUN,,22.0,25.0,23.22,23.0,10,10,11/23,Final
+2022,Florida State,ACC,16.0,17.0,25.0,19.67,,4,4,Pre,11/29
+2022,Georgia,SEC,,13.0,25.0,17.5,,14,14,11/29,2/28
+2022,Georgia Tech,ACC,17.0,11.0,25.0,16.77,,14,14,Pre,2/28
+2022,Indiana,Big Ten,8.0,4.0,14.0,7.41,11.0,19,19,Pre,Final
+2022,Iowa,Big Ten,9.0,8.0,25.0,16.62,8.0,18,18,Pre,Final
+2022,Iowa State,Big 12,12.0,6.0,15.0,11.12,10.0,19,19,Pre,Final
+2022,Kansas State,Big 12,,25.0,25.0,25.0,,3,3,1/10,1/31
+2022,Kentucky,SEC,13.0,14.0,23.0,19.0,15.0,13,13,Pre,Final
+2022,LSU,SEC,,6.0,24.0,14.07,9.0,15,15,12/6,Final
+2022,Louisville,ACC,6.0,3.0,10.0,5.06,4.0,19,19,Pre,Final
+2022,Maryland,Big Ten,4.0,2.0,17.0,10.06,13.0,19,19,Pre,Final
+2022,Michigan,Big Ten,11.0,4.0,13.0,9.53,12.0,19,19,Pre,Final
+2022,NC State,ACC,5.0,2.0,5.0,3.71,3.0,19,19,Pre,Final
+2022,Notre Dame,ACC,,14.0,24.0,19.73,21.0,16,16,11/29,Final
+2022,Ohio State,Big Ten,17.0,13.0,25.0,20.07,14.0,16,16,Pre,Final
+2022,Oklahoma,Big 12,,12.0,23.0,18.3,22.0,11,11,1/3,Final
+2022,Ole Miss,SEC,,24.0,24.0,24.0,,1,1,1/24,1/24
+2022,Oregon,Pac 12,10.0,9.0,25.0,18.43,,8,8,Pre,2/21
+2022,Oregon State,Pac 12,14.0,15.0,23.0,19.25,,5,5,Pre,12/6
+2022,Princeton,Ivy,,24.0,24.0,24.0,25.0,2,2,3/7,Final
+2022,South Carolina,SEC,1.0,1.0,1.0,1.0,1.0,19,19,Pre,Final
+2022,South Florida,AAC,21.0,13.0,24.0,19.44,,10,10,Pre,1/10
+2022,Stanford,Pac 12,3.0,2.0,7.0,2.88,2.0,19,19,Pre,Final
+2022,Tennessee,SEC,15.0,4.0,19.0,10.24,18.0,19,19,Pre,Final
+2022,Texas,Big 12,25.0,7.0,16.0,11.94,6.0,19,19,Pre,Final
+2022,Texas A&M,SEC,23.0,17.0,25.0,22.0,,9,9,Pre,1/3
+2022,UCF,AAC,,25.0,25.0,25.0,24.0,2,2,3/7,Final
+2022,UCLA,Pac 12,20.0,19.0,20.0,19.5,,3,3,Pre,11/23
+2022,UConn,Big East,2.0,2.0,11.0,7.47,5.0,19,19,Pre,Final
+2022,UNC,ACC,,16.0,25.0,21.42,17.0,13,13,12/13,Final
+2022,Virginia Tech,ACC,24.0,17.0,25.0,22.17,16.0,8,8,Pre,Final
+2022,West Virginia,Big 12,19.0,22.0,22.0,22.0,,3,3,Pre,11/23
+2023,Arizona,Pac 12,19.0,12.0,22.0,17.12,24.0,18,18,Pre,Final
+2023,Arkansas,SEC,,17.0,24.0,20.75,,4,4,12/5,12/26
+2023,Baylor,Big 12,18.0,17.0,24.0,20.44,,10,10,Pre,1/9
+2023,Colorado,Pac 12,,20.0,25.0,22.67,20.0,7,7,1/16,Final
+2023,Creighton,Big East,21.0,13.0,25.0,18.75,,9,9,Pre,1/2
+2023,Duke,ACC,,9.0,19.0,13.56,13.0,10,10,1/2,Final
+2023,Florida State,ACC,,19.0,24.0,22.6,,5,5,1/23,2/20
+2023,Gonzaga,WCC,,15.0,23.0,19.64,16.0,15,15,11/28,Final
+2023,Illinois,Big Ten,,21.0,25.0,23.0,,4,4,1/9,2/20
+2023,Indiana,Big Ten,11.0,2.0,12.0,4.69,3.0,18,18,Pre,Final
+2023,Iowa,Big Ten,4.0,4.0,16.0,9.69,2.0,18,18,Pre,Final
+2023,Iowa State,Big 12,8.0,5.0,23.0,14.56,,17,17,Pre,2/28
+2023,Kansas,Big 12,,20.0,23.0,21.6,,5,5,12/13,1/9
+2023,Kansas State,Big 12,,24.0,25.0,24.5,,2,2,11/21,12/5
+2023,LSU,SEC,16.0,3.0,15.0,7.38,9.0,18,18,Pre,Final
+2023,Louisville,ACC,7.0,6.0,18.0,11.33,,4,4,Pre,11/28
+2023,Marquette,Big East,,24.0,24.0,24.0,,1,1,11/28,11/28
+2023,Maryland,Big Ten,17.0,5.0,20.0,12.38,6.0,18,18,Pre,Final
+2023,Michigan,Big Ten,25.0,12.0,23.0,16.06,18.0,18,18,Pre,Final
+2023,Middle Tennessee,CUSA,,21.0,25.0,23.25,25.0,5,5,1/23,Final
+2023,NC State,ACC,10.0,6.0,22.0,12.54,,14,14,Pre,2/6
+2023,Nebraska,Big Ten,22.0,22.0,22.0,22.0,,2,2,Pre,11/14
+2023,Notre Dame,ACC,9.0,4.0,10.0,7.31,11.0,18,18,Pre,Final
+2023,Ohio State,Big Ten,14.0,2.0,16.0,6.5,12.0,18,18,Pre,Final
+2023,Oklahoma,Big 12,15.0,13.0,24.0,17.93,14.0,16,16,Pre,Final
+2023,Oregon,Pac 12,20.0,16.0,23.0,18.7,,11,11,Pre,1/16
+2023,Princeton,Ivy,24.0,,,,,1,1,Pre,Pre
+2023,South Carolina,SEC,1.0,1.0,1.0,1.0,1.0,18,18,Pre,Final
+2023,South Dakota State,Summit,23.0,,,,,1,1,Pre,Pre
+2023,South Florida,AAC,,24.0,25.0,24.67,,3,3,1/30,2/28
+2023,St. John's (NY),Big East,,24.0,25.0,24.67,,3,3,12/19,1/2
+2023,Stanford,Pac 12,2.0,2.0,6.0,2.81,5.0,18,18,Pre,Final
+2023,Tennessee,SEC,5.0,11.0,23.0,17.0,23.0,4,4,Pre,Final
+2023,Texas,Big 12,3.0,3.0,25.0,17.89,15.0,11,11,Pre,Final
+2023,UCLA,Pac 12,,8.0,20.0,13.33,17.0,16,16,11/21,Final
+2023,UConn,Big East,6.0,3.0,9.0,5.62,7.0,18,18,Pre,Final
+2023,UNC,ACC,12.0,6.0,22.0,13.81,19.0,18,18,Pre,Final
+2023,UNLV,MWC,,22.0,24.0,23.0,21.0,4,4,2/13,Final
+2023,USC,Pac 12,,25.0,25.0,25.0,,1,1,2/13,2/13
+2023,Utah,Pac 12,,3.0,25.0,10.81,8.0,17,17,11/14,Final
+2023,Villanova,Big East,,11.0,25.0,20.31,10.0,14,14,11/14,Final
+2023,Virginia Tech,ACC,13.0,6.0,14.0,10.0,4.0,18,18,Pre,Final
+2023,Washington State,Pac 12,,,,,22.0,1,1,Final,Final
+2024,Baylor,Big 12,19.0,4.0,24.0,14.47,13.0,21,21,Pre,Post
+2024,Colorado,Pac 12,20.0,3.0,18.0,8.37,15.0,21,21,Pre,Post
+2024,Creighton,Big East,22.0,20.0,24.0,21.59,23.0,19,19,Pre,Post
+2024,Duke,ACC,,,,,17.0,1,1,Post,Post
+2024,Fairfield,MAAC,,25.0,25.0,25.0,,3,3,3/4,3/18
+2024,Florida State,ACC,18.0,12.0,23.0,18.73,,12,12,Pre,1/22
+2024,Gonzaga,WCC,,14.0,23.0,17.75,14.0,17,17,12/4,Post
+2024,Illinois,Big Ten,23.0,,,,,1,1,Pre,Pre
+2024,Indiana,Big Ten,9.0,10.0,21.0,14.95,12.0,21,21,Pre,Post
+2024,Iowa,Big Ten,3.0,2.0,6.0,3.53,2.0,21,21,Pre,Post
+2024,Iowa State,Big 12,,24.0,24.0,24.0,25.0,2,2,1/15,Post
+2024,Kansas State,Big 12,,2.0,16.0,11.17,19.0,19,19,11/20,Post
+2024,LSU,SEC,1.0,7.0,13.0,8.58,6.0,21,21,Pre,Post
+2024,Louisville,ACC,17.0,13.0,24.0,18.95,,20,20,Pre,3/18
+2024,Marquette,Big East,,18.0,23.0,20.12,,8,8,11/27,1/15
+2024,Maryland,Big Ten,14.0,20.0,20.0,20.0,,2,2,Pre,11/13
+2024,Miami (FL),ACC,,24.0,24.0,24.0,,1,1,12/11,12/11
+2024,Mississippi State,SEC,25.0,21.0,25.0,23.0,,3,3,Pre,11/27
+2024,NC State,ACC,,3.0,14.0,6.63,4.0,20,20,11/13,Post
+2024,Notre Dame,ACC,10.0,9.0,19.0,14.95,11.0,21,21,Pre,Post
+2024,Ohio State,Big Ten,7.0,2.0,20.0,10.63,16.0,21,21,Pre,Post
+2024,Oklahoma,Big 12,,17.0,25.0,21.22,21.0,10,10,11/13,Post
+2024,Ole Miss,SEC,12.0,19.0,24.0,22.0,,4,4,Pre,11/27
+2024,Oregon State,Pac 12,,9.0,25.0,14.22,8.0,10,10,1/22,Post
+2024,Penn State,Big Ten,,25.0,25.0,25.0,,1,1,12/4,12/4
+2024,Princeton,Ivy,,25.0,25.0,25.0,,5,5,11/27,2/19
+2024,South Carolina,SEC,6.0,1.0,1.0,1.0,1.0,21,21,Pre,Post
+2024,Stanford,Pac 12,15.0,2.0,9.0,5.79,9.0,21,21,Pre,Post
+2024,Syracuse,ACC,,17.0,25.0,21.0,20.0,11,11,1/1,Post
+2024,TCU,Big 12,,23.0,25.0,23.67,,3,3,12/18,1/1
+2024,Tennessee,SEC,11.0,15.0,20.0,18.0,,4,4,Pre,11/27
+2024,Texas,Big 12,13.0,3.0,12.0,7.42,7.0,21,21,Pre,Post
+2024,UCLA,Pac 12,4.0,2.0,12.0,4.74,10.0,21,21,Pre,Post
+2024,UConn,Big East,2.0,6.0,17.0,11.79,3.0,21,21,Pre,Post
+2024,UNC,ACC,16.0,17.0,25.0,22.09,,12,12,Pre,1/29
+2024,UNLV,MWC,,20.0,25.0,23.0,,7,7,12/11,3/18
+2024,USC,Pac 12,21.0,3.0,15.0,7.53,5.0,21,21,Pre,Post
+2024,Utah,Pac 12,5.0,4.0,22.0,15.89,22.0,21,21,Pre,Post
+2024,Virginia Tech,ACC,8.0,5.0,19.0,12.58,18.0,21,21,Pre,Post
+2024,Washington,Pac 12,,23.0,23.0,23.0,,1,1,12/18,12/18
+2024,Washington State,Pac 12,24.0,21.0,24.0,22.67,,4,4,Pre,12/4
+2024,West Virginia,Big 12,,22.0,25.0,23.56,24.0,10,10,12/25,Post
+2025,Alabama,SEC,24.0,18.0,24.0,20.47,20.0,19,19,Pre,Post
+2025,Baylor,Big 12,12.0,14.0,25.0,18.44,18.0,11,11,Pre,Post
+2025,California,ACC,,18.0,24.0,21.12,,8,8,12/16,2/3
+2025,Creighton,Big East,21.0,22.0,24.0,22.83,,7,7,Pre,3/17
+2025,Duke,ACC,11.0,7.0,16.0,11.89,7.0,21,21,Pre,Post
+2025,Florida State,ACC,19.0,22.0,25.0,23.0,22.0,9,9,Pre,Post
+2025,Georgia Tech,ACC,,13.0,25.0,17.45,,11,11,12/9,2/17
+2025,Illinois,Big Ten,,19.0,25.0,22.0,,5,5,11/11,2/17
+2025,Indiana,Big Ten,25.0,,,,,1,1,Pre,Pre
+2025,Iowa,Big Ten,,17.0,24.0,21.71,,7,7,11/25,1/6
+2025,Iowa State,Big 12,8.0,8.0,20.0,13.8,,6,6,Pre,12/9
+2025,Kansas State,Big 12,13.0,9.0,20.0,12.95,13.0,21,21,Pre,Post
+2025,Kentucky,SEC,22.0,8.0,20.0,13.84,16.0,21,21,Pre,Post
+2025,LSU,SEC,7.0,4.0,10.0,6.53,8.0,21,21,Pre,Post
+2025,Louisville,ACC,17.0,18.0,25.0,22.8,,6,6,Pre,2/24
+2025,Maryland,Big Ten,18.0,7.0,21.0,12.21,12.0,21,21,Pre,Post
+2025,Michigan,Big Ten,,20.0,25.0,22.71,25.0,8,8,12/2,Post
+2025,Michigan State,Big Ten,,15.0,24.0,20.43,,14,14,12/2,3/3
+2025,Minnesota,Big Ten,,23.0,24.0,23.5,,2,2,1/13,1/20
+2025,NC State,ACC,9.0,7.0,22.0,16.11,9.0,20,20,Pre,Post
+2025,Nebraska,Big Ten,23.0,21.0,25.0,23.17,,7,7,Pre,12/16
+2025,Notre Dame,ACC,6.0,1.0,10.0,4.47,10.0,21,21,Pre,Post
+2025,Ohio State,Big Ten,14.0,8.0,15.0,10.89,19.0,21,21,Pre,Post
+2025,Oklahoma,SEC,10.0,8.0,16.0,11.47,11.0,21,21,Pre,Post
+2025,Oklahoma State,Big 12,,17.0,25.0,21.44,24.0,10,10,1/13,Post
+2025,Ole Miss,SEC,20.0,17.0,25.0,21.9,17.0,12,12,Pre,Post
+2025,Oregon,Big Ten,,21.0,25.0,23.0,,3,3,11/11,11/25
+2025,South Carolina,SEC,1.0,1.0,6.0,2.79,2.0,21,21,Pre,Post
+2025,South Dakota State,Summit,,24.0,25.0,24.33,23.0,4,4,3/3,Post
+2025,Stanford,ACC,,24.0,24.0,24.0,,1,1,11/11,11/11
+2025,TCU,Big 12,,6.0,19.0,10.56,6.0,19,19,11/18,Post
+2025,Tennessee,SEC,,11.0,20.0,16.73,15.0,16,16,12/9,Post
+2025,Texas,SEC,4.0,1.0,7.0,4.42,4.0,21,21,Pre,Post
+2025,UCLA,Big Ten,5.0,1.0,5.0,1.74,3.0,21,21,Pre,Post
+2025,UConn,Big East,2.0,2.0,7.0,4.42,1.0,21,21,Pre,Post
+2025,UNC,ACC,15.0,8.0,19.0,14.21,14.0,21,21,Pre,Post
+2025,USC,Big Ten,3.0,2.0,7.0,4.47,5.0,21,21,Pre,Post
+2025,Utah,Big 12,,22.0,23.0,22.5,,2,2,1/6,1/13
+2025,Vanderbilt,SEC,,23.0,24.0,23.5,,2,2,1/27,2/3
+2025,West Virginia,Big 12,16.0,12.0,21.0,16.47,21.0,21,21,Pre,Post
+2026,Alabama,SEC,26.0,21.0,25.0,23.0,,7,7,1/12,2/23
+2026,Baylor,Big 12,16.0,7.0,22.0,14.69,,17,17,Pre,3/2
+2026,Duke,ACC,7.0,9.0,21.0,14.75,,9,7,Pre,3/2
+2026,Fairfield,MAAC,26.0,25.0,25.0,25.0,,1,1,3/2,3/2
+2026,Georgia,SEC,26.0,22.0,24.0,23.0,,4,3,1/26,3/2
+2026,Illinois,Big Ten,26.0,25.0,25.0,25.0,,1,1,1/12,1/12
+2026,Iowa,Big Ten,21.0,8.0,21.0,12.38,,17,17,Pre,3/2
+2026,Iowa State,Big 12,14.0,10.0,19.0,12.0,,10,10,Pre,1/12
+2026,Kentucky,SEC,24.0,6.0,23.0,14.94,,17,17,Pre,3/2
+2026,LSU,SEC,5.0,5.0,12.0,5.94,,17,17,Pre,3/2
+2026,Louisville,ACC,20.0,6.0,23.0,13.62,,17,17,Pre,3/2
+2026,Maryland,Big Ten,10.0,7.0,22.0,11.75,,17,17,Pre,3/2
+2026,Michigan,Big Ten,13.0,6.0,14.0,7.5,,17,17,Pre,3/2
+2026,Michigan State,Big Ten,23.0,12.0,25.0,18.19,,17,17,Pre,3/2
+2026,Minnesota,Big Ten,26.0,19.0,23.0,21.33,,3,3,2/16,3/2
+2026,NC State,ACC,9.0,10.0,25.0,17.0,,4,4,Pre,11/24
+2026,Nebraska,Big Ten,26.0,20.0,25.0,23.33,,6,6,12/8,1/19
+2026,Notre Dame,ACC,15.0,18.0,24.0,19.88,,9,8,Pre,1/12
+2026,Ohio State,Big Ten,26.0,8.0,23.0,14.69,,13,13,12/1,3/2
+2026,Oklahoma,SEC,6.0,5.0,16.0,9.19,,17,17,Pre,3/2
+2026,Oklahoma State,Big 12,22.0,18.0,24.0,21.8,,6,6,Pre,12/8
+2026,Ole Miss,SEC,12.0,13.0,24.0,15.88,,17,17,Pre,3/2
+2026,Princeton,Ivy,26.0,19.0,25.0,23.0,,10,8,12/15,3/2
+2026,Richmond,A10,24.0,,,,,1,1,Pre,Pre
+2026,South Carolina,SEC,2.0,2.0,3.0,2.69,,17,17,Pre,3/2
+2026,TCU,Big 12,17.0,8.0,17.0,11.0,,17,17,Pre,3/2
+2026,Tennessee,SEC,8.0,12.0,23.0,18.0,,15,15,Pre,2/16
+2026,Texas,SEC,4.0,2.0,4.0,3.38,,17,17,Pre,3/2
+2026,Texas Tech,Big 12,26.0,16.0,21.0,19.0,,10,10,12/22,3/2
+2026,UCLA,Big Ten,3.0,2.0,4.0,2.94,,17,17,Pre,3/2
+2026,UConn,Big East,1.0,1.0,1.0,1.0,,17,17,Pre,3/2
+2026,UNC,ACC,11.0,11.0,25.0,17.0,,14,9,Pre,3/2
+2026,USC,Big Ten,18.0,8.0,21.0,15.75,,9,9,Pre,1/5
+2026,Vanderbilt,SEC,19.0,5.0,19.0,9.75,,17,17,Pre,3/2
+2026,Washington,Big Ten,26.0,20.0,25.0,23.36,,11,6,11/10,2/9
+2026,West Virginia,Big 12,26.0,15.0,25.0,20.3,,10,7,11/17,3/2

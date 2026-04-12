@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WBB Tournament 2026 — Conference Distribution by Round</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&family=Rock+Salt&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:       #F0F4FF;
+    --white:    #FFFFFF;
+    --primary:  #1D3557;
+    --accent:   #C2842E;
+    --text:     #1D3557;
+    --text-sub: #5A6A82;
+    --border:   #D6DEEE;
+    --shadow:   rgba(29,53,87,0.09);
+    --c-b10:    #1D3557;
+    --c-sec:    #C2842E;
+    --c-acc:    #E07255;
+    --c-b12:    #457B9D;
+    --c-be:     #2A7A6B;
+    --c-a10:    #8B5CF6;
+    --c-oth:    #A8B9CC;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 0 0 60px;
+  }
+
+  /* ── HEADER ──────────────────────────────────────────── */
+  .page-header {
+    background: var(--primary);
+    color: white;
+    padding: 40px 48px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::after {
+    content: '';
+    position: absolute; bottom:0; right:0;
+    width:320px; height:100%;
+    background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.04));
+    pointer-events: none;
+  }
+  .page-header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem; font-weight: 700;
+    letter-spacing: 0.5px; text-transform: uppercase;
+    line-height: 1.2; margin-bottom: 6px;
+  }
+  .page-header h1 span { color: #D4A574; }
+  .page-header p { font-size:0.9rem; color:rgba(255,255,255,0.68); max-width:560px; }
+  .page-header .annotation {
+    font-family:'Rock Salt',cursive; font-size:0.65rem;
+    color:#D4A574; margin-top:14px; opacity:0.9;
+  }
+
+  /* ── LEGEND ──────────────────────────────────────────── */
+  .legend-bar {
+    background:var(--white); border-bottom:1px solid var(--border);
+    padding:14px 48px; display:flex; align-items:center; gap:24px;
+    flex-wrap:wrap; position:sticky; top:0; z-index:100;
+    box-shadow:0 2px 8px var(--shadow);
+  }
+  .legend-label { font-size:0.7rem; font-weight:700; letter-spacing:0.8px; text-transform:uppercase; color:var(--text-sub); margin-right:4px; }
+  .legend-item { display:flex; align-items:center; gap:7px; cursor:pointer; padding:3px 10px 3px 3px; border-radius:20px; transition:background 0.15s; }
+  .legend-item:hover { background:var(--bg); }
+  .legend-dot { width:12px; height:12px; border-radius:3px; flex-shrink:0; }
+  .legend-name { font-size:0.78rem; font-weight:600; color:var(--text); }
+  .legend-name.dim { color:var(--text-sub); }
+
+  /* ── CONTENT ─────────────────────────────────────────── */
+  .content { max-width:1100px; margin:0 auto; padding:0 48px; }
+
+  /* ── ROUND PANEL ─────────────────────────────────────── */
+  .round-panel {
+    margin-top:48px;
+    opacity:0; transform:translateY(18px);
+    transition:opacity 0.5s ease, transform 0.5s ease;
+  }
+  .round-panel.visible { opacity:1; transform:translateY(0); }
+  .round-header { display:flex; align-items:baseline; gap:14px; margin-bottom:16px; }
+  .round-title { font-family:'Oswald',sans-serif; font-size:1.4rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:var(--primary); }
+  .round-n { font-size:0.8rem; font-weight:700; color:var(--text-sub); letter-spacing:0.5px; text-transform:uppercase; }
+  .round-sublabel { font-size:0.8rem; color:var(--text-sub); margin-left:auto; font-style:italic; }
+
+  /* ── STACKED BAR ─────────────────────────────────────── */
+  .stacked-bar-wrap { position:relative; margin-bottom:0; }
+  .stacked-bar {
+    display:flex; height:52px; border-radius:10px; overflow:hidden;
+    box-shadow:0 2px 8px var(--shadow);
+  }
+  .bar-seg {
+    height:100%;
+    transition:width 0.8s cubic-bezier(0.25,0.46,0.45,0.94), filter 0.15s;
+    cursor:pointer; position:relative; display:flex;
+    align-items:center; justify-content:center;
+    min-width:0; overflow:hidden;
+  }
+  .bar-seg:hover { filter:brightness(1.12); z-index:10; }
+  .bar-seg-label {
+    font-size:0.68rem; font-weight:700; color:white;
+    text-shadow:0 1px 2px rgba(0,0,0,0.4); white-space:nowrap;
+    opacity:0; transition:opacity 0.3s; pointer-events:none; padding:0 6px;
+  }
+  .bar-seg.wide .bar-seg-label { opacity:1; }
+
+  /* TBD segments for partial Elite 8 */
+  .bar-seg-tbd {
+    height:100%; cursor:default; position:relative;
+    display:flex; align-items:center; justify-content:center;
+    min-width:0; overflow:hidden; flex-shrink:0; flex-grow:0;
+  }
+  .tbd-inner {
+    display:flex; flex-direction:column; align-items:center;
+    justify-content:center; gap:2px; padding:0 6px;
+  }
+  .tbd-tag { font-family:'Rock Salt',cursive; font-size:0.42rem; color:rgba(255,255,255,0.75); letter-spacing:0.3px; }
+  .tbd-teams { font-size:0.65rem; font-weight:700; color:white; text-shadow:0 1px 2px rgba(0,0,0,0.45); white-space:nowrap; }
+
+  /* ── SURVIVAL ANNOTATION STRIP ───────────────────────── */
+  .survival-strip {
+    display:flex; margin-top:3px; margin-bottom:10px;
+    height:22px; align-items:center;
+  }
+  .survival-cell {
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden; flex-shrink:0; flex-grow:0;
+    transition:width 0.8s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+  .surv-badge {
+    font-size:0.65rem; font-weight:700;
+    display:flex; align-items:center; gap:3px;
+    white-space:nowrap;
+    padding: 2px 6px; border-radius:10px;
+  }
+  .surv-badge.advanced {
+    background:rgba(255,255,255,0.85);
+    border:1px solid currentColor;
+  }
+  .surv-badge.eliminated {
+    color:#A0AEC0; background:rgba(160,174,192,0.12);
+    border:1px solid #D6DEEE; font-size:0.6rem;
+  }
+  .surv-arrow { font-size:0.7rem; }
+
+  /* ── CONF PILLS ──────────────────────────────────────── */
+  .conf-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:4px; }
+  .conf-pill {
+    display:flex; align-items:center; gap:7px;
+    background:var(--white); border:1px solid var(--border);
+    border-radius:20px; padding:5px 12px 5px 8px;
+    cursor:pointer; transition:box-shadow 0.15s, border-color 0.15s;
+  }
+  .conf-pill:hover { box-shadow:0 2px 8px var(--shadow); border-color:#B0BDCF; }
+  .pill-dot { width:10px; height:10px; border-radius:2px; flex-shrink:0; }
+  .pill-conf { font-size:0.74rem; font-weight:700; color:var(--text); }
+  .pill-count { font-size:0.74rem; font-weight:600; color:var(--text-sub); }
+
+  /* ── INSIGHT ─────────────────────────────────────────── */
+  .insight {
+    margin-top:14px; padding:10px 16px;
+    background:var(--white); border-left:3px solid var(--accent);
+    border-radius:0 8px 8px 0; display:flex; align-items:flex-start; gap:10px;
+  }
+  .insight-tag { font-family:'Rock Salt',cursive; font-size:0.55rem; color:var(--accent); white-space:nowrap; padding-top:1px; line-height:1.6; }
+  .insight-text { font-size:0.8rem; color:var(--text); line-height:1.55; }
+  .insight-text strong { font-weight:700; }
+
+  /* live-game badge */
+  .live-badge {
+    display:inline-flex; align-items:center; gap:5px;
+    background:#FFF0F0; border:1px solid #F8A5A5; border-radius:20px;
+    padding:2px 8px; font-size:0.68rem; font-weight:700; color:#C0392B;
+    vertical-align:middle; margin-left:6px;
+  }
+  .live-dot {
+    width:7px; height:7px; background:#E74C3C; border-radius:50%;
+    animation:pulse 1.2s infinite;
+  }
+  @keyframes pulse {
+    0%,100%{opacity:1;transform:scale(1)}
+    50%{opacity:0.55;transform:scale(0.75)}
+  }
+
+  /* ── CONNECTOR ───────────────────────────────────────── */
+  .connector { width:2px; height:28px; background:linear-gradient(to bottom, var(--border), transparent); margin:4px auto 0; border-radius:1px; }
+
+  /* ── STAT STRIP ──────────────────────────────────────── */
+  .stat-strip { margin-top:48px; display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+  .stat-card { background:var(--white); border-radius:12px; padding:18px 20px; text-align:center; border:1px solid var(--border); }
+  .stat-card-val { font-family:'Oswald',sans-serif; font-size:2rem; font-weight:700; color:var(--primary); line-height:1; margin-bottom:4px; }
+  .stat-card-val span { font-size:1.1rem; color:var(--accent); }
+  .stat-card-lbl { font-size:0.72rem; font-weight:600; color:var(--text-sub); text-transform:uppercase; letter-spacing:0.6px; }
+
+  /* ── TOOLTIP ─────────────────────────────────────────── */
+  .tooltip {
+    position:fixed; background:var(--primary); color:white;
+    border-radius:10px; padding:12px 16px; font-size:0.78rem;
+    pointer-events:none; z-index:9999; max-width:260px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.25); opacity:0; transition:opacity 0.15s;
+  }
+  .tooltip.show { opacity:1; }
+  .tooltip-conf { font-family:'Oswald',sans-serif; font-size:1rem; font-weight:700; text-transform:uppercase; letter-spacing:0.3px; margin-bottom:8px; }
+  .tooltip-conf span { font-size:0.75rem; font-weight:500; opacity:0.7; margin-left:6px; font-family:'Inter',sans-serif; text-transform:none; }
+  .tooltip-teams { display:flex; flex-direction:column; gap:3px; }
+  .tooltip-team { display:flex; align-items:center; gap:8px; font-size:0.76rem; color:rgba(255,255,255,0.9); }
+  .tooltip-seed { background:rgba(255,255,255,0.18); border-radius:4px; padding:1px 5px; font-size:0.65rem; font-weight:700; min-width:22px; text-align:center; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>2026 WBB Tournament<br><span>Conference Representation by Round</span></h1>
+  <p>How the balance of power shifts as the bracket narrows — from 68 teams to the Elite 8 and beyond.</p>
+  <div class="annotation">hover any segment for team breakdown · survival rates shown between rounds</div>
+</div>
+
+<div class="legend-bar">
+  <span class="legend-label">Conference</span>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--c-b10)"></div><span class="legend-name">Big Ten</span></div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--c-sec)"></div><span class="legend-name">SEC</span></div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--c-acc)"></div><span class="legend-name">ACC</span></div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--c-b12)"></div><span class="legend-name">Big 12</span></div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--c-be)"></div><span class="legend-name">Big East</span></div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--c-a10)"></div><span class="legend-name">Atlantic 10</span></div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--c-oth)"></div><span class="legend-name dim">Mid-Majors</span></div>
+</div>
+
+<div class="content" id="rounds-container"></div>
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const CONF_COLORS = {
+  'Big Ten':     '#1D3557',
+  'SEC':         '#C2842E',
+  'ACC':         '#E07255',
+  'Big 12':      '#457B9D',
+  'Big East':    '#2A7A6B',
+  'Atlantic 10': '#8B5CF6',
+  'Other':       '#A8B9CC',
+};
+const CONF_ORDER = ['Big Ten','SEC','ACC','Big 12','Big East','Atlantic 10','Other'];
+
+// Survival rates FROM this round into the NEXT
+// keyed by round index (0=R68→R32, 1=R32→S16, 2=S16→E8 partial)
+const SURVIVAL = [
+  { // R68 → R32
+    'Big Ten':     {survived:11, total:12},
+    'SEC':         {survived:8,  total:10},
+    'ACC':         {survived:7,  total:9},
+    'Big 12':      {survived:5,  total:8},
+    'Big East':    {survived:1,  total:2},
+    'Atlantic 10': {survived:0,  total:2},
+    'Other':       {survived:0,  total:25},
+  },
+  { // R32 → S16
+    'Big Ten': {survived:3,  total:11},
+    'SEC':     {survived:6,  total:8},
+    'ACC':     {survived:5,  total:7},
+    'Big 12':  {survived:1,  total:5},
+    'Big East':{survived:1,  total:1},
+  },
+  { // S16 → E8
+    'SEC':     {survived:2, total:6},
+    'ACC':     {survived:2, total:5},
+    'Big Ten': {survived:2, total:3},
+    'Big 12':  {survived:1, total:1},
+    'Big East':{survived:1, total:1},
+  },
+  { // E8 → F4
+    'Big East': {survived:1, total:1},
+    'SEC':      {survived:2, total:2},
+    'Big Ten':  {survived:1, total:2},
+    'ACC':      {survived:0, total:2},
+    'Big 12':   {survived:0, total:1},
+  },
+];
+
+const ROUNDS = [
+  {
+    label: 'Field of 68', n: 68,
+    sublabel: 'All tournament teams',
+    insight: '<strong>The Big Ten leads the field</strong> with 12 teams — the largest single-conference haul. The SEC (10) and ACC (9) follow closely. Together, these three conferences account for <strong>31 of 68 teams (46%)</strong>. Mid-major conferences fill out the bracket but face long odds against the power-conference gauntlet.',
+    by_conf: {
+      'Big Ten':     [{name:'UCLA',seed:1},{name:'Iowa',seed:2},{name:'Michigan',seed:2},{name:'Ohio State',seed:3},{name:'Minnesota',seed:4},{name:'Michigan State',seed:5},{name:'Maryland',seed:5},{name:'Washington',seed:6},{name:'Illinois',seed:7},{name:'Oregon',seed:8},{name:'USC',seed:9},{name:'Nebraska',seed:11}],
+      'SEC':         [{name:'Texas',seed:1},{name:'South Carolina',seed:1},{name:'Vanderbilt',seed:2},{name:'LSU',seed:2},{name:'Oklahoma',seed:4},{name:'Kentucky',seed:5},{name:'Ole Miss',seed:5},{name:'Alabama',seed:6},{name:'Georgia',seed:7},{name:'Tennessee',seed:10}],
+      'ACC':         [{name:'Duke',seed:3},{name:'Louisville',seed:3},{name:'North Carolina',seed:4},{name:'Notre Dame',seed:6},{name:'NC State',seed:7},{name:'Clemson',seed:8},{name:'Virginia Tech',seed:9},{name:'Syracuse',seed:9},{name:'Virginia',seed:10}],
+      'Big 12':      [{name:'TCU',seed:3},{name:'West Virginia',seed:4},{name:'Baylor',seed:6},{name:'Texas Tech',seed:7},{name:'Oklahoma State',seed:8},{name:'Iowa State',seed:8},{name:'Colorado',seed:10},{name:'Arizona State',seed:10}],
+      'Big East':    [{name:'UConn',seed:1},{name:'Villanova',seed:10}],
+      'Atlantic 10': [{name:'Rhode Island',seed:11},{name:'Richmond',seed:11}],
+      'Other':       [{name:'Princeton',seed:9},{name:'Fairfield',seed:11},{name:'S. Dakota St.',seed:11},{name:'Gonzaga',seed:12},{name:'Murray State',seed:12},{name:'James Madison',seed:12},{name:'Colorado St.',seed:12},{name:'Miami (OH)',seed:13},{name:'Green Bay',seed:13},{name:'Idaho',seed:13},{name:'W. Illinois',seed:13},{name:'UC San Diego',seed:14},{name:'Howard',seed:14},{name:'Charleston',seed:14},{name:'Vermont',seed:14},{name:'Fairleigh Dick.',seed:15},{name:'Holy Cross',seed:15},{name:'High Point',seed:15},{name:'Jacksonville',seed:15},{name:'SFA',seed:16},{name:'Samford',seed:16},{name:'Missouri St.',seed:16},{name:'Southern',seed:16},{name:'Cal Baptist',seed:16},{name:'UTSA',seed:16}],
+    }
+  },
+  {
+    label: 'Round of 32', n: 32,
+    sublabel: 'Survived the first round',
+    insight: '<strong>Every mid-major team was eliminated in the first round.</strong> 0 of 26 "Other" teams advanced. The Big Ten maintained its stranglehold with 11 of 12 teams surviving (92%). The SEC (8/10) and ACC (7/9) both showed depth. Big 12 dropped from 8 to 5 — losing Iowa State, Colorado, and Arizona State.',
+    by_conf: {
+      'Big Ten': [{name:'UCLA',seed:1},{name:'Iowa',seed:2},{name:'Michigan',seed:2},{name:'Ohio State',seed:3},{name:'Minnesota',seed:4},{name:'Michigan State',seed:5},{name:'Maryland',seed:5},{name:'Washington',seed:6},{name:'Illinois',seed:7},{name:'Oregon',seed:8},{name:'USC',seed:9}],
+      'SEC':     [{name:'Texas',seed:1},{name:'South Carolina',seed:1},{name:'Vanderbilt',seed:2},{name:'LSU',seed:2},{name:'Oklahoma',seed:4},{name:'Kentucky',seed:5},{name:'Ole Miss',seed:5},{name:'Alabama',seed:6}],
+      'ACC':     [{name:'Duke',seed:3},{name:'Louisville',seed:3},{name:'North Carolina',seed:4},{name:'Notre Dame',seed:6},{name:'NC State',seed:7},{name:'Syracuse',seed:9},{name:'Virginia',seed:10}],
+      'Big 12':  [{name:'TCU',seed:3},{name:'West Virginia',seed:4},{name:'Baylor',seed:6},{name:'Texas Tech',seed:7},{name:'Oklahoma State',seed:8}],
+      'Big East':[{name:'UConn',seed:1}],
+    }
+  },
+  {
+    label: 'Sweet 16', n: 16,
+    sublabel: 'Regional semifinalists',
+    insight: '<strong>The SEC takes sole possession of the lead with 6 teams</strong> — including both No. 1 seeds (Texas, South Carolina) and a pair of No. 2s (Vanderbilt, LSU). The ACC follows with 5. The Big Ten — dominant at 11 in the Round of 32 — collapsed to just 3 in the Sweet 16, losing 8 teams including Washington, Iowa, Michigan State, and Ohio State. Virginia (a First Four team) stands as the ACC\'s most unlikely survivor.',
+    by_conf: {
+      'SEC':     [{name:'Texas',seed:1},{name:'South Carolina',seed:1},{name:'Vanderbilt',seed:2},{name:'LSU',seed:2},{name:'Oklahoma',seed:4},{name:'Kentucky',seed:5}],
+      'ACC':     [{name:'Duke',seed:3},{name:'Louisville',seed:3},{name:'North Carolina',seed:4},{name:'Notre Dame',seed:6},{name:'Virginia',seed:10}],
+      'Big Ten': [{name:'UCLA',seed:1},{name:'Michigan',seed:2},{name:'Minnesota',seed:4}],
+      'Big 12':  [{name:'TCU',seed:3}],
+      'Big East':[{name:'UConn',seed:1}],
+    }
+  },
+  {
+    label: 'Elite 8', n: 8,
+    sublabel: 'Regional finals',
+    insight: '<strong>The ACC sent two teams (Notre Dame, Duke) but went 0-for-2.</strong> The Big Ten split — UCLA advanced, Michigan fell. The SEC went a perfect 2-for-2: Texas dismantled Duke, South Carolina overpowered TCU. UConn continued its unbeaten run past Notre Dame. The Big 12\'s lone survivor TCU reached the Elite 8 but couldn\'t finish the run.',
+    by_conf: {
+      'Big East': [{name:'UConn',          seed:1}],
+      'ACC':      [{name:'Notre Dame',     seed:6},{name:'Duke',          seed:3}],
+      'Big Ten':  [{name:'UCLA',           seed:1},{name:'Michigan',      seed:2}],
+      'SEC':      [{name:'Texas',          seed:1},{name:'South Carolina',seed:1}],
+      'Big 12':   [{name:'TCU',            seed:3}],
+    }
+  },
+  {
+    label: 'Final Four', n: 4,
+    sublabel: 'National semifinals — April 3, Phoenix',
+    insight: '<strong>The SEC claims half the Final Four.</strong> Texas and South Carolina — both No. 1 seeds — represent the conference\'s dominance from wire to wire. UCLA (Big Ten) is the last power-conference challenger. UConn arrives undefeated and representing the Big East alone. Three conferences, four 1-seeds (UConn, Texas, South Carolina are all 1s; UCLA is a 1). The ACC, Big 12, and every mid-major are eliminated.',
+    by_conf: {
+      'SEC':     [{name:'Texas',          seed:1},{name:'South Carolina', seed:1}],
+      'Big Ten': [{name:'UCLA',           seed:1}],
+      'Big East':[{name:'UConn',          seed:1}],
+    }
+  }
+];
+
+// ── BUILDERS ──────────────────────────────────────────────
+const container = document.getElementById('rounds-container');
+const tooltip   = document.getElementById('tooltip');
+
+ROUNDS.forEach((round, ri) => {
+  const panel = document.createElement('div');
+  panel.className = 'round-panel';
+  panel.dataset.index = ri;
+
+  // Header
+  const hdr = document.createElement('div');
+  hdr.className = 'round-header';
+  hdr.innerHTML = `<span class="round-title">${round.label}</span><span class="round-n">${round.n} teams</span><span class="round-sublabel">${round.sublabel}</span>`;
+  panel.appendChild(hdr);
+
+  // ── BAR ───────────────────────────────────────────────
+  const barWrap = document.createElement('div');
+  barWrap.className = 'stacked-bar-wrap';
+
+  if (round.partial) {
+    // Partial Elite 8: 8 equal 12.5% slots — confirmed + 2 TBD
+    const bar = document.createElement('div');
+    bar.className = 'stacked-bar';
+    const slotPct = 100 / round.n; // 12.5% each
+
+    // Confirmed segments — one slot per team
+    CONF_ORDER.forEach(conf => {
+      const teams = round.by_conf[conf];
+      if (!teams || teams.length === 0) return;
+      teams.forEach(team => {
+        const seg = makeSeg(conf, [team], slotPct, true);
+        bar.appendChild(seg);
+      });
+    });
+
+    // TBD games (each = 1 slot = 12.5%)
+    round.pending_games.forEach(pg => {
+      const tbd = document.createElement('div');
+      tbd.className = 'bar-seg-tbd';
+      tbd.style.width = slotPct + '%';
+      if (pg.stripe) {
+        // Split color Big 12 / ACC diagonal
+        tbd.style.background = `repeating-linear-gradient(-55deg, ${CONF_COLORS[pg.conf_a]} 0px, ${CONF_COLORS[pg.conf_a]} 12px, ${CONF_COLORS[pg.conf_b]} 12px, ${CONF_COLORS[pg.conf_b]} 24px)`;
+      } else {
+        // Solid with pattern (both SEC)
+        tbd.style.background = `repeating-linear-gradient(-55deg, ${pg.color} 0px, ${pg.color} 12px, rgba(0,0,0,0.12) 12px, rgba(0,0,0,0.12) 14px, ${pg.color} 14px, ${pg.color} 26px)`;
+      }
+      tbd.innerHTML = `<div class="tbd-inner"><span class="tbd-tag">in progress</span><span class="tbd-teams">${pg.label}</span></div>`;
+      bar.appendChild(tbd);
+    });
+
+    barWrap.appendChild(bar);
+  } else {
+    const total = Object.values(round.by_conf).reduce((s,ts) => s+ts.length, 0);
+    const bar = document.createElement('div');
+    bar.className = 'stacked-bar';
+    CONF_ORDER.forEach(conf => {
+      const teams = round.by_conf[conf];
+      if (!teams || teams.length === 0) return;
+      const pct = (teams.length / total * 100).toFixed(2);
+      const seg = makeSeg(conf, teams, pct, false);
+      bar.appendChild(seg);
+    });
+    barWrap.appendChild(bar);
+  }
+  panel.appendChild(barWrap);
+
+  // ── SURVIVAL ANNOTATION STRIP ─────────────────────────
+  if (!round.partial && ri < ROUNDS.length - 1) {
+    const survData = SURVIVAL[ri];
+    if (survData) {
+      const total = Object.values(round.by_conf).reduce((s,ts) => s+ts.length, 0);
+      const strip = document.createElement('div');
+      strip.className = 'survival-strip';
+
+      CONF_ORDER.forEach(conf => {
+        const teams = round.by_conf[conf];
+        if (!teams || teams.length === 0) return;
+        const segPct = (teams.length / total * 100).toFixed(2);
+        const cell = document.createElement('div');
+        cell.className = 'survival-cell';
+        cell.style.width = '0%';
+        cell.dataset.target = segPct;
+
+        const s = survData[conf];
+        if (s) {
+          const rate = Math.round(s.survived / s.total * 100);
+          const isElim = s.survived === 0;
+          const isPerfect = rate === 100;
+          const badge = document.createElement('span');
+          badge.className = 'surv-badge ' + (isElim ? 'eliminated' : 'advanced');
+          if (!isElim) badge.style.color = CONF_COLORS[conf];
+          badge.innerHTML = isElim
+            ? `✕ out`
+            : `<span class="surv-arrow">↓</span>${rate}%`;
+          badge.title = `${conf}: ${s.survived} of ${s.total} advanced (${rate}%)`;
+          cell.appendChild(badge);
+        }
+        strip.appendChild(cell);
+      });
+      panel.appendChild(strip);
+    }
+  }
+
+  // ── PILLS ─────────────────────────────────────────────
+  if (!round.partial) {
+    const pills = document.createElement('div');
+    pills.className = 'conf-pills';
+    CONF_ORDER.forEach(conf => {
+      const teams = round.by_conf[conf];
+      if (!teams || teams.length === 0) return;
+      const pct = (teams.length / round.n * 100).toFixed(0);
+      const pill = document.createElement('div');
+      pill.className = 'conf-pill';
+      pill.innerHTML = `<div class="pill-dot" style="background:${CONF_COLORS[conf]}"></div><span class="pill-conf">${conf}</span><span class="pill-count">${teams.length} team${teams.length>1?'s':''} · ${pct}%</span>`;
+      pill.addEventListener('mouseenter', () => { document.querySelectorAll(`.bar-seg[data-conf="${conf}"]`).forEach(s => s.style.filter='brightness(1.18)'); });
+      pill.addEventListener('mouseleave', () => { document.querySelectorAll(`.bar-seg[data-conf="${conf}"]`).forEach(s => s.style.filter=''); });
+      pills.appendChild(pill);
+    });
+    panel.appendChild(pills);
+  } else {
+    // Partial pills — confirmed only
+    const pills = document.createElement('div');
+    pills.className = 'conf-pills';
+    Object.entries(round.by_conf).forEach(([conf, teams]) => {
+      const pill = document.createElement('div');
+      pill.className = 'conf-pill';
+      pill.innerHTML = `<div class="pill-dot" style="background:${CONF_COLORS[conf]}"></div><span class="pill-conf">${conf}</span><span class="pill-count">${teams.map(t=>t.name).join(', ')} ✓</span>`;
+      pills.appendChild(pill);
+    });
+    round.pending_games.forEach(pg => {
+      const pill = document.createElement('div');
+      pill.className = 'conf-pill';
+      const stripStyle = pg.stripe
+        ? `background:linear-gradient(90deg,${CONF_COLORS[pg.conf_a]} 50%,${CONF_COLORS[pg.conf_b]} 50%)`
+        : `background:${CONF_COLORS[pg.conf_a]}`;
+      pill.innerHTML = `<div class="pill-dot" style="${stripStyle};border-radius:2px"></div><span class="pill-conf" style="color:var(--text-sub)">${pg.label}</span><span class="pill-count">in progress</span>`;
+      pills.appendChild(pill);
+    });
+    panel.appendChild(pills);
+  }
+
+  // ── INSIGHT ───────────────────────────────────────────
+  if (round.insight) {
+    const ins = document.createElement('div');
+    ins.className = 'insight';
+    ins.innerHTML = `<span class="insight-tag">takeaway</span><span class="insight-text">${round.insight}</span>`;
+    panel.appendChild(ins);
+  }
+
+  // ── CONNECTOR ─────────────────────────────────────────
+  if (ri < ROUNDS.length - 1) {
+    const conn = document.createElement('div');
+    conn.className = 'connector';
+    panel.appendChild(conn);
+  }
+
+  container.appendChild(panel);
+});
+
+// ── STAT STRIP ────────────────────────────────────────────
+container.insertAdjacentHTML('beforeend', `
+  <div class="stat-strip">
+    <div class="stat-card">
+      <div class="stat-card-val">2<span>/4</span></div>
+      <div class="stat-card-lbl">SEC teams in Final Four</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-val">3</div>
+      <div class="stat-card-lbl">Conferences in Final Four</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-val">0</div>
+      <div class="stat-card-lbl">ACC teams remaining</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-val">4<span>/4</span></div>
+      <div class="stat-card-lbl">Final Four teams are No. 1 seeds</div>
+    </div>
+  </div>
+`);
+
+// ── HELPERS ───────────────────────────────────────────────
+function makeSeg(conf, teams, pct, confirmed) {
+  const seg = document.createElement('div');
+  seg.className = 'bar-seg' + (teams.length >= 3 ? ' wide' : '');
+  seg.style.cssText = `width:0%; background:${CONF_COLORS[conf]}`;
+  seg.dataset.conf   = conf;
+  seg.dataset.teams  = JSON.stringify(teams);
+  seg.dataset.pct    = pct;
+  seg.dataset.target = pct;
+  if (confirmed) {
+    seg.innerHTML = `<span class="bar-seg-label" style="opacity:1">${teams[0].name} ✓</span>`;
+  } else {
+    seg.innerHTML = `<span class="bar-seg-label">${conf}</span>`;
+  }
+  seg.addEventListener('mouseenter', e => showTooltip(e, conf, teams, CONF_COLORS[conf]));
+  seg.addEventListener('mousemove',  moveTooltip);
+  seg.addEventListener('mouseleave', hideTooltip);
+  return seg;
+}
+
+// ── TOOLTIP ───────────────────────────────────────────────
+function showTooltip(e, conf, teams, color) {
+  tooltip.innerHTML = `
+    <div class="tooltip-conf" style="color:${color==='#1D3557'?'#7FB3D3':color}">${conf}<span>${teams.length} team${teams.length>1?'s':''}</span></div>
+    <div class="tooltip-teams">${teams.map(t=>`<div class="tooltip-team"><span class="tooltip-seed">#${t.seed}</span><span>${t.name}</span></div>`).join('')}</div>`;
+  tooltip.classList.add('show');
+  moveTooltip(e);
+}
+function moveTooltip(e) {
+  const x=e.clientX+14, y=e.clientY-10;
+  const tw=tooltip.offsetWidth, th=tooltip.offsetHeight;
+  tooltip.style.left=(x+tw>window.innerWidth-16?x-tw-28:x)+'px';
+  tooltip.style.top=(y+th>window.innerHeight-16?y-th+20:y)+'px';
+}
+function hideTooltip() { tooltip.classList.remove('show'); }
+
+// ── INTERSECTION OBSERVER ─────────────────────────────────
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const panel = entry.target;
+    panel.classList.add('visible');
+    setTimeout(() => {
+      // Animate bar segments
+      panel.querySelectorAll('.bar-seg').forEach(seg => {
+        seg.style.width = seg.dataset.target + '%';
+      });
+      // Animate survival cells (same widths as bar)
+      panel.querySelectorAll('.survival-cell').forEach(cell => {
+        cell.style.width = cell.dataset.target + '%';
+      });
+    }, 120);
+    observer.unobserve(panel);
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.round-panel').forEach(p => observer.observe(p));
+</script>
+</body>
+</html>

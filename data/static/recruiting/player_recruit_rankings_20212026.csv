@@ -1,0 +1,602 @@
+SEASON_YEARS,SEASON,RECRUITING_YEAR,ESPNW_PLAYER_RECRUIT_RANK,PLAYER_NAME,ESPN_GRADE,TEAM,POS,HEIGHT_FEET,HEIGHT_INCHES,HIGH_SCHOOL_FULL,HIGH_SCHOOL,HOMETOWN_STATE
+2025-2026,2026,2025,1,Jasmine Davidson,98,USC,G,6,1,Clackamas H.S. (OR),Clackamas H.S. ,OR
+2025-2026,2026,2025,2,Sienna Betts,98,UCLA,F,6,4,Grandview H.S. (CO),Grandview H.S. ,CO
+2025-2026,2026,2025,3,Aaliyah Chavez,98,Oklahoma,PG,5,11,Monterey H.S. (TX),Monterey H.S. ,TX
+2025-2026,2026,2025,4,Emilee Skinner,97,Duke,PG,6,0,Ridgeline H.S.,Ridgeline H.S.,
+2025-2026,2026,2025,5,Aaliyah Crump,97,Texas,G,6,1,Montverde Academy (FL),Montverde Academy ,FL
+2025-2026,2026,2025,6,Agot Makeer,97,South Carolina,W,6,1,Montverde Academy (FL),Montverde Academy ,FL
+2025-2026,2026,2025,7,Grace Knox,97,LSU,W,6,2,Etiwanda H.S. (CA),Etiwanda H.S. ,CA
+2025-2026,2026,2025,8,Hailee Swain,97,Stanford,PG,5,10,Holy Innocents' Episcopal School (GA),Holy Innocents' Episcopal School ,GA
+2025-2026,2026,2025,9,Mia Pauldo,97,Tennessee,PG,5,5,Morris Catholic High (NJ),Morris Catholic High ,NJ
+2025-2026,2026,2025,10,ZaKiyah Johnson,97,LSU,G,6,0,Sacred Heart Academy (KY),Sacred Heart Academy ,KY
+2025-2026,2026,2025,11,Darianna Alexander,97,Cincinnati,G,6,1,Purcell Marian H.S. (OH),Purcell Marian H.S. ,OH
+2025-2026,2026,2025,12,Lara Somfai,97,Stanford,F,6,4,IMG Academy (FL),IMG Academy ,IMG
+2025-2026,2026,2025,13,Nyla Brooks,97,North Carolina,W,6,1,Bishop Ireton H.S. (VA),Bishop Ireton H.S. ,VA
+2025-2026,2026,2025,14,Brynn McGaughy,97,Washington,F,6,2,Central Valley H.S. (WA),Central Valley H.S. ,WA
+2025-2026,2026,2025,15,Ayla McDowell,96,South Carolina,W,6,2,Cypress Springs H.S. (TX),Cypress Springs H.S. ,TX
+2025-2026,2026,2025,16,Jordan Speiser,96,Kansas State,G,6,1,Lutheran H.S.,Lutheran H.S.,
+2025-2026,2026,2025,17,Deniya Prawl,96,Tennessee,W,6,1,IMG Academy (FL),IMG Academy ,IMG
+2025-2026,2026,2025,18,Kaelyn Carroll,96,Kentucky,W,6,2,Tabor Academy (MA),Tabor Academy ,MA
+2025-2026,2026,2025,19,Jaliya Davis,96,Kansas,F,6,2,Blue Valley North H.S. (KS),Blue Valley North H.S. ,KS
+2025-2026,2026,2025,20,Jaida Civil,96,Tennessee,G,6,0,Palm Bay Magnet H.S. (FL),Palm Bay Magnet H.S. ,FL
+2025-2026,2026,2025,21,Alexandra Eschmeyer,96,Stanford,F,6,5,Peak To Peak Charter School (CO),Peak To Peak Charter School ,CO
+2025-2026,2026,2025,22,Aliyahna Morris,96,California,PG,5,5,Etiwanda H.S. (CA),Etiwanda H.S. ,CA
+2025-2026,2026,2025,23,Addison Deal,96,Iowa,G,6,0,Mater Dei H.S. (CA),Mater Dei H.S. ,CA
+2025-2026,2026,2025,24,Divine Bourrage,96,LSU,G,5,10,Davenport North H.S. (IA),Davenport North H.S. ,IA
+2025-2026,2026,2025,25,Kelis Fisher,96,UConn,PG,5,9,IMG Academy (FL),IMG Academy ,IMG
+2025-2026,2026,2025,26,Leah Macy,96,Notre Dame,F,6,2,Bethlehem H.S. (KY),Bethlehem H.S. ,KY
+2025-2026,2026,2025,27,Taliyah Henderson,96,North Carolina,W,6,0,Salpointe Catholic H.S. (AZ),Salpointe Catholic H.S. ,AZ
+2025-2026,2026,2025,28,Leonna Sneed,96,Utah,PG,5,6,Karen Wagner H.S. (TX),Karen Wagner H.S. ,TX
+2025-2026,2026,2025,29,Destiny Jackson,96,Illinois,PG,5,6,Whitney Young H.S. (IL),Whitney Young H.S. ,IL
+2025-2026,2026,2025,30,Nylah Wilson,96,Pittsburgh,G,5,9,IMG Academy (FL),IMG Academy ,IMG
+2025-2026,2026,2025,31,Keeley Parks,96,Kansas,G,5,11,Norman H.S. (OK),Norman H.S. ,OK
+2025-2026,2026,2025,32,Isabella Hines,95,LSU,G,5,9,Eldorado H.S. (NM),Eldorado H.S. ,NM
+2025-2026,2026,2025,33,Jordan Ode,95,Michigan State,G,5,11,Maple Grove H.S. (MN),Maple Grove H.S. ,MN
+2025-2026,2026,2025,34,Rainey Welson,95,Maryland,G,5,9,Hortonville H.S. (WI),Hortonville H.S. ,WI
+2025-2026,2026,2025,35,Maya Makalusky,95,Indiana,W,6,3,Hamilton Southeastern H.S. (IN),Hamilton Southeastern H.S. ,IN
+2025-2026,2026,2025,36,Camille Williams,95,Miami,G,5,11,Boswell H.S. (TX),Boswell H.S. ,TX
+2025-2026,2026,2025,37,Jaylah Lampley,95,Mississippi State,G,6,1,Lawrence Central H.S. (IN),Lawrence Central H.S. ,IN
+2025-2026,2026,2025,38,Madison Francis,94,Mississippi State,F,6,1,Lancaster Central High (NY),Lancaster Central High ,NY
+2025-2026,2026,2025,39,McKenzie Mathurin,94,Michigan,G,5,10,Broken Arrow H.S. (OK),Broken Arrow H.S. ,OK
+2025-2026,2026,2025,40,Cearah Parchment,94,Illinois,F,6,2,Fort Erie International Academy (CAN),Fort Erie International Academy ,CAN
+2025-2026,2026,2025,41,Marcayla Johnson,94,Baylor,G,6,0,Booker T. Washington H.S. (OK),Booker T. Washington H.S. ,OK
+2025-2026,2026,2025,42,Nevaeh Caffey,94,Indiana,PG,5,10,Incarnate Word Academy (MO),Incarnate Word Academy ,MO
+2025-2026,2026,2025,43,Libby Fandel,94,Kansas,G,6,0,Xavier H.S. (IA),Xavier H.S. ,IA
+2025-2026,2026,2025,44,Avery Hjelmstad,94,Utah,G,6,0,Edmond Memorial H.S. (OK),Edmond Memorial H.S. ,OK
+2025-2026,2026,2025,45,Lauren Hurst,94,Tennessee,W,6,2,Cleveland H.S. (TN),Cleveland H.S. ,TN
+2025-2026,2026,2025,46,Zhen Craft,94,Georgia,W,6,2,Bishop McNamara H.S. (MD),Bishop McNamara H.S. ,MD
+2025-2026,2026,2025,47,Aniya Foy,94,Kansas State,G,5,11,Cinco Ranch H.S. (TX),Cinco Ranch H.S. ,TX
+2025-2026,2026,2025,48,Manuella Alves-Fernandez,94,Illinois,F,6,3,IMG Academy (FL),IMG Academy ,IMG
+2025-2026,2026,2025,49,Aubrey Beckham,94,Georgia,G,5,11,Hebron Christian Academy (GA),Hebron Christian Academy ,GA
+2025-2026,2026,2025,50,Keziah Lofton,94,Oklahoma,G,5,11,Bethany H.S. (OK),Bethany H.S. ,OK
+2025-2026,2026,2025,51,Lourdes Da Silva Costa,94,Alabama,F,6,2,Montverde Academy (FL),Montverde Academy ,FL
+2025-2026,2026,2025,52,Makena Christian,94,Minnesota,G,5,11,Hartford H.S. (WI),Hartford H.S. ,WI
+2025-2026,2026,2025,53,Janiyah Williams,94,Oregon,G,5,10,Edmond Memorial H.S. (OK),Edmond Memorial H.S. ,OK
+2025-2026,2026,2025,54,Danielle Osho,94,Miami,G,6,1,Hebron Christian Academy (GA),Hebron Christian Academy ,GA
+2025-2026,2026,2025,55,Ace Austin,93,Alabama,PG,5,7,Spring Garden H.S.,Spring Garden H.S.,
+2025-2026,2026,2025,56,Lena Girardi,93,Oklahoma State,G,6,0,Grandview Prep (FL),Grandview Prep ,FL
+2025-2026,2026,2025,57,Mya Pauldo,93,Tennessee,PG,5,5,Morris Catholic High (NJ),Morris Catholic High ,NJ
+2025-2026,2026,2025,58,Brandie Harrod,93,Kansas State,G,6,0,Putnam City North H.S. (OK),Putnam City North H.S. ,OK
+2025-2026,2026,2025,59,Nyadieng Yiech,93,Florida,F,6,1,Fort Erie Secondary School (CAN),Fort Erie Secondary School ,CAN
+2025-2026,2026,2025,60,Jasmyn Cooper,93,Syracuse,W,6,1,Noble & Greenough School (MA),Noble & Greenough School ,MA
+2025-2026,2026,2025,61,Aubrey Shaw,93,Harvard,W,6,1,Blue Valley North H.S. (KS),Blue Valley North H.S. ,KS
+2025-2026,2026,2025,62,Caliyah DeVillasee,93,Cincinnati,PG,5,7,Our Lady of Good Counsel H.S. (MD),Our Lady of Good Counsel H.S. ,MD
+2025-2026,2026,2025,63,Avery Gordon,93,Purdue,P,6,5,Brownsburg H.S. (IN),Brownsburg H.S. ,IN
+2025-2026,2026,2025,64,Holland Harris,93,Clemson,W,6,1,Montverde Academy (FL),Montverde Academy ,FL
+2025-2026,2026,2025,65,Destiny Lunan,93,NC State,G,5,9,Millenium H.S. (AZ),Millenium H.S. ,AZ
+2025-2026,2026,2025,66,Brooklyn Stewart,93,Oklahoma,F,6,2,Pine Creek H.S. (CO),Pine Creek H.S. ,CO
+2025-2026,2026,2025,67,Ciara Byars,93,Michigan,F,6,2,George Rogers Clark H.S. (KY),George Rogers Clark H.S. ,KY
+2025-2026,2026,2025,68,Adelaide Jernigan,92,NC State,G,5,10,Bishop McGuinness HS (NC),Bishop McGuinness HS ,HS
+2025-2026,2026,2025,69,Brynleigh Martin,92,None,G,6,0,Springboro H.S. (OH),Springboro H.S. ,OH
+2025-2026,2026,2025,70,Ava Zediker,92,Creighton,PG,5,10,Dowling Catholic H.S. (IA),Dowling Catholic H.S. ,IA
+2025-2026,2026,2025,71,Layla Hays,92,Iowa,P,6,4,Wasilla H.S. (AK),Wasilla H.S. ,AK
+2025-2026,2026,2025,72,Nina Cain,92,Washington,W,6,1,C. K. McClatchy H.S. (CA),C. K. McClatchy H.S. ,CA
+2025-2026,2026,2025,73,Taylor Barnes,92,California,G,6,0,South Grand Prairie H.S. (TX),South Grand Prairie H.S. ,TX
+2025-2026,2026,2025,74,Amani Jenkins,92,Virginia Tech,F,6,2,Johnston H.S. (IA),Johnston H.S. ,IA
+2025-2026,2026,2025,75,Gandy Malou-Mamel,92,UConn,P,6,5,Gill St. Bernard's School (NJ),Gill St. Bernard's School ,NJ
+2025-2026,2026,2025,76,Amirah Anderson,92,Boston College,G,5,10,Bishop Ireton H.S. (VA),Bishop Ireton H.S. ,VA
+2025-2026,2026,2025,77,Taisa Queiroz,92,North Carolina,G,6,1,Cardinal Newman H.S. (CA),Cardinal Newman H.S. ,CA
+2025-2026,2026,2025,78,Grace Mbugua,92,Louisville,F,6,4,Danville Christian Academy (KY),Danville Christian Academy ,KY
+2025-2026,2026,2025,79,Kennedy Henry,92,Villanova,G,6,0,Blair Academy (NJ),Blair Academy ,NJ
+2025-2026,2026,2025,80,Natalie Wetzel,92,Miami,F,6,3,Peters Township H.S. (PA),Peters Township H.S. ,PA
+2025-2026,2026,2025,81,Logyn Greer,92,Colorado,F,6,3,Friends' Central School (PA),Friends' Central School ,PA
+2025-2026,2026,2025,82,Kate Sears,92,Virginia Tech,G,5,9,Watauga H.S. (NC),Watauga H.S. ,NC
+2025-2026,2026,2025,83,Daria Biriuk,92,Ohio State,G,6,1,The Webb School,The Webb School,
+2025-2026,2026,2025,84,Neleigh Gessert,92,Creighton,W,6,0,Millard West H.S. (NE),Millard West H.S. ,NE
+2025-2026,2026,2025,85,Nora Ezike,91,Stanford,F,6,2,Lyons Township H.S. (IL),Lyons Township H.S. ,IL
+2025-2026,2026,2025,86,Sydney Benally,91,BYU,PG,5,8,Sandia H.S. (NM),Sandia H.S. ,NM
+2025-2026,2026,2025,87,Amy Terrian,91,Michigan State,PG,5,8,Pewaukee H.S. (WI),Pewaukee H.S. ,WI
+2025-2026,2026,2025,88,Madison Parrish,91,West Virginia,G,5,11,Mason H.S. (OH),Mason H.S. ,OH
+2025-2026,2026,2025,89,Norah Gessert,91,Creighton,W,6,0,Millard West H.S. (NE),Millard West H.S. ,NE
+2025-2026,2026,2025,90,Lauren Jacobs,91,Ole Miss,G,5,9,Heathwood Hall Episcopal School (SC),Heathwood Hall Episcopal School ,SC
+2025-2026,2026,2025,91,Meredith Tippner,91,Miami,G,5,9,Noblesville H.S. (IN),Noblesville H.S. ,IN
+2025-2026,2026,2025,92,Tianna Chambers,91,Alabama,G,6,0,Cherry Creek H.S. (CO),Cherry Creek H.S. ,CO
+2025-2026,2026,2025,93,Nataliyah Gray,91,Mississippi State,F,6,3,Alief Taylor H.S. (TX),Alief Taylor H.S. ,TX
+2025-2026,2026,2025,94,Gabrielle White,91,Virginia,G,5,10,Seaforth H.S. (NC),Seaforth H.S. ,NC
+2025-2026,2026,2025,95,Harrissoum Coulibaly,91,Auburn,G,5,10,Shining Stars Sports Academy (VA),Shining Stars Sports Academy ,VA
+2025-2026,2026,2025,96,Naomi Benson,91,Illinois,W,6,2,Streetsboro H.S. (OH),Streetsboro H.S. ,OH
+2025-2026,2026,2025,97,Jessica Fields,91,Michigan,W,6,1,Mount Paran Christian School (GA),Mount Paran Christian School ,GA
+2025-2026,2026,2025,98,Jocelyn Faison,91,Georgia,G,6,1,Langston Hughes H.S. (GA),Langston Hughes H.S. ,GA
+2025-2026,2026,2025,99,Theresa Hagans,91,Pittsburgh,PG,5,9,Bishop Ireton H.S. (VA),Bishop Ireton H.S. ,VA
+2025-2026,2026,2025,100,Amaia Jackson,91,Clemson,G,5,8,Montverde Academy (FL),Montverde Academy ,FL
+2024-2025,2025,2024,1,Sarah Strong,98,UConn,F,6,2,Grace Christian Sanford (NC),Grace Christian Sanford ,NC
+2024-2025,2025,2024,2,Jaloni Cambridge,98,Ohio State,PG,5,6,Montverde Academy (FL),Montverde Academy ,FL
+2024-2025,2025,2024,3,Joyce Edwards,98,South Carolina,F,6,3,Camden H.S. (SC),Camden H.S. ,SC
+2024-2025,2025,2024,4,Syla Swords,98,Michigan,G,6,0,Long Island Lutheran H.S. (NY),Long Island Lutheran H.S. ,NY
+2024-2025,2025,2024,5,Kateryna Koval,98,Notre Dame,P,6,4,Long Island Lutheran H.S. (NY),Long Island Lutheran H.S. ,NY
+2024-2025,2025,2024,6,Kennedy Smith,98,USC,W,6,1,Etiwanda H.S. (CA),Etiwanda H.S. ,CA
+2024-2025,2025,2024,7,Allie Ziebell,98,UConn,G,5,10,Neenah H.S. (WI),Neenah H.S. ,WI
+2024-2025,2025,2024,8,Mikayla Blakes,98,Vanderbilt,G,6,0,Rutgers Prep H.S. (NJ),Rutgers Prep H.S. ,NJ
+2024-2025,2025,2024,9,Jordan Lee,97,Texas,G,6,0,Saint Mary's H.S. (CA),Saint Mary's H.S. ,CA
+2024-2025,2025,2024,10,Toby Fournier,97,Duke,F,6,2,Crestwood Secondary (CAN),Crestwood Secondary ,CAN
+2024-2025,2025,2024,11,Morgan Cheli,97,UConn,G,6,2,Archbishop Mitty H.S. (CA),Archbishop Mitty H.S. ,CA
+2024-2025,2025,2024,12,Justice Carlton,97,Texas,F,6,2,Seven Lakes H.S. (TX),Seven Lakes H.S. ,TX
+2024-2025,2025,2024,13,Kayleigh Heckel,97,USC,G,5,9,Long Island Lutheran H.S. (NY),Long Island Lutheran H.S. ,NY
+2024-2025,2025,2024,14,Madisen McDaniel,97,South Carolina,PG,5,9,Bishop McNamara H.S. (MD),Bishop McNamara H.S. ,MD
+2024-2025,2025,2024,15,Alivia McGill,97,Florida,PG,5,9,Hopkins H.S. (MN),Hopkins H.S. ,MN
+2024-2025,2025,2024,16,Avery Howell,97,USC,G,5,11,Boise H.S. (ID),Boise H.S. ,ID
+2024-2025,2025,2024,17,Arianna Roberson,97,Duke,F,6,4,Clark H.S. (TX),Clark H.S. ,TX
+2024-2025,2025,2024,18,Kendall Dudley,96,UCLA,W,6,2,Sidwell Friends School (DC),Sidwell Friends School ,DC
+2024-2025,2025,2024,19,Imari Berry,96,Louisville,G,5,10,Clarksville H.S. (TN),Clarksville H.S. ,TN
+2024-2025,2025,2024,20,Olivia Olson,96,Michigan,G,6,1,Benilde Saint Margaret High (MN),Benilde Saint Margaret High ,MN
+2024-2025,2025,2024,21,Zamareya Jones,96,NC State,PG,5,7,North Pitt H.S. (NC),North Pitt H.S. ,NC
+2024-2025,2025,2024,22,Berry Wallace,96,Illinois,W,6,1,Pickerington Central H.S. (OH),Pickerington Central H.S. ,OH
+2024-2025,2025,2024,23,Mackenly Randolph,96,Louisville,F,6,0,Sierra Canyon H.S. (CA),Sierra Canyon H.S. ,CA
+2024-2025,2025,2024,24,Tajianna Avant-Roberts,96,Louisville,G,5,10,IMG Academy (FL),IMG Academy ,IMG
+2024-2025,2025,2024,25,Britt Prince,96,Nebraska,PG,5,11,Elkhorn North H.S. (NE),Elkhorn North H.S. ,NE
+2024-2025,2025,2024,26,Avary Cain,96,UCLA,G,6,1,Saint Joseph H.S. (CA),Saint Joseph H.S. ,CA
+2024-2025,2025,2024,27,Kiyomi McMiller,96,Rutgers,PG,5,9,Life Center Academy (NJ),Life Center Academy ,NJ
+2024-2025,2025,2024,28,Adhel Tac,96,South Carolina,P,6,5,South Grand Prairie H.S. (TX),South Grand Prairie H.S. ,TX
+2024-2025,2025,2024,29,Danielle Carnegie,95,Georgia Tech,G,5,8,Grayson H.S. (GA),Grayson H.S. ,GA
+2024-2025,2025,2024,30,Zania Socka-Nguemen,95,UCLA,F,6,3,Sidwell Friends School (DC),Sidwell Friends School ,DC
+2024-2025,2025,2024,31,Me'Arah O'Neal,95,Florida,P,6,3,Episcopal H.S. (TX),Episcopal H.S. ,TX
+2024-2025,2025,2024,32,Blanca Thomas,95,North Carolina,P,6,5,Charlotte Catholic H.S. (NC),Charlotte Catholic H.S. ,NC
+2024-2025,2025,2024,33,Leah Harmon,95,Miami,PG,5,6,IMG Academy (FL),IMG Academy ,IMG
+2024-2025,2025,2024,34,Katie Fiso,95,Oregon,PG,5,11,Garfield H.S. (WA),Garfield H.S. ,WA
+2024-2025,2025,2024,35,Kyndal Walker,95,Maryland,PG,5,9,Saint Johns College H.S. (MD),Saint Johns College H.S. ,MD
+2024-2025,2025,2024,36,Eris Lester,95,Alabama,G,5,11,Montverde Academy (FL),Montverde Academy ,FL
+2024-2025,2025,2024,37,Kaniya Boyd,95,Tennessee,G,5,9,Centennial H.S. (NV),Centennial H.S. ,NV
+2024-2025,2025,2024,38,Bryanna Preston,95,Texas,PG,5,9,Wesleyan School (GA),Wesleyan School ,GA
+2024-2025,2025,2024,39,Devin Coppinger,95,Washington,G,5,10,Nooksack Valley H.S. (WA),Nooksack Valley H.S. ,WA
+2024-2025,2025,2024,40,Alexandra Blue,95,Kentucky,W,6,2,Lake Highland Prep (FL),Lake Highland Prep ,FL
+2024-2025,2025,2024,41,Ahnay Adams,95,Miami,PG,5,6,Tilton School (NH),Tilton School ,NH
+2024-2025,2025,2024,42,Ava Heiden,95,Iowa,P,6,4,Sherwood H.S. (OR),Sherwood H.S. ,OR
+2024-2025,2025,2024,43,Tahj Bloom,94,Mississippi State,F,6,3,DME Academy (FL),DME Academy ,FL
+2024-2025,2025,2024,44,Ume Kennedy,94,Stanford,F,6,3,McDonough H.S. (MD),McDonough H.S. ,MD
+2024-2025,2025,2024,45,Breanna Williams,94,Maryland,F,6,2,Skyview H.S. (MT),Skyview H.S. ,MT
+2024-2025,2025,2024,46,Zya Vann,94,Oklahoma,G,5,9,Bethany H.S. (OK),Bethany H.S. ,OK
+2024-2025,2025,2024,47,Vivian Iwuchukwu,94,USC,F,6,3,Montverde Academy (FL),Montverde Academy ,FL
+2024-2025,2025,2024,48,Tabitha Betson,94,Colorado,W,6,2,DME Academy (FL),DME Academy ,DME
+2024-2025,2025,2024,49,Chazadi Wright,94,Georgia Tech,PG,5,4,Wesleyan School (GA),Wesleyan School ,GA
+2024-2025,2025,2024,50,Devyn Quigley,94,NC State,W,5,11,Manchester Township H.S. (NJ),Manchester Township H.S. ,NJ
+2024-2025,2025,2024,51,Kayla Nelms,94,Baylor,F,6,1,Miami Country Day School (FL),Miami Country Day School ,FL
+2024-2025,2025,2024,52,Ava Watson,94,Ohio State,PG,5,8,Buford H.S. (GA),Buford H.S. ,GA
+2024-2025,2025,2024,53,Wrenwyck Ijiwoye,94,Stanford,PG,5,6,Desert Vista H.S. (AZ),Desert Vista H.S. ,AZ
+2024-2025,2025,2024,54,Rian Forestier,94,USC,G,5,11,Brandeis H.S. (TX),Brandeis H.S. ,TX
+2024-2025,2025,2024,55,Xamiya Walton,94,Northwestern,PG,5,5,Butler College Prep (IL),Butler College Prep ,IL
+2024-2025,2025,2024,56,Kamryn Mafua,94,California,F,6,2,Folsom H.S. (CA),Folsom H.S. ,CA
+2024-2025,2025,2024,57,Jordyn Poole,94,Purdue,PG,5,7,R. Nelson Snider H.S. (IN),R. Nelson Snider H.S. ,IN
+2024-2025,2025,2024,58,Aaliyah Guyton,94,Iowa,G,5,8,Peoria H.S. (IL),Peoria H.S. ,IL
+2024-2025,2025,2024,59,Lanie Grant,94,North Carolina,PG,5,9,James River H.S. (VA),James River H.S. ,VA
+2024-2025,2025,2024,60,Taliyah Parker,94,Texas A&M,G,6,1,South Grand Prairie H.S. (TX),South Grand Prairie H.S. ,TX
+2024-2025,2025,2024,61,Faith Wiseman,93,Indiana,F,6,3,Indian Creek H.S. (IN),Indian Creek H.S. ,IN
+2024-2025,2025,2024,62,Juliann Woodard,93,Michigan State,F,6,0,Jennings County H.S. (IN),Jennings County H.S. ,IN
+2024-2025,2025,2024,63,McKenna Johnson,93,Minnesota,G,5,9,Wilmot Union H.S. (WI),Wilmot Union H.S. ,WI
+2024-2025,2025,2024,64,Kalysta Martin,93,Texas Tech,G,6,1,Providence Catholic School (TX),Providence Catholic School ,TX
+2024-2025,2025,2024,65,Teagan Mallegni,93,Iowa,G,6,0,McFarland H.S. (WI),McFarland H.S. ,WI
+2024-2025,2025,2024,66,Athena Tomlinson,93,Boston College,PG,5,5,Clovis West H.S. (CA),Clovis West H.S. ,CA
+2024-2025,2025,2024,67,Indya Davis,93,Georgia,G,5,9,West Bloomfield H.S. (MI),West Bloomfield H.S. ,MI
+2024-2025,2025,2024,68,Kayl Peterson,93,Virginia Tech,W,6,0,Waupun H.S. (WI),Waupun H.S. ,WI
+2024-2025,2025,2024,69,Jordan Zubich,93,North Carolina,G,5,11,Mountain Iron-Buhl H.S.,Mountain Iron-Buhl H.S.,
+2024-2025,2025,2024,70,Brooke Walker,93,Utah,PG,5,8,Andover H.S. (KS),Andover H.S. ,KS
+2024-2025,2025,2024,71,Jamia Woolfolk,93,Georgia,F,6,3,Manchester H.S. (VA),Manchester H.S. ,VA
+2024-2025,2025,2024,72,Caya Smith,93,Oklahoma,W,5,11,Putnam City West H.S. (OK),Putnam City West H.S. ,OK
+2024-2025,2025,2024,73,Ines Goryanova,93,Baylor,PG,5,8,DME Academy (FL),DME Academy ,DME
+2024-2025,2025,2024,74,Trinity Turner,93,Georgia,PG,5,6,Dr. Phillips H.S. (FL),Dr. Phillips H.S. ,FL
+2024-2025,2025,2024,75,Roisin Grandberry,92,Loyola Chicago,F,6,3,Rolling Meadows H.S. (IL),Rolling Meadows H.S. ,IL
+2024-2025,2025,2024,76,Zahra King,92,California,G,5,10,Westtown School (PA),Westtown School ,PA
+2024-2025,2025,2024,77,Delaney Gibb,92,BYU,PG,5,10,Raymond H.S. (CAN),Raymond H.S. ,CAN
+2024-2025,2025,2024,78,Destiny Agubata,92,West Virginia,W,6,0,Santiago H.S. (CA),Santiago H.S. ,CA
+2024-2025,2025,2024,79,Jordan Thomas,92,West Virginia,P,6,3,Hebron H.S. (TX),Hebron H.S. ,TX
+2024-2025,2025,2024,80,Janessa Cotton,92,Duke,W,6,2,Mater Dei H.S. (CA),Mater Dei H.S. ,CA
+2024-2025,2025,2024,81,Lauryn Swann,92,Arizona,PG,5,7,Long Island Lutheran H.S. (NY),Long Island Lutheran H.S. ,NY
+2024-2025,2025,2024,82,Tianna Thompson,92,Georgia Tech,G,5,10,The Galloway School (GA),The Galloway School ,GA
+2024-2025,2025,2024,83,Katie Vasecka,92,South Dakota State,W,6,2,Tea H.S.,Tea H.S.,
+2024-2025,2025,2024,84,Grace Oliver,92,Colorado,W,6,1,Noble & Greenough School (MA),Noble & Greenough School ,MA
+2024-2025,2025,2024,85,Keira Scott,92,Syracuse,W,6,2,DME Academy (FL),DME Academy ,DME
+2024-2025,2025,2024,86,Taylor Barner,92,Memphis,PG,5,8,Panther Creek H.S. (NC),Panther Creek H.S. ,NC
+2024-2025,2025,2024,87,Harper Peterson,92,Stanford,F,6,3,Whitney H.S. (CA),Whitney H.S. ,CA
+2024-2025,2025,2024,88,Izela Arenas,92,Louisville,G,5,9,Sierra Canyon H.S. (CA),Sierra Canyon H.S. ,CA
+2024-2025,2025,2024,89,Teagan Colvin,92,UNLV,PG,5,7,Coeur D'Alene H.S. (ID),Coeur D'Alene H.S. ,ID
+2024-2025,2025,2024,90,Jada Richard,92,LSU,PG,5,6,Lafayette Christian Academy (LA),Lafayette Christian Academy ,LA
+2024-2025,2025,2024,91,Jadyn Wooten,92,Oklahoma State,PG,5,5,Blue Valley H.S. (KS),Blue Valley H.S. ,KS
+2024-2025,2025,2024,92,Laura Williams,91,USC,F,6,1,Paul VI H.S. (VA),Paul VI H.S. ,VI
+2024-2025,2025,2024,93,Sinai Douglas,91,Michigan State,PG,5,5,Start H.S. (OH),Start H.S. ,OH
+2024-2025,2025,2024,94,Taylor Stremlow,91,Iowa,G,5,8,Verona H.S. (WI),Verona H.S. ,WI
+2024-2025,2025,2024,95,Ella Hobbs,91,Ohio State,F,6,4,1 of 1 Academy (NC),1 of 1 Academy ,NC
+2024-2025,2025,2024,96,Summer Davis,91,Georgia,PG,5,9,West Bloomfield H.S. (MI),West Bloomfield H.S. ,MI
+2024-2025,2025,2024,97,Jasmine Bascoe,91,Villanova,PG,5,7,King's Christian Collegiate (CAN),King's Christian Collegiate ,CAN
+2024-2025,2025,2024,98,Hana Belibi,91,Harvard,W,6,0,Regis Jesuit H.S. (CO),Regis Jesuit H.S. ,CO
+2024-2025,2025,2024,99,Breona Hurd,91,Virginia,F,6,1,Waynesville H.S. (MO),Waynesville H.S. ,MO
+2024-2025,2025,2024,100,Ariel Little,91,St. John's,PG,5,4,South Shore H.S. (NY),#REF!,NY
+2023-2024,2024,2023,1,Judea Watkins,98,USC,G,6,0,Sierra Canyon H.S. (CA),Sierra Canyon H.S. ,CA
+2023-2024,2024,2023,2,Mikaylah Williams,98,LSU,G,6,0,Parkway H.S. (LA),Parkway H.S. ,LA
+2023-2024,2024,2023,3,Jadyn Donovan,97,Duke,G,6,0,Sidwell Friends School (DC),Sidwell Friends School ,DC
+2023-2024,2024,2023,4,Ciera Toomey,97,North Carolina,P,6,3,Dunmore H.S. (PA),Dunmore H.S. ,PA
+2023-2024,2024,2023,5,Hannah Hidalgo,97,Notre Dame,PG,5,6,Paul VI H.S. (NJ),Paul VI H.S. ,VI
+2023-2024,2024,2023,6,Kamorea Arnold,97,UConn,PG,5,9,Germantown H.S. (WI),Germantown H.S. ,WI
+2023-2024,2024,2023,7,Aalyah Del Rosario,97,LSU,P,6,5,The Webb School,The Webb School,
+2023-2024,2024,2023,8,Montaya Dew,97,Arizona,F,6,2,Centennial H.S. (NV),Centennial H.S. ,NV
+2023-2024,2024,2023,9,Zoe Brooks,97,NC State,G,5,10,Saint John Vianney High (NJ),Saint John Vianney High ,NJ
+2023-2024,2024,2023,10,Courtney Ogden,97,Stanford,W,5,11,Westminster School (GA),Westminster School ,GA
+2023-2024,2024,2023,11,Taliah Scott,97,Arkansas,G,5,9,Saint John's Country Day School (FL),Saint John's Country Day School ,FL
+2023-2024,2024,2023,12,Madison Booker,96,Texas,W,6,1,Germantown H.S. (MS),Germantown H.S. ,MS
+2023-2024,2024,2023,13,Milaysia Fulwiley,96,South Carolina,PG,5,6,W. J. Keenan H.S. (SC),W. J. Keenan H.S. ,SC
+2023-2024,2024,2023,14,Breya Cunningham,96,Arizona,P,6,4,La Jolla Country Day School (CA),La Jolla Country Day School ,CA
+2023-2024,2024,2023,15,Ashlynn Shade,96,UConn,G,5,9,La Lumiere School (IN),La Lumiere School ,IN
+2023-2024,2024,2023,16,Cassandre Prosper,96,Notre Dame,F,6,2,Cairine Wilson Secondary School (CAN),Cairine Wilson Secondary School ,CAN
+2023-2024,2024,2023,17,Chloe Kitts,96,South Carolina,F,6,2,Faith Christian Academy (FL),Faith Christian Academy ,FL
+2023-2024,2024,2023,18,Riley Nelson,96,Maryland,W,6,0,Bullis School (MD),Bullis School ,MD
+2023-2024,2024,2023,19,Laila Reynolds,96,Florida,G,6,0,Shabach Christian Academy (MD),Shabach Christian Academy ,MD
+2023-2024,2024,2023,20,Emma Risch,96,Notre Dame,G,6,1,Palm Bay Magnet H.S. (FL),Palm Bay Magnet H.S. ,FL
+2023-2024,2024,2023,21,Jada Williams,96,Arizona,PG,5,6,La Jolla Country Day School (CA),La Jolla Country Day School ,CA
+2023-2024,2024,2023,22,Essence Cody,96,Alabama,P,6,3,Valdosta H.S. (GA),Valdosta H.S. ,GA
+2023-2024,2024,2023,23,Sahara Williams,96,Oklahoma,W,5,10,West H.S. (IA),West H.S. ,IA
+2023-2024,2024,2023,24,Kymora Johnson,96,Virginia,G,5,7,Saint Annes-Belfield H.S. (VA),Saint Annes-Belfield H.S. ,VA
+2023-2024,2024,2023,25,Tessa Johnson,95,South Carolina,G,5,10,Saint Michael Albertville High,Saint Michael Albertville High,
+2023-2024,2024,2023,26,Sofia Bell,95,Oregon,W,6,1,Jesuit H.S. (OR),Jesuit H.S. ,OR
+2023-2024,2024,2023,27,Oluchi Okananwa,95,Duke,G,5,9,Worcester Academy (MA),Worcester Academy ,MA
+2023-2024,2024,2023,28,Sayvia Sellers,95,Washington,PG,5,7,Anchorage Christian H.S. (AK),Anchorage Christian H.S. ,AK
+2023-2024,2024,2023,29,Delaney Thomas,95,Duke,F,6,2,St. John's College H.S. (DC),St. John's College H.S. ,DC
+2023-2024,2024,2023,30,Reniya Kelly,95,North Carolina,PG,5,5,Hoover H.S. (AL),Hoover H.S. ,AL
+2023-2024,2024,2023,31,Addyson Brown,95,Iowa State,W,6,2,Derby Senior H.S. (KS),Derby Senior H.S. ,KS
+2023-2024,2024,2023,32,Amanda Muse,95,UCLA,P,6,4,Heritage H.S. (CA),Heritage H.S. ,CA
+2023-2024,2024,2023,33,Amari Whiting,95,BYU,PG,5,10,Timpview H.S. (UT),Timpview H.S. ,UT
+2023-2024,2024,2023,34,S'mya Nichols,95,Kansas,W,6,0,Shawnee Mission West H.S. (KS),Shawnee Mission West H.S. ,KS
+2023-2024,2024,2023,35,Kylie Marshall,95,Texas A&M,G,5,11,Lake Ridge H.S. (TX),Lake Ridge H.S. ,TX
+2023-2024,2024,2023,36,Letycia Vasconcelos,95,Baylor,P,6,7,Montverde Academy (FL),Montverde Academy ,FL
+2023-2024,2024,2023,37,Sunaja Agara,95,Stanford,G,5,11,Hopkins H.S. (MN),Hopkins H.S. ,MN
+2023-2024,2024,2023,38,Gisella Maul,94,Texas,G,5,11,Cedar Park H.S. (TX),Cedar Park H.S. ,TX
+2023-2024,2024,2023,39,Chloe Clardy,94,Stanford,G,5,9,Conway H.S. (AR),Conway H.S. ,AR
+2023-2024,2024,2023,40,Sahnya Jah,94,South Carolina,W,6,1,Montverde Academy (FL),Montverde Academy ,FL
+2023-2024,2024,2023,41,Qadence Samuels,94,UConn,F,6,2,Bishop McNamara H.S. (MD),Bishop McNamara H.S. ,MD
+2023-2024,2024,2023,42,Sammie Wagner,94,Oregon,W,6,1,Ronald Reagan H.S. (TX),Ronald Reagan H.S. ,TX
+2023-2024,2024,2023,43,Amiyah Reynolds,94,Purdue,G,6,0,Washington H.S. (IN),Washington H.S. ,IN
+2023-2024,2024,2023,44,Angelica Velez,94,LSU,PG,5,7,The Webb School,The Webb School,
+2023-2024,2024,2023,45,Olivia McGhee,94,Virginia,G,6,2,IMG Academy (FL),IMG Academy ,IMG
+2023-2024,2024,2023,46,Ari Long,94,Washington,PG,6,0,Valley View H.S. (CA),Valley View H.S. ,CA
+2023-2024,2024,2023,47,Jalynn Bristow,94,Iowa State,F,6,2,Holliday H.S.,Holliday H.S.,
+2023-2024,2024,2023,48,Quanirah Cherry-Montague,94,Mississippi State,P,6,6,Atlantic City H.S. (NJ),Atlantic City H.S. ,NJ
+2023-2024,2024,2023,49,Malia Samuels,94,USC,PG,5,6,Garfield H.S. (WA),Garfield H.S. ,WA
+2023-2024,2024,2023,50,Reychel Douglas,94,Alabama,G,6,0,Millbrook H.S. (NC),Millbrook H.S. ,NC
+2023-2024,2024,2023,51,Sole Williams,94,Texas A&M,G,5,9,Princeton H.S. (OH),Princeton H.S. ,OH
+2023-2024,2024,2023,52,Jules LaMendola,94,Indiana,G,6,1,Coppell H.S. (TX),Coppell H.S. ,TX
+2023-2024,2024,2023,53,Grace Slaughter,94,Missouri,W,6,1,Grain Valley R-5 H.S. (MO),Grain Valley R-5 H.S. ,MO
+2023-2024,2024,2023,54,Jasmine Brown,93,Mississippi State,G,5,9,Example Academy (IL),Example Academy ,IL
+2023-2024,2024,2023,55,Mallory Collier,93,NC State,P,6,3,Bartlett H.S. (TN),Bartlett H.S. ,TN
+2023-2024,2024,2023,56,Laci Steele,93,NC State,G,5,11,Edmond North H.S. (OK),Edmond North H.S. ,OK
+2023-2024,2024,2023,57,Audi Crooks,93,Iowa State,P,6,3,Bishop Garrigan H.S. (IA),Bishop Garrigan H.S. ,IA
+2023-2024,2024,2023,58,Carys Baker,93,Virginia Tech,F,6,1,Loomis Chaffee School (CT),Loomis Chaffee School ,CT
+2023-2024,2024,2023,59,Taylor Woodson,93,Michigan,G,6,0,Hopkins H.S. (MN),Hopkins H.S. ,MN
+2023-2024,2024,2023,60,Lisa Thompson,93,DePaul,G,5,7,Example Academy (IL),Example Academy ,IL
+2023-2024,2024,2023,61,Jenna Lawrence,93,Arkansas,F,6,3,Farmington H.S. (AR),Farmington H.S. ,AR
+2023-2024,2024,2023,62,Jordan Wood,93,Duke,F,6,2,Carmel Catholic H.S. (IL),Carmel Catholic H.S. ,IL
+2023-2024,2024,2023,63,Khamil Pierre,93,Vanderbilt,F,6,2,Perry H.S. (AZ),Perry H.S. ,AZ
+2023-2024,2024,2023,64,Fadima Tall,93,Princeton,W,5,11,Georgetown Visitation Preparatory School (DC),Georgetown Visitation Preparatory School ,DC
+2023-2024,2024,2023,65,Mackenzie Nelson,93,Virginia Tech,PG,5,8,St. Luke's School (CT),St. Luke's School ,CT
+2023-2024,2024,2023,66,Sarah Rambus,93,Oregon,F,6,3,IMG Academy (FL),IMG Academy ,IMG
+2023-2024,2024,2023,67,Madisyn Jordan,93,Wake Forest,W,6,1,Panther Creek H.S. (NC),Panther Creek H.S. ,NC
+2023-2024,2024,2023,68,Jenna Villa,93,Washington State,G,6,1,Arlington H.S. (WA),Arlington H.S. ,WA
+2023-2024,2024,2023,69,Samyha Suffren,93,Virginia Tech,PG,5,8,Cannon School (NC),Cannon School ,NC
+2023-2024,2024,2023,70,Diana Collins,93,Ohio State,PG,5,6,Brookwood H.S. (GA),Brookwood H.S. ,GA
+2023-2024,2024,2023,71,Maddie Cox,93,NC State,F,6,2,Flower Mound H.S. (TX),Flower Mound H.S. ,TX
+2023-2024,2024,2023,72,Alyssa Latham,93,Syracuse,F,6,1,Homewood-Flossmoor H.S. (IL),Homewood-Flossmoor H.S. ,IL
+2023-2024,2024,2023,73,Janae Kent,93,LSU,W,6,1,Oak Forest H.S. (IL),Oak Forest H.S. ,IL
+2023-2024,2024,2023,74,Macy Brown,93,Michigan,G,6,0,East Grand Rapids H.S. (MI),East Grand Rapids H.S. ,MI
+2023-2024,2024,2023,75,Kennedy Sanders,93,Colorado,PG,5,8,Chaska H.S. (MN),Chaska H.S. ,MN
+2023-2024,2024,2023,76,Erica Moon,93,Texas A&M,PG,5,6,St. Francis H.S. (GA),St. Francis H.S. ,GA
+2023-2024,2024,2023,77,Katy Eidle,93,Michigan,PG,5,11,John Hersey H.S. (IL),John Hersey H.S. ,IL
+2023-2024,2024,2023,78,Ruthie Loomis-Goltl,93,Colorado,F,6,3,Bridgeport H.S.,Bridgeport H.S.,
+2023-2024,2024,2023,79,Rashunda Jones,93,Purdue,PG,5,8,Washington H.S. (IN),Washington H.S. ,IN
+2023-2024,2024,2023,80,Emily Fisher,93,Maryland,W,6,1,Libertyville H.S. (IL),Libertyville H.S. ,IL
+2023-2024,2024,2023,81,Victoria Flores,93,TCU,PG,5,7,Duncanville H.S. (TX),Duncanville H.S. ,TX
+2023-2024,2024,2023,82,Donovyn Hunter,93,Oregon State,G,5,11,South Medford H.S. (OR),South Medford H.S. ,OR
+2023-2024,2024,2023,83,Lenee Beaumont,93,Indiana,PG,6,0,Benet Academy (IL),Benet Academy ,IL
+2023-2024,2024,2023,84,Ava Jones,93,Iowa,W,6,2,Nickerson H.S.,Nickerson H.S.,
+2023-2024,2024,2023,85,Rylie Theuerkauf,93,Wake Forest,G,5,9,Tenafly H.S. (NJ),Tenafly H.S. ,NJ
+2023-2024,2024,2023,86,Mjracle Sheppard,93,Mississippi State,PG,5,10,Montverde Academy (FL),Montverde Academy ,FL
+2023-2024,2024,2023,87,Naomi Jones,93,Alabama,P,6,3,Jackson H.S. (AL),Jackson H.S. ,AL
+2023-2024,2024,2023,88,Zakiyah Stephenson,93,Ole Miss,PG,5,5,Princess Anne H.S. (VA),Princess Anne H.S. ,VA
+2023-2024,2024,2023,89,Loghan Johnson,92,Texas Tech,G,5,8,Houston Christian H.S. (TX),Houston Christian H.S. ,TX
+2023-2024,2024,2023,90,Rylee Grays,92,North Carolina,P,6,3,Pearland H.S. (TX),Pearland H.S. ,TX
+2023-2024,2024,2023,91,Logan Nissley,92,Nebraska,PG,5,10,Century H.S.,Century H.S.,
+2023-2024,2024,2023,92,Jade Clack,92,TCU,W,6,1,Austin H.S. (TX),Austin H.S. ,TX
+2023-2024,2024,2023,93,Chloe Briggs,92,Washington,G,5,10,Ontario Christian H.S. (CA),Ontario Christian H.S. ,CA
+2023-2024,2024,2023,94,Khia Miller,91,East Carolina,G,5,10,Sidwell Friends School (DC),Sidwell Friends School ,DC
+2023-2024,2024,2023,95,Clara Strack,91,Virginia Tech,P,6,4,Hamburg H.S. (NY),Hamburg H.S. ,NY
+2023-2024,2024,2023,96,Skylar Jones,91,Arizona,W,6,0,Whitney Young H.S. (IL),Whitney Young H.S. ,IL
+2023-2024,2024,2023,97,Mary Ashley Groot,91,Purdue,F,6,2,Dalton School (NY),Dalton School ,NY
+2023-2024,2024,2023,98,Grace Grocholski,91,Minnesota,G,5,10,Kettle Moraine H.S. (WI),Kettle Moraine H.S. ,WI
+2023-2024,2024,2023,99,J'Adore Young,91,Ole Miss,F,6,4,Greenville Senior H.S. (SC),Greenville Senior H.S. ,SC
+2023-2024,2024,2023,100,Miyah Verse,91,Georgia,F,6,1,Arizona College Prep (AZ),Arizona College Prep ,AZ
+2022-2023,2023,2022,1,Lauren Betts,98,Stanford,P,6,7,Grandview H.S. (CO),Grandview H.S. ,CO
+2022-2023,2023,2022,2,Kiki Rice,98,UCLA,PG,5,11,Sidwell Friends School (DC),Sidwell Friends School ,DC
+2022-2023,2023,2022,3,Janiah Barker,98,Texas A&M,F,6,2,Montverde Academy (FL),Montverde Academy ,FL
+2022-2023,2023,2022,4,Ayanna Patterson,98,UConn,W,6,2,Homestead H.S. (IN),Homestead H.S. ,IN
+2022-2023,2023,2022,5,Isuneh Brady,98,UConn,P,6,3,Cathedral Catholic H.S. (CA),Cathedral Catholic H.S. ,CA
+2022-2023,2023,2022,6,Timea Gardiner,98,Oregon State,F,6,3,Fremont H.S. (UT),Fremont H.S. ,UT
+2022-2023,2023,2022,7,Chance Gray,97,Oregon,PG,5,9,Winton Woods H.S. (OH),Winton Woods H.S. ,OH
+2022-2023,2023,2022,8,Aaliyah Gayles,97,USC,PG,5,9,Spring Valley H.S. (NV),Spring Valley H.S. ,NV
+2022-2023,2023,2022,9,Maya Nnaji,97,Arizona,F,6,4,Hopkins H.S. (MN),Hopkins H.S. ,MN
+2022-2023,2023,2022,10,Raegan Beers,97,Oregon State,P,6,2,Valor Christian H.S. (CO),Valor Christian H.S. ,CO
+2022-2023,2023,2022,11,Justine Pissott,97,Tennessee,W,6,2,Red Bank Catholic High (NJ),Red Bank Catholic High ,NJ
+2022-2023,2023,2022,12,Ashlyn Watkins,97,South Carolina,P,6,3,Cardinal Newman School (SC),Cardinal Newman School ,SC
+2022-2023,2023,2022,13,Grace VanSlooten,97,Oregon,F,6,3,IMG Academy (FL),IMG Academy ,FL
+2022-2023,2023,2022,14,Ta'Niya Latson,97,Florida State,G,5,8,American Heritage H.S. (FL),American Heritage H.S. ,FL
+2022-2023,2023,2022,15,Ruby Whitehorn,97,Clemson,G,6,0,Detroit Edison Public Academy (MI),Detroit Edison Public Academy ,MI
+2022-2023,2023,2022,16,Ashlon Jackson,96,Duke,G,5,10,Hardin Jefferson High (TX),Hardin Jefferson High ,TX
+2022-2023,2023,2022,17,Darianna Littlepage-Buggs,96,Baylor,W,6,1,Classen H.S. (OK),Classen H.S. ,OK
+2022-2023,2023,2022,18,Talaysia Cooper,96,South Carolina,PG,6,0,East Clarendon H.S.,East Clarendon H.S.,
+2022-2023,2023,2022,19,Gabriela Jaquez,96,UCLA,F,6,0,Adolfo Camarillo H.S. (CA),Adolfo Camarillo H.S. ,CA
+2022-2023,2023,2022,20,Indya Nivar,96,Stanford,G,5,9,Apex Friendship H.S. (NC),Apex Friendship H.S. ,NC
+2022-2023,2023,2022,21,Paris Clark,96,Arizona,G,5,8,Long Island Lutheran H.S. (NY),Long Island Lutheran H.S. ,NY
+2022-2023,2023,2022,22,Londynn Jones,95,UCLA,PG,5,5,Santiago H.S. (CA),Santiago H.S. ,CA
+2022-2023,2023,2022,23,Cotie McMahon,95,Ohio State,W,5,11,Centerville H.S. (OH),Centerville H.S. ,OH
+2022-2023,2023,2022,24,Tonie Morgan,95,Georgia Tech,PG,5,10,Florida H.S. (FL),Florida H.S. ,FL
+2022-2023,2023,2022,25,Kyla Oldacre,95,Miami,P,6,5,William Mason H.S. (OH),William Mason H.S. ,OH
+2022-2023,2023,2022,26,Flau'jae Johnson,95,LSU,G,5,10,Sprayberry H.S. (GA),Sprayberry H.S. ,GA
+2022-2023,2023,2022,27,Paulina Paris,95,North Carolina,PG,5,7,Saddle River Day School (NJ),Saddle River Day School ,NJ
+2022-2023,2023,2022,28,Mara Braun,95,Minnesota,PG,5,11,Wayzata H.S. (MN),Wayzata H.S. ,MN
+2022-2023,2023,2022,29,KK Bransford,95,Notre Dame,G,5,10,Mount Notre Dame H.S. (OH),Mount Notre Dame H.S. ,OH
+2022-2023,2023,2022,30,Lazaria Spearman,95,Miami,F,6,3,Dacula H.S. (GA),Dacula H.S. ,GA
+2022-2023,2023,2022,31,Kailyn Gilbert,95,Arizona,PG,5,8,IMG Academy (FL),IMG Academy ,FL
+2022-2023,2023,2022,32,Maggie Mendelson,95,Nebraska,P,6,6,Fremont H.S. (UT),Fremont H.S. ,UT
+2022-2023,2023,2022,33,Shay Bollin,95,Duke,F,6,3,Bridgewater-Raynham Regional High S (MA),Bridgewater-Raynham Regional High S ,MA
+2022-2023,2023,2022,34,Ndjakalenga Mwenentanda,95,Texas,W,6,1,Washington H.S. (SD),Washington H.S. ,SD
+2022-2023,2023,2022,35,Nyla Harris,95,Louisville,F,6,2,Lake Highland Prep (FL),Lake Highland Prep ,FL
+2022-2023,2023,2022,36,Jennah Isai,95,Oregon,W,5,11,Valley Vista H.S. (AZ),Valley Vista H.S. ,AZ
+2022-2023,2023,2022,37,Sydney Bowles,95,Texas A&M,W,6,1,Woodward Academy (GA),Woodward Academy ,GA
+2022-2023,2023,2022,38,Zyanna Walker,95,Louisville,G,6,0,Wichita Heights H.S. (KS),Wichita Heights H.S. ,KS
+2022-2023,2023,2022,39,Amaya Battle,95,Minnesota,PG,5,11,Hopkins H.S. (MN),Hopkins H.S. ,MN
+2022-2023,2023,2022,40,Hannah Stines,95,Washington,G,5,10,Orangewood Academy (CA),Orangewood Academy ,CA
+2022-2023,2023,2022,41,Ysabella Fontleroy,95,Baylor,W,6,1,Kickapoo H.S. (MO),Kickapoo H.S. ,MO
+2022-2023,2023,2022,42,Brianna McDaniel,94,Maryland,G,5,10,Kenwood Academy H.S. (IL),Kenwood Academy H.S. ,IL
+2022-2023,2023,2022,43,Tabitha Amanze,94,Princeton,F,6,4,Blair Academy (NJ),Blair Academy ,NJ
+2022-2023,2023,2022,44,Carleigh Wenzel,94,Virginia Tech,G,5,11,Antonian College Preparatory H.S. (TX),Antonian College Preparatory H.S. ,TX
+2022-2023,2023,2022,45,Hannah Stuelke,94,Iowa,W,6,2,Washington Senior H.S. (IA),Washington Senior H.S. ,IA
+2022-2023,2023,2022,46,Madison St. Rose,94,Princeton,G,5,10,Saint John Vianney High (NJ),Saint John Vianney High ,NJ
+2022-2023,2023,2022,47,Savannah Henderson,94,Georgia,W,6,1,Timber Creek H.S. (FL),Timber Creek H.S. ,FL
+2022-2023,2023,2022,48,Alyssa Crockett,94,Michigan,F,6,1,Westfield H.S. (IN),Westfield H.S. ,IN
+2022-2023,2023,2022,49,Christeen Iwuala,94,UCLA,P,6,3,Ronald Reagan H.S. (TX),Ronald Reagan H.S. ,TX
+2022-2023,2023,2022,50,Sydney Shaw,94,Auburn,PG,5,6,DME Academy (FL),DME Academy ,FL
+2022-2023,2023,2022,51,Amaya Bonner,94,California,G,6,0,Bishop O'Dowd H.S. (CA),Bishop O'Dowd H.S. ,CA
+2022-2023,2023,2022,52,Gia Cooke,94,Maryland,PG,5,8,Bishop McNamara H.S. (MD),Bishop McNamara H.S. ,MD
+2022-2023,2023,2022,53,Elle Ladine,94,Washington,G,5,11,Pinewood School (CA),Pinewood School ,CA
+2022-2023,2023,2022,54,Bailey Maupin,94,Texas Tech,G,5,11,Gruver H.S. (TX),Gruver H.S. ,TX
+2022-2023,2023,2022,55,Mallory Heyer,94,Minnesota,F,6,1,Chaska H.S. (MN),Chaska H.S. ,MN
+2022-2023,2023,2022,56,Shay Ciezki,94,Penn State,PG,5,7,Saint Mary's H.S. (NY),Saint Mary's H.S. ,NY
+2022-2023,2023,2022,57,Imani Lester,94,Louisville,P,6,3,North Raleigh Christian Academy (NC),North Raleigh Christian Academy ,NC
+2022-2023,2023,2022,58,Sa'Myah Smith,94,LSU,F,6,2,DeSoto H.S. (TX),DeSoto H.S. ,TX
+2022-2023,2023,2022,59,Kennedy Basham,94,Oregon,P,6,7,PHH Prep (AZ),PHH Prep ,AZ
+2022-2023,2023,2022,60,Mila Reynolds,94,Maryland,G,6,2,Washington H.S. (IN),Washington H.S. ,IN
+2022-2023,2023,2022,61,Kara Dunn,94,Georgia Tech,G,5,11,Mount Paran Christian School (GA),Mount Paran Christian School ,GA
+2022-2023,2023,2022,62,Kyla Abraham,93,Baylor,P,6,4,Smithfield H.S. (VA),Smithfield H.S. ,VA
+2022-2023,2023,2022,63,Amina Muhammad,93,Texas,F,6,3,DeSoto H.S. (TX),DeSoto H.S. ,TX
+2022-2023,2023,2022,64,Kaylene Smikle,93,Rutgers,W,5,11,Westtown School (PA),Westtown School ,PA
+2022-2023,2023,2022,65,Camille Jackson,93,Illinois,G,5,11,Butler College Prep (IL),Butler College Prep ,IL
+2022-2023,2023,2022,66,Amiya Evans,93,UCF,F,6,1,DME Academy (FL),DME Academy ,FL
+2022-2023,2023,2022,67,Jordana Codio,93,Texas,G,6,1,Montverde Academy (FL),Montverde Academy ,FL
+2022-2023,2023,2022,68,Lexus Bargesser,93,Indiana,G,5,8,Grass Lake H.S. (MI),Grass Lake H.S. ,MI
+2022-2023,2023,2022,69,Tionna Herron,93,Kentucky,P,6,4,DeSoto H.S. (TX),DeSoto H.S. ,TX
+2022-2023,2023,2022,70,Amiya Joyner,93,East Carolina,F,6,2,Farmville Central H.S. (NC),Farmville Central H.S. ,NC
+2022-2023,2023,2022,71,Talana Lepolo,93,Stanford,PG,5,7,Carondelet H.S. (CA),Carondelet H.S. ,CA
+2022-2023,2023,2022,72,Yonta Vaughn,92,Virginia,PG,5,7,Bishop McNamara H.S. (MD),Bishop McNamara H.S. ,MD
+2022-2023,2023,2022,73,Tryanna Crisp,92,Arizona State,G,5,8,PHH Prep (AZ),PHH Prep ,AZ
+2022-2023,2023,2022,74,Averi Kroenke,92,Missouri,G,5,10,Rock Bridge H.S. (MO),Rock Bridge H.S. ,MO
+2022-2023,2023,2022,75,Kennedy Fauntleroy,92,Georgetown,PG,5,8,New Hope Academy (MD),New Hope Academy ,MD
+2022-2023,2023,2022,76,Jada Gyamfi,92,Iowa,F,6,1,Johnston H.S. (IA),Johnston H.S. ,IA
+2022-2023,2023,2022,77,Emily La Chapell,92,Marquette,G,5,10,Appleton East H.S. (WI),Appleton East H.S. ,WI
+2022-2023,2023,2022,78,Jalyn Brown,92,Louisville,W,6,0,St. Frances Academy (MD),St. Frances Academy ,MD
+2022-2023,2023,2022,79,Teagan Brown,92,Washington,G,5,10,Oak Ridge H.S. (CA),Oak Ridge H.S. ,CA
+2022-2023,2023,2022,80,Abbey Kimball,92,Michigan State,PG,5,9,West Catholic H.S. (MI),West Catholic H.S. ,MI
+2022-2023,2023,2022,81,Mya Petticord,92,Texas A&M,PG,5,9,Arbor Preparatory H.S. (MI),Arbor Preparatory H.S. ,MI
+2022-2023,2023,2022,82,Ryanne Allen,91,Vanderbilt,G,6,1,Archbishop Wood H.S. (PA),Archbishop Wood H.S. ,PA
+2022-2023,2023,2022,83,Imarianah Russell,91,West Virginia,G,6,0,Reynoldsburg H.S. (OH),Reynoldsburg H.S. ,OH
+2022-2023,2023,2022,84,Debreasha Powe,91,Mississippi State,F,6,1,Meridian H.S. (MS),Meridian H.S. ,MS
+2022-2023,2023,2022,85,Lemyah Hylton,91,Arizona,G,5,11,Southwest Academy Girls Prep (CAN),Southwest Academy Girls Prep ,CAN
+2022-2023,2023,2022,86,Saniyah Glenn,91,Harvard,G,5,11,Christ the King H.S. (NY),Christ the King H.S. ,NY
+2022-2023,2023,2022,87,Lilly Stoddard,91,Purdue,F,6,4,Crown Point H.S. (IN),Crown Point H.S. ,IN
+2022-2023,2023,2022,88,Ally Carman,91,Boston College,F,6,5,Red Bank Catholic High (NJ),Red Bank Catholic High ,NJ
+2022-2023,2023,2022,89,Taylor McCabe,91,Iowa,G,5,9,Fremont H.S. (NE),Fremont H.S. ,NE
+2022-2023,2023,2022,90,Savannah White,91,Wisconsin,F,6,2,De La Salle H.S. (MN),De La Salle H.S. ,MN
+2022-2023,2023,2022,91,Caroline Lau,91,Northwestern,G,5,9,St. Luke's School (CT),St. Luke's School ,CT
+2022-2023,2023,2022,92,Lola Lesmond,91,Yale,G,6,0,Worcester Academy (MA),Worcester Academy ,MA
+2022-2023,2023,2022,93,Amauri Williams,91,Vanderbilt,P,6,3,NLR H.S. - West Campus (AR),NLR H.S. - West Campus ,NLR
+2022-2023,2023,2022,94,Amiya Jenkins,91,Kentucky,G,5,10,Anderson County H.S. (KY),Anderson County H.S. ,KY
+2022-2023,2023,2022,95,Madisen Wardell,91,DePaul,F,6,2,Detroit Edison Public Academy (MI),Detroit Edison Public Academy ,MI
+2022-2023,2023,2022,96,Beatrice Culliton,91,Oklahoma,P,6,3,Saint Thomas Aquinas H.S. (KS),Saint Thomas Aquinas H.S. ,KS
+2022-2023,2023,2022,97,Lily Krahn,91,Wisconsin,G,5,9,Prairie Du Chien H.S. (WI),Prairie Du Chien H.S. ,WI
+2022-2023,2023,2022,98,Aislin Malcolm,91,Pittsburgh,G,5,10,Chartiers Valley H.S. (PA),Chartiers Valley H.S. ,PA
+2022-2023,2023,2022,99,Kate Clarke,91,Michigan,G,6,0,Carmel H.S. (IN),Carmel H.S. ,IN
+2022-2023,2023,2022,100,Mackendra Konig,91,Montana,PG,5,9,Henry M. Jackson H.S. (WA),Henry M. Jackson H.S. ,WA
+2021-2022,2022,2021,1,Azzi Fudd,98,UConn,G,5,11,St. John's College H.S. (DC),#REF!,DC
+2021-2022,2022,2021,2,Raven Johnson,98,South Carolina,PG,5,8,Westlake H.S. (GA),Westlake H.S. ,GA
+2021-2022,2022,2021,3,Saniya Rivers,98,South Carolina,G,6,0,Eugene Ashley H.S. (NC),Eugene Ashley H.S. ,NC
+2021-2022,2022,2021,4,Sania Feagin,98,South Carolina,F,6,3,Forest Park H.S. (GA),Forest Park H.S. ,GA
+2021-2022,2022,2021,5,Caroline Ducharme,98,UConn,G,6,1,Noble & Greenough School (MA),Noble & Greenough School ,MA
+2021-2022,2022,2021,6,Aaliyah Moore,97,Texas,F,6,1,Moore H.S. (OK),Moore H.S. ,OK
+2021-2022,2022,2021,7,Jersey Wolfenbarger,97,Arkansas,W,6,5,Northside H.S. (AR),Northside H.S. ,AR
+2021-2022,2022,2021,8,Olivia Miles,97,Notre Dame,PG,5,10,Blair Academy (NJ),Blair Academy ,NJ
+2021-2022,2022,2021,9,Teonni Key,97,North Carolina,W,6,3,Cary H.S. (NC),Cary H.S. ,NC
+2021-2022,2022,2021,10,Rori Harmon,97,Texas,PG,5,6,Cypress Creek H.S. (TX),Cypress Creek H.S. ,TX
+2021-2022,2022,2021,11,Brooke Demetre,97,Stanford,W,6,2,Mater Dei H.S. (CA),Mater Dei H.S. ,CA
+2021-2022,2022,2021,12,Payton Verhulst,97,Louisville,G,6,1,Bishop Miege H.S. (KS),Bishop Miege H.S. ,KS
+2021-2022,2022,2021,13,Maryam Dauda,96,Arkansas,P,6,4,Bentonville H.S. (AR),Bentonville H.S. ,AR
+2021-2022,2022,2021,14,Aubryanna Hall,96,South Carolina,G,5,11,Wayne H.S. (OH),Wayne H.S. ,OH
+2021-2022,2022,2021,15,Amari DeBerry,96,UConn,F,6,5,Williamsville South H.S. (NY),Williamsville South H.S. ,NY
+2021-2022,2022,2021,16,Sonia Citron,95,Notre Dame,G,6,1,Ursuline H.S. (NY),Ursuline H.S. ,NY
+2021-2022,2022,2021,17,Kayla McPherson,95,North Carolina,PG,5,7,Madison County H.S. (GA),Madison County H.S. ,GA
+2021-2022,2022,2021,18,Morasha Wiggins,95,North Carolina,G,6,0,Kalamazoo Central H.S. (MI),Kalamazoo Central H.S. ,MI
+2021-2022,2022,2021,19,Okikiola Iriafen,95,Stanford,F,6,2,Harvard Westlake H.S. (CA),Harvard Westlake H.S. ,CA
+2021-2022,2022,2021,20,Destiny Adams,95,North Carolina,W,6,3,Manchester Township H.S. (NJ),Manchester Township H.S. ,NJ
+2021-2022,2022,2021,21,Clarice Akunwafo,95,USC,P,6,5,Rolling Hills Prepatory (CA),Rolling Hills Prepatory ,CA
+2021-2022,2022,2021,22,Shyanne Sellers,95,Maryland,G,6,0,Aurora H.S. (OH),Aurora H.S. ,OH
+2021-2022,2022,2021,23,Damiya Hagemann,95,Michigan State,PG,5,7,Detroit Edison Public Academy (MI),Detroit Edison Public Academy ,MI
+2021-2022,2022,2021,24,Kyndall Hunter,95,Texas,PG,5,8,Cypress Creek H.S. (TX),Cypress Creek H.S. ,TX
+2021-2022,2022,2021,25,Talia Von Oelhoffen,95,Oregon State,W,5,11,Chiawana H.S. (WA),Chiawana H.S. ,WA
+2021-2022,2022,2021,26,Dominique Darius,94,UCLA,G,5,9,Blair Academy (NJ),Blair Academy ,NJ
+2021-2022,2022,2021,27,Rayah Marshall,94,USC,G,6,3,Lynwood H.S. (CA),Lynwood H.S. ,CA
+2021-2022,2022,2021,28,Laila Phelia,94,Michigan,G,5,11,Mount Notre Dame H.S. (OH),Mount Notre Dame H.S. ,OH
+2021-2022,2022,2021,29,Taylor Bigby,94,Oregon,G,6,1,Centennial H.S. (NV),Centennial H.S. ,NV
+2021-2022,2022,2021,30,Saylor Poffenbarger,94,UConn,G,6,2,Middletown H.S. (MD),Middletown H.S. ,MD
+2021-2022,2022,2021,31,O'Mariah Gordon,94,Florida State,PG,5,4,Braden River H.S. (FL),Braden River H.S. ,FL
+2021-2022,2022,2021,32,Greta Kampschroeder,94,Oregon State,G,6,0,Naperville North H.S. (IL),Naperville North H.S. ,IL
+2021-2022,2022,2021,33,Meg Newman,94,Arizona State,W,6,3,North Central H.S. (IN),North Central H.S. ,IN
+2021-2022,2022,2021,34,Reigan Richardson,94,Georgia,G,5,11,Cannon School (NC),Cannon School ,NC
+2021-2022,2022,2021,35,Hailey Weaver,94,Northwestern,G,5,11,Solon H.S. (OH),Solon H.S. ,OH
+2021-2022,2022,2021,36,Aziaha James,93,NC State,G,5,9,Princess Anne H.S. (VA),Princess Anne H.S. ,VA
+2021-2022,2022,2021,37,Jillian Hollingshead,93,Georgia,F,6,4,McEachern H.S. (GA),McEachern H.S. ,GA
+2021-2022,2022,2021,38,Latasha Lattimore,93,Texas,F,6,4,Crestwood Secondary (CAN),Crestwood Secondary ,CAN
+2021-2022,2022,2021,39,Allison Ediger,93,Iowa,P,6,3,Hamilton H.S.,Hamilton H.S.,
+2021-2022,2022,2021,40,Knisha Godfrey,93,Mississippi State,PG,5,9,Tampa Bay Tech Senior High (FL),Tampa Bay Tech Senior High ,FL
+2021-2022,2022,2021,41,Shayeann Day-Wilson,93,Duke,PG,5,5,Crestwood Secondary (CAN),Crestwood Secondary ,CAN
+2021-2022,2022,2021,42,Jenna Johnson,93,Utah,F,6,2,Wayzata H.S. (MN),Wayzata H.S. ,MN
+2021-2022,2022,2021,43,Sara Puckett,93,Tennessee,F,6,2,Muscle Shoals H.S. (AL),Muscle Shoals H.S. ,AL
+2021-2022,2022,2021,44,Breanne Salenbien,93,Gonzaga,W,6,3,Lenawee Christian (MI),Lenawee Christian ,MI
+2021-2022,2022,2021,45,Karoline Striplin,93,Tennessee,F,6,2,Geneva County H.S. (AL),Geneva County H.S. ,AL
+2021-2022,2022,2021,46,Kaybriana Hallman,93,Xavier,F,6,3,East Kentwood H.S. (MI),East Kentwood H.S. ,MI
+2021-2022,2022,2021,47,Kiya Dorroh,93,Missouri,W,6,0,Sabino H.S. (AZ),Sabino H.S. ,AZ
+2021-2022,2022,2021,48,Makayla Timpson,93,Florida State,F,6,2,Early County H.S. (GA),Early County H.S. ,GA
+2021-2022,2022,2021,49,Kendall Coley,93,Nebraska,W,6,2,Saint Louis Park High (MN),Saint Louis Park High ,MN
+2021-2022,2022,2021,50,Jillian Brown,93,Northwestern,G,5,10,East Grand Rapids H.S. (MI),East Grand Rapids H.S. ,MI
+2021-2022,2022,2021,51,Amani Bartlett,93,LSU,F,6,3,Houston Christian H.S. (TX),Houston Christian H.S. ,TX
+2021-2022,2022,2021,52,Kionna Gaines,93,Clemson,G,5,11,Carver H.S. (GA),Carver H.S. ,GA
+2021-2022,2022,2021,53,Adalia McKenzie,92,Illinois,G,5,10,Park Center H.S. (MN),Park Center H.S. ,MN
+2021-2022,2022,2021,54,Jaelyn Glenn,92,Kansas State,G,6,1,The Barstow School (MO),The Barstow School ,MO
+2021-2022,2022,2021,55,Jasmine Shavers,92,Mississippi State,G,5,10,Horn H.S. (TX),Horn H.S. ,TX
+2021-2022,2022,2021,56,Caileigh Walsh,92,Northwestern,P,6,3,Gill St. Bernard's School (NJ),Gill St. Bernard's School ,NJ
+2021-2022,2022,2021,57,Sacha Washington,91,Vanderbilt,F,6,2,Parkview H.S. (GA),Parkview H.S. ,GA
+2021-2022,2022,2021,58,Kendra Gillispie,91,Marquette,W,6,2,Harding Prep (OK),Harding Prep ,OK
+2021-2022,2022,2021,59,Emma Shumate,91,West Virginia,G,6,1,Newark H.S. (OH),Newark H.S. ,OH
+2021-2022,2022,2021,60,Raegyn Conley,91,Wake Forest,W,6,0,Baylor School (TN),Baylor School ,TN
+2021-2022,2022,2021,61,Brianna Turnage,91,Virginia Tech,G,6,1,Westlake H.S. (GA),Westlake H.S. ,GA
+2021-2022,2022,2021,62,Kaiya Wynn,91,Tennessee,G,5,10,Foster H.S. (TX),Foster H.S. ,TX
+2021-2022,2022,2021,63,Ashtynne Marotte,91,Oregon State,G,6,0,Vista Ridge H.S. (TX),Vista Ridge H.S. ,TX
+2021-2022,2022,2021,64,Sophia Hart,91,NC State,P,6,5,Farmington H.S. (MN),Farmington H.S. ,MN
+2021-2022,2022,2021,65,Tiarra East,91,Temple,G,5,10,Butler Traditional H.S. (KY),Butler Traditional H.S. ,KY
+2021-2022,2022,2021,66,Kelbie Washington,91,Oklahoma,PG,5,6,Norman H.S. (OK),Norman H.S. ,OK
+2021-2022,2022,2021,67,Chante Embry,91,Texas Tech,F,5,11,Norman H.S. (OK),Norman H.S. ,OK
+2021-2022,2022,2021,68,Ariana Wiggins,91,Michigan,G,5,8,Heritage Christian School (IN),Heritage Christian School ,IN
+2021-2022,2022,2021,69,De'Mauri Flournoy,91,Vanderbilt,PG,5,6,Carrollton H.S. (GA),Carrollton H.S. ,GA
+2021-2022,2022,2021,70,Se'Quoia Allmond,91,Jackson State,PG,5,7,Whitehaven H.S. (TN),Whitehaven H.S. ,TN
+2021-2022,2022,2021,71,Madison Conner,91,Arizona,G,5,11,Perry H.S. (AZ),Perry H.S. ,AZ
+2021-2022,2022,2021,72,Paige Bradley,91,TCU,G,5,10,Bishop Lynch H.S. (TX),Bishop Lynch H.S. ,TX
+2021-2022,2022,2021,73,Callie Genke,91,Green Bay,G,6,0,Freedom H.S. (WI),Freedom H.S. ,WI
+2021-2022,2022,2021,74,Emma Calvert,91,BYU,P,6,4,Fremont H.S. (UT),Fremont H.S. ,UT
+2021-2022,2022,2021,75,Kayla Blackshear,91,Alabama,F,6,1,Lake Highland Prep (FL),Lake Highland Prep ,FL
+2021-2022,2022,2021,76,Marisa Davis,91,Washington,W,6,1,Valley Vista H.S. (AZ),Valley Vista H.S. ,AZ
+2021-2022,2022,2021,77,Kierra Sanderlin,91,Rutgers,PG,5,8,Judson H.S. (TX),Judson H.S. ,TX
+2021-2022,2022,2021,78,Jzaniya Harriel,91,Stanford,PG,5,10,Antelope H.S. (CA),Antelope H.S. ,CA
+2021-2022,2022,2021,79,Lashae Dwyer,91,Miami,PG,5,8,The Webb School,The Webb School,
+2021-2022,2022,2021,80,Allison Weidner,91,Nebraska,G,5,9,Saint Francis H.S. (NE),Saint Francis H.S. ,NE
+2021-2022,2022,2021,81,Messiah Hunter,91,West Virginia,G,6,1,TPLS Christian Academy (VA),TPLS Christian Academy ,TPLS
+2021-2022,2022,2021,82,Kindyll Wetta,91,Colorado,PG,5,9,Valor Christian H.S. (CO),Valor Christian H.S. ,CO
+2021-2022,2022,2021,83,Khylee-Jade Pepe,91,San Diego State,G,5,11,Bishop Montgomery H.S. (CA),Bishop Montgomery H.S. ,CA
+2021-2022,2022,2021,84,Laila Jewett,91,UCF,G,5,10,Bishop Ireton H.S. (VA),Bishop Ireton H.S. ,VA
+2021-2022,2022,2021,85,Avery Van Sickle,91,Washington,PG,5,10,Regis Jesuit H.S. (CO),Regis Jesuit H.S. ,CO
+2021-2022,2022,2021,86,Grace Hall,91,LSU,F,6,2,Homewood-Flossmoor H.S. (IL),Homewood-Flossmoor H.S. ,IL
+2021-2022,2022,2021,87,Jada Walker,91,Kentucky,PG,5,6,Henrico H.S. (VA),Henrico H.S. ,VA
+2021-2022,2022,2021,88,Macie James,91,Oklahoma State,G,5,10,San Joaquin Memorial H.S. (CA),San Joaquin Memorial H.S. ,CA
+2021-2022,2022,2021,89,Amiya Payne,91,Middle Tennessee,W,5,11,Hewitt-Trussville H.S. (AL),Hewitt-Trussville H.S. ,AL
+2021-2022,2022,2021,90,Olivia Westphal,91,Duquesne,G,5,10,Bethel Park Senior H.S. (PA),Bethel Park Senior H.S. ,PA
+2021-2022,2022,2021,91,Jada Malone,91,Texas A&M,P,6,3,The Village School (TX),The Village School ,TX
+2021-2022,2022,2021,92,Addison O'Grady,91,Iowa,P,6,3,Grandview H.S. (CO),Grandview H.S. ,CO
+2021-2022,2022,2021,93,Skye Williams,91,Purdue,G,5,10,Pickerington Central H.S. (OH),Pickerington Central H.S. ,OH
+2021-2022,2022,2021,94,Jess Finney,91,Washington,G,5,10,Chaparral H.S. (AZ),Chaparral H.S. ,AZ
+2021-2022,2022,2021,95,Ally Van Timmeren,91,Boston College,F,6,2,Jenison H.S. (MI),Jenison H.S. ,MI
+2021-2022,2022,2021,96,Mallorie Haines,91,Davidson,G,5,10,Davidson Day School (NC),Davidson Day School ,NC
+2021-2022,2022,2021,97,Stefanie Kulesza,91,UMass,G,5,11,Conrad H.S. (DE),Conrad H.S. ,DE
+2021-2022,2022,2021,98,Katie Borowicz,91,Minnesota,PG,5,6,Roseau H.S.,Roseau H.S.,
+2021-2022,2022,2021,99,Nyah Wilson,91,Syracuse,G,5,8,Duncanville H.S. (TX),Duncanville H.S. ,TX
+2021-2022,2022,2021,100,Aaronette Vonleh,91,Arizona,P,6,3,West Linn H.S. (OR),West Linn H.S. ,OR
+2026-2027,2027,2026,1,Saniyah Hall,98,USC,G,6-0,,SPIRE Institute (OH),SPIRE Institute,OH
+2026-2027,2027,2026,2,Oliviyah Edwards,98,Tennessee,F,6-3,,Lincoln H.S. (WA),Lincoln H.S.,WA
+2026-2027,2027,2026,3,Olivia Vukosa,98,UConn,P,6-4,,Christ the King H.S. (NY),Christ the King,NY
+2026-2027,2027,2026,4,Kate Harpring,98,North Carolina,PG,5-10,,Marist School (GA),Marist School,GA
+2026-2027,2027,2026,5,Jerzy Robinson,97,South Carolina,G,6-0,,Sierra Canyon H.S. (CA),Sierra Canyon,CA
+2026-2027,2027,2026,6,McKenna Woliczko,97,Iowa,W,6-2,,Archbishop Mitty H.S. (CA),Archbishop Mitty,CA
+2026-2027,2027,2026,7,Jordyn Jackson,97,Maryland,G,6-1,,St. James Performance Academy (DC),St. James,DC
+2026-2027,2027,2026,8,Brihanna Crittendon,97,Texas,W,6-3,,Riverdale Ridge H.S. (CO),Riverdale Ridge,CO
+2026-2027,2027,2026,9,Jacy Abii,97,Notre Dame,W,6-2,,Legion Prep Academy (TX),Legion Prep,TX
+2026-2027,2027,2026,10,Addison Bjorn,97,Texas,W,6-1,,Park Hill South H.S. (MO),Park Hill,MO
+2026-2027,2027,2026,11,Trinity Jones,96,Clemson,G,6-1,,Naperville Central H.S. (IL),Naperville Central,IL
+2026-2027,2027,2026,12,Autumn Fleary,96,Duke,PG,5-7,,Sidwell Friends School (DC),Sidwell Friends,DC
+2026-2027,2027,2026,13,Maddyn Greenway,96,Kentucky,PG,5-8,,Providence Academy (MN),Providence Academy,MN
+2026-2027,2027,2026,14,Olivia Jones,96,Vanderbilt,G,5-11,,Long Island Lutheran H.S. (NY),Long Island,NY
+2026-2027,2027,2026,15,Lilly Williams,96,Michigan State,P,6-5,,Howell H.S. (MI),Howell H.S.,MI
+2026-2027,2027,2026,16,Bella Flemings,96,Duke,G,6-0,,William J. Brennan H.S. (TX),William J.,TX
+2026-2027,2027,2026,17,Kaeli Wynn,96,South Carolina,F,6-2,,Mater Dei H.S. (CA),Mater Dei,CA
+2026-2027,2027,2026,18,Kelsi Andrews,95,South Carolina,F,6-3,,IMG Academy (FL),IMG Academy,FL
+2026-2027,2027,2026,19,Savvy Swords,95,Kentucky,W,6-1,,Long Island Lutheran H.S. (NY),Long Island,NY
+2026-2027,2027,2026,20,Aaliah Spaight,95,Texas,PG,5-7,,Bishop Gorman H.S. (NV),Bishop Gorman,NV
+2026-2027,2027,2026,21,Melissa Odom,95,FSU,F,6-2,,Montverde Academy (FL),Montverde Academy,FL
+2026-2027,2027,2026,22,Ashlyn Koupal,95,Nebraska,G,6-2,,Wagner Community School (SD),Wagner Community,SD
+2026-2027,2027,2026,23,Emily McDonald,95,Kentucky,G,6-0,,Long Island Lutheran H.S. (NY),Long Island,NY
+2026-2027,2027,2026,24,Jenica Lewis,95,Notre Dame,G,5-10,,Johnston H.S. (IA),Johnston H.S.,IA
+2026-2027,2027,2026,25,Sanai Green,95,Duke,G,6-0,,Long Island Lutheran H.S. (NY),Long Island,NY
+2026-2027,2027,2026,26,Brooklyn Haywood,95,Oregon,G,5-9,,Union H.S. (WA),Union H.S.,WA
+2026-2027,2027,2026,27,Kimora Fields,95,Clemson,W,5-11,,Bradley Central H.S. (TN),Bradley Central,TN
+2026-2027,2027,2026,28,Addison Nyemchek,95,Indiana,W,6-1,,Red Bank Catholic High (NJ),Red Bank,NJ
+2026-2027,2027,2026,29,Lola Lampley,95,LSU,W,6-2,,Lawrence Central H.S. (IN),Lawrence Central,IN
+2026-2027,2027,2026,30,Isabella Ragone,95,Notre Dame,W,6-2,,Mill Creek H.S. (GA),Mill Creek,GA
+2026-2027,2027,2026,31,Morgan Stewart,95,FSU,G,5-11,,St. John's College H.S. (DC),St. John's,DC
+2026-2027,2027,2026,32,Gigi Battle,95,Indiana,G,5-11,,DME Academy (FL),DME Academy,FL
+2026-2027,2027,2026,33,Cydnee Bryant,95,Kansas,P,6-3,,Centennial H.S. (CA),Centennial H.S.,CA
+2026-2027,2027,2026,34,Ariyana Cradle,95,Louisville,PG,5-8,,SPIRE Institute (OH),SPIRE Institute,OH
+2026-2027,2027,2026,35,Jhai Johnson,95,Vanderbilt,F,6-3,,Oakland Technical H.S. (CA),Oakland Technical,CA
+2026-2027,2027,2026,36,Alliyah Bell,95,Oklahoma,F,6-2,,Minot Senior H.S. (ND),Minot Senior,ND
+2026-2027,2027,2026,37,Amari Byles,94,Notre Dame,F,6-2,,Kingdom Collegiate Academy (TX),Kingdom Collegiate,TX
+2026-2027,2027,2026,38,Kamora Pruitt,94,NC State,F,6-2,,Legion Prep Academy (TX),Legion Prep,TX
+2026-2027,2027,2026,39,Julia Scott,94,Clemson,F,6-3,,Albertus Magnus H.S. (NY),Albertus Magnus,NY
+2026-2027,2027,2026,40,Natalie Kussow,94,Minnesota,G,5-10,,Arrowhead H.S. (WI),Arrowhead H.S.,WI
+2026-2027,2027,2026,41,Emilia Krstevski,94,Oregon,P,6-4,,Sierra Canyon H.S. (CA),Sierra Canyon,CA
+2026-2027,2027,2026,42,Mimi Thiero,94,Maryland,F,6-4,,Quaker Valley H.S. (PA),Quaker Valley,PA
+2026-2027,2027,2026,43,Taylor Sofilkanich,94,Duke,P,6-4,,Saint John Vianney High (NJ),Saint John,NJ
+2026-2027,2027,2026,44,Rieyan Desouze,94,Texas A&M,PG,5-6,,Legion Prep Academy (TX),Legion Prep,TX
+2026-2027,2027,2026,45,Ayo Mofopefoluwa,94,Michigan,P,6-3,,Austin Preparatory School (MA),Austin Preparatory,MA
+2026-2027,2027,2026,46,Amayah Garcia,94,Washington,G,5-11,,Faith Family Academy (TX),Faith Family,TX
+2026-2027,2027,2026,47,Adaline Sheplee,94,Wisconsin,F,6-2,,Rice Lake H.S.,Rice Lake,
+2026-2027,2027,2026,48,Arynn Finley,94,Florida,G,5-10,,Etiwanda H.S. (CA),Etiwanda H.S.,CA
+2026-2027,2027,2026,49,Whitley Rogers,94,Arkansas,G,6-0,,Little Rock Christian Academy (AR),Little Rock,AR
+2026-2027,2027,2026,50,Meeyah Green,94,Clemson,G,5-9,,Webb School Of Knoxville (TN),Webb School,TN
+2026-2027,2027,2026,51,Chikae Desdunes,94,Penn State,G,5-9,,DME Academy (FL),DME Academy,FL
+2026-2027,2027,2026,52,Irene Guiamatsia,94,North Carolina,F,6-4,,Xavier College Preparatory (AZ),Xavier College,AZ
+2026-2027,2027,2026,53,KK Holman,94,Florida,PG,5-10,,Hamilton Southeastern H.S. (IN),Hamilton Southeastern,IN
+2026-2027,2027,2026,54,Averie Lower,94,Arizona State,G,5-11,,Clear Creek-Amana H.S. (IA),Clear Creek-Amana,IA
+2026-2027,2027,2026,55,Karisma Lewis,93,UC Santa Barbara,G,5-10,,Oak Park H.S. (CA),Oak Park,CA
+2026-2027,2027,2026,56,Devin Cosgriff,93,Michigan,G,5-10,,Bishop O'Dowd H.S. (CA),Bishop O'Dowd,CA
+2026-2027,2027,2026,57,Amalia Holguin,93,Texas,G,5-9,,Sage Hill H.S. (CA),Sage Hill,CA
+2026-2027,2027,2026,58,Tori Oehrlein,93,Minnesota,G,5-11,,Crosby Ironton H.S. (MN),Crosby Ironton,MN
+2026-2027,2027,2026,59,Jayda Porter,93,Texas A&M,F,6-3,,Rock Bridge H.S. (MO),Rock Bridge,MO
+2026-2027,2027,2026,60,Jasleen Green,93,Arizona,G,5-8,,American Heritage H.S. (FL),American Heritage,FL
+2026-2027,2027,2026,61,Chamiah Francis,93,FSU,F,6-2,,Booker T. Washington H.S. (FL),Booker T.,FL
+2026-2027,2027,2026,62,Gabrieal Minus,93,Tennessee,W,6-0,,Hebron Christian Academy (GA),Hebron Christian,GA
+2026-2027,2027,2026,63,Makayla Presser-Palmer,93,Arizona,G,5-11,,Northwestern H.S. (PA),Northwestern H.S.,PA
+2026-2027,2027,2026,64,Ashlinn James,93,Indiana,PG,5-8,,Assumption H.S. (KY),Assumption H.S.,KY
+2026-2027,2027,2026,65,Peyton Jones,93,Utah,G,5-11,,Valor Christian H.S. (CO),Valor Christian,CO
+2026-2027,2027,2026,66,Danyella Mporokoso,93,Illinois State,PG,5-6,,Waubonsie Valley H.S. (IL),Waubonsie Valley,IL
+2026-2027,2027,2026,67,Gianna Jordan,93,Texas Tech,PG,5-7,,Kingdom Collegiate Academy (TX),Kingdom Collegiate,TX
+2026-2027,2027,2026,68,Myah Epps,93,Louisville,G,5-10,,Homestead H.S. (IN),Homestead H.S.,IN
+2026-2027,2027,2026,69,Ava Miles,92,Nebraska,G,6-0,,Staley H.S. (MO),Staley H.S.,MO
+2026-2027,2027,2026,70,Kaleo Anderson,92,Virginia Tech,G,5-11,,King's H.S. (WA),King's H.S.,WA
+2026-2027,2027,2026,71,Brooklyn Renn,92,Kansas,F,6-3,,Silver Creek H.S. (IN),Silver Creek,IN
+2026-2027,2027,2026,72,Ashley Knox,92,Auburn,W,6-0,,Tampa Catholic H.S. (FL),Tampa Catholic,FL
+2026-2027,2027,2026,73,Aaliyah Blanchard,92,Middle Tennessee,G,5-11,,Hoover H.S. (AL),Hoover H.S.,AL
+2026-2027,2027,2026,74,Atlee Vanesko,92,Ohio State,PG,5-10,,Westtown School (PA),Westtown School,PA
+2026-2027,2027,2026,75,Lani Smallwood,92,Mississippi State,PG,5-7,,Albertville H.S. (AL),Albertville H.S.,AL
+2026-2027,2027,2026,76,Lanelle Wright,92,Grand Canyon,G,5-9,,Minnetonka H.S. (MN),Minnetonka H.S.,MN
+2026-2027,2027,2026,77,Zaniyah Williams,92,Auburn,PG,5-8,,Montverde Academy (FL),Montverde Academy,FL
+2026-2027,2027,2026,78,Shania James,92,SMU,PG,5-6,,Example Academy (IL),Example Academy,IL
+2026-2027,2027,2026,79,Natalya Hodge,92,Missouri,PG,5-7,,Bearden H.S. (TN),Bearden H.S.,TN
+2026-2027,2027,2026,80,Erica Gribble,92,Richmond,G,5-11,,Greensburg Central Catholic H. S. (PA),Greensburg Central,PA
+2026-2027,2027,2026,81,Isabella Sangha,91,Notre Dame,F,6-3,,Pine Crest H.S. (FL),Pine Crest,FL
+2026-2027,2027,2026,82,Rylee Little,91,Utah,F,6-4,,Kanab H.S.,Kanab,
+2026-2027,2027,2026,83,Taylor Young,91,Oregon State,G,5-11,,Crater H.S. (OR),Crater H.S.,OR
+2026-2027,2027,2026,84,Mathis Dritz,91,Columbia,W,6-1,,Fairmont Prep (CA),Fairmont Prep,CA
+2026-2027,2027,2026,85,Keonni Lewis,91,UNLV,PG,5-5,,Democracy Prep Academy (NV),Democracy Prep Academy,NV
+2026-2027,2027,2026,86,Jordyn Wheeler,91,Stanford,G,5-10,,Niagara Academy (CAN),Niagara Academy,CAN
+2026-2027,2027,2026,87,Inieye Oruh,91,Seton Hall,P,6-4,,Centennial H.S. (NV),Centennial H.S.,NV
+2026-2027,2027,2026,88,Jayla Constant,91,UNLV,PG,5-9,,Grind Prep (OK),Grind Prep,OK
+2026-2027,2027,2026,89,Jaelynn Housey,91,Florida Atlantic,PG,5-10,,Nova H.S. (FL),Nova,FL
+2026-2027,2027,2026,90,Chante Murray,91,None,W,6-1,,Crestwood Secondary (CAN),Crestwood Secondary,CAN
+2026-2027,2027,2026,91,Vienna Murray,91,Oklahoma,G,6-1,,East Ridge H.S. (MN),East Ridge,MN
+2026-2027,2027,2026,92,Ambrosia Cole,91,Texas Tech,PG,5-6,,Monterey H.S. (TX),Monterey,TX
+2026-2027,2027,2026,93,Annsley Trivette,91,NC State,F,6-3,,Abingdon H.S. (VA),Abingdon,VA
+2026-2027,2027,2026,94,Khloe Ford,91,Missouri,F,6-3,,Hoover H.S. (AL),Hoover H.S.,AL
+2026-2027,2027,2026,95,Elyse Ngenda,91,Stanford,G,5-8,,New Hampton School (NH),New Hampton School,NH
+2026-2027,2027,2026,96,Tristan Rickenbacker,91,East Carolina,W,5-11,,Princess Anne H.S. (VA),Princess Anne,VA
+2026-2027,2027,2026,97,Xyanna Walton,91,Northwestern,G,5-10,,Butler College Prep (IL),Butler College Prep,IL
+2026-2027,2027,2026,98,Zoe Osby,91,SMU,W,6-0,,Elizabeth Seton,Elizabeth Seton,
+2026-2027,2027,2026,99,Syvannah Dawson,91,St. John's,G,5-8,,Shining Stars Sports Academy (VA),Shining Stars Sports Academy,VA
+2026-2027,2027,2026,100,Madeline Stewart,91,Nebraska,PG,5-9,,Lincoln Christian School (OK),Lincoln Christian School,OK
+2026-2027,2027,2026,,,,,,,,,,

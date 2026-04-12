@@ -1,0 +1,69 @@
+team_location,bracket_display,seed,region,region_number,is_first_four,first_four_slot,first_four_opponent,r64_opponent,r64_opponent_seed,net_rank,conference,q1_wins,q1_losses,q1_winpct,wab,last10_wins,last10_losses,last10_winpct,road_wins,road_losses,road_winpct,automatic_qualifier,conference_winner,has_player_data
+UConn,UConn,1,Regional 1,1,False,,,UTSA,16,1.0,Big East,9.0,0.0,1.0,11.43,10.0,0.0,1.0,12.0,0.0,1.0,AQ,1.0,True
+UT San Antonio,UTSA,16,Regional 1,1,False,,,UConn,1,,,,,,,,,,,,,,,False
+Iowa State,Iowa State,8,Regional 1,1,False,,,Syracuse,9,33.0,Big 12,2.0,3.0,0.4,0.87,6.0,4.0,0.6,5.0,5.0,0.5,Non,0.0,True
+Syracuse,Syracuse,9,Regional 1,1,False,,,Iowa State,8,40.0,ACC,1.0,7.0,0.125,2.23,6.0,4.0,0.6,6.0,3.0,0.667,Non,0.0,True
+Maryland,Maryland,5,Regional 1,1,False,,,Murray State,12,14.0,Big Ten,6.0,7.0,0.462,5.4,6.0,4.0,0.6,6.0,3.0,0.667,Non,0.0,True
+Murray State,Murray St,12,Regional 1,1,False,,,Maryland,5,,,,,,,,,,,,,,,False
+North Carolina,North Carolina,4,Regional 1,1,False,,,Western Illinois,13,19.0,ACC,4.0,6.0,0.4,6.18,8.0,2.0,0.8,8.0,3.0,0.727,Non,0.0,True
+Western Illinois,W Illinois,13,Regional 1,1,False,,,North Carolina,4,,,,,,,,,,,,,,,False
+Notre Dame,Notre Dame,6,Regional 1,1,False,,,Fairfield,11,21.0,ACC,7.0,7.0,0.5,4.32,8.0,2.0,0.8,6.0,6.0,0.5,Non,0.0,True
+Fairfield,Fairfield,11,Regional 1,1,False,,,Notre Dame,6,53.0,MAAC,2.0,2.0,0.5,0.29,10.0,0.0,1.0,12.0,2.0,0.857,AQ,1.0,False
+Ohio State,Ohio State,3,Regional 1,1,False,,,Howard,14,15.0,Big Ten,9.0,7.0,0.562,9.37,6.0,4.0,0.6,7.0,3.0,0.7,Non,0.0,True
+Howard,Howard,14,Regional 1,1,False,,,Ohio State,3,156.0,MEAC,0.0,2.0,0.0,-4.29,10.0,0.0,1.0,11.0,7.0,0.611,Non,0.0,False
+Illinois,Illinois,7,Regional 1,1,False,,,Colorado,10,30.0,Big Ten,3.0,10.0,0.231,2.45,5.0,5.0,0.5,6.0,6.0,0.5,Non,0.0,True
+Colorado,Colorado,10,Regional 1,1,False,,,Illinois,7,46.0,Big 12,2.0,5.0,0.286,0.83,7.0,3.0,0.7,4.0,6.0,0.4,Non,0.0,True
+Vanderbilt,Vanderbilt,2,Regional 1,1,False,,,High Point,15,7.0,SEC,8.0,4.0,0.667,9.83,7.0,3.0,0.7,7.0,2.0,0.778,Non,0.0,True
+High Point,High Point,15,Regional 1,1,False,,,Vanderbilt,2,142.0,Big South,0.0,0.0,,-4.04,7.0,3.0,0.7,8.0,3.0,0.727,AQ,1.0,False
+UCLA,UCLA,1,Regional 2,2,False,,,California Baptist,16,2.0,Big Ten,18.0,1.0,0.947,17.06,10.0,0.0,1.0,9.0,0.0,1.0,AQ,1.0,True
+California Baptist,CA Baptist,16,Regional 2,2,False,,,UCLA,1,127.0,WAC,0.0,1.0,0.0,-7.62,8.0,2.0,0.8,11.0,5.0,0.688,Non,0.0,False
+Oklahoma State,Oklahoma St,8,Regional 2,2,False,,,Princeton,9,29.0,Big 12,1.0,3.0,0.25,1.22,6.0,4.0,0.6,5.0,6.0,0.455,Non,0.0,True
+Princeton,Princeton,9,Regional 2,2,False,,,Oklahoma State,8,38.0,Ivy League,1.0,1.0,0.5,2.57,8.0,2.0,0.8,11.0,2.0,0.846,Non,0.0,True
+Ole Miss,Ole Miss,5,Regional 2,2,False,,,Gonzaga,12,20.0,SEC,5.0,8.0,0.385,3.95,4.0,6.0,0.4,4.0,6.0,0.4,Non,0.0,True
+Gonzaga,Gonzaga,12,Regional 2,2,False,,,Ole Miss,5,63.0,WCC,0.0,0.0,,-4.38,8.0,2.0,0.8,9.0,4.0,0.692,Non,0.0,False
+Minnesota,Minnesota,4,Regional 2,2,False,,,Green Bay,13,9.0,Big Ten,5.0,7.0,0.417,5.12,8.0,2.0,0.8,8.0,3.0,0.727,Non,0.0,True
+Green Bay,Green Bay,13,Regional 2,2,False,,,Minnesota,4,98.0,Horizon,0.0,2.0,0.0,-4.24,7.0,3.0,0.7,9.0,5.0,0.643,Non,0.0,False
+Baylor,Baylor,6,Regional 2,2,False,,,TBD (First Four),11,32.0,Big 12,3.0,6.0,0.333,4.29,5.0,5.0,0.5,7.0,3.0,0.7,Non,0.0,True
+Duke,Duke,3,Regional 2,2,False,,,Charleston,14,8.0,ACC,9.0,7.0,0.562,7.98,8.0,2.0,0.8,9.0,3.0,0.75,AQ,1.0,True
+Charleston,Charleston,14,Regional 2,2,False,,,Duke,3,,,,,,,,,,,,,,,False
+Texas Tech,Texas Tech,7,Regional 2,2,False,,,Villanova,10,31.0,Big 12,3.0,1.0,0.75,2.31,5.0,5.0,0.5,7.0,4.0,0.636,Non,0.0,True
+Villanova,Villanova,10,Regional 2,2,False,,,Texas Tech,7,35.0,Big East,2.0,3.0,0.4,1.48,8.0,2.0,0.8,10.0,3.0,0.769,Non,0.0,True
+LSU,LSU,2,Regional 2,2,False,,,Jacksonville,15,5.0,SEC,8.0,5.0,0.615,8.82,7.0,3.0,0.7,10.0,2.0,0.833,Non,0.0,True
+Jacksonville,Jacksonville,15,Regional 2,2,False,,,LSU,2,136.0,ASUN,0.0,2.0,0.0,-4.47,9.0,1.0,0.9,8.0,6.0,0.571,AQ,1.0,False
+South Carolina,South Carolina,1,Regional 4,4,False,,,TBD (First Four),16,3.0,SEC,12.0,3.0,0.8,14.52,9.0,1.0,0.9,11.0,1.0,0.917,Non,0.0,True
+Clemson,Clemson,8,Regional 4,4,False,,,USC,9,42.0,ACC,3.0,10.0,0.231,1.36,6.0,4.0,0.6,7.0,8.0,0.467,Non,0.0,True
+USC,USC,9,Regional 4,4,False,,,Clemson,8,23.0,Big Ten,4.0,12.0,0.25,3.06,6.0,4.0,0.6,3.0,7.0,0.3,Non,0.0,True
+Michigan State,Michigan St,5,Regional 4,4,False,,,Colorado State,12,17.0,Big Ten,5.0,7.0,0.417,5.51,4.0,6.0,0.4,7.0,3.0,0.7,Non,0.0,True
+Colorado State,Colorado St,12,Regional 4,4,False,,,Michigan State,5,,,,,,,,,,,,,,,False
+Oklahoma,Oklahoma,4,Regional 4,4,False,,,Idaho,13,13.0,SEC,6.0,7.0,0.462,6.79,7.0,3.0,0.7,6.0,3.0,0.667,Non,0.0,True
+Idaho,Idaho,13,Regional 4,4,False,,,Oklahoma,4,100.0,Big Sky,0.0,0.0,,-3.2,10.0,0.0,1.0,10.0,4.0,0.714,Non,0.0,False
+Washington,Washington,6,Regional 4,4,False,,,South Dakota State,11,26.0,Big Ten,6.0,7.0,0.462,4.26,4.0,6.0,0.4,7.0,5.0,0.583,Non,0.0,True
+South Dakota State,S Dakota St,11,Regional 4,4,False,,,Washington,6,39.0,Summit League,0.0,3.0,0.0,0.63,10.0,0.0,1.0,10.0,2.0,0.833,AQ,1.0,True
+TCU,TCU,3,Regional 4,4,False,,,UC San Diego,14,12.0,Big 12,4.0,3.0,0.571,6.89,8.0,2.0,0.8,7.0,3.0,0.7,Non,0.0,True
+UC San Diego,UC San Diego,14,Regional 4,4,False,,,TCU,3,119.0,Big West,0.0,1.0,0.0,-5.84,8.0,2.0,0.8,11.0,4.0,0.733,Non,0.0,False
+Georgia,Georgia,7,Regional 4,4,False,,,TBD (First Four),10,34.0,SEC,3.0,8.0,0.273,3.14,4.0,6.0,0.4,6.0,4.0,0.6,Non,0.0,True
+Iowa,Iowa,2,Regional 4,4,False,,,Fairleigh Dickinson,15,10.0,Big Ten,9.0,6.0,0.6,10.99,8.0,2.0,0.8,8.0,3.0,0.727,Non,0.0,True
+Fairleigh Dickinson,FDU,15,Regional 4,4,False,,,Iowa,2,,,,,,,,,,,,,,,False
+Texas,Texas,1,Regional 3,3,False,,,TBD (First Four),16,4.0,SEC,14.0,3.0,0.824,14.77,9.0,1.0,0.9,7.0,3.0,0.7,AQ,1.0,True
+Oregon,Oregon,8,Regional 3,3,False,,,Virginia Tech,9,24.0,Big Ten,3.0,8.0,0.273,2.56,5.0,5.0,0.5,6.0,5.0,0.545,Non,0.0,True
+Virginia Tech,Virginia Tech,9,Regional 3,3,False,,,Oregon,8,41.0,ACC,3.0,7.0,0.3,1.83,6.0,4.0,0.6,7.0,3.0,0.7,Non,0.0,True
+Kentucky,Kentucky,5,Regional 3,3,False,,,James Madison,12,16.0,SEC,5.0,9.0,0.357,4.97,5.0,5.0,0.5,8.0,5.0,0.615,Non,0.0,True
+James Madison,James Madison,12,Regional 3,3,False,,,Kentucky,5,45.0,Sun Belt,0.0,2.0,0.0,-2.3,10.0,0.0,1.0,7.0,5.0,0.583,AQ,1.0,True
+West Virginia,West Virginia,4,Regional 3,3,False,,,Miami (OH),13,18.0,Big 12,3.0,3.0,0.5,6.66,9.0,1.0,0.9,8.0,2.0,0.8,AQ,1.0,True
+Miami (OH),Miami OH,13,Regional 3,3,False,,,West Virginia,4,,,,,,,,,,,,,,,False
+Alabama,Alabama,6,Regional 3,3,False,,,Rhode Island,11,27.0,SEC,5.0,8.0,0.385,4.68,4.0,6.0,0.4,3.0,5.0,0.375,Non,0.0,True
+Rhode Island,Rhode Island,11,Regional 3,3,False,,,Alabama,6,49.0,Atlantic 10,1.0,1.0,0.5,0.72,8.0,2.0,0.8,11.0,3.0,0.786,AQ,1.0,True
+Louisville,Louisville,3,Regional 3,3,False,,,Vermont,14,11.0,ACC,8.0,6.0,0.571,7.83,6.0,4.0,0.6,9.0,0.0,1.0,Non,0.0,True
+Vermont,Vermont,14,Regional 3,3,False,,,Louisville,3,83.0,America East,0.0,1.0,0.0,-4.67,8.0,2.0,0.8,12.0,4.0,0.75,Non,0.0,False
+NC State,NC State,7,Regional 3,3,False,,,Tennessee,10,25.0,ACC,3.0,9.0,0.25,2.61,6.0,4.0,0.6,7.0,4.0,0.636,Non,0.0,True
+Tennessee,Tennessee,10,Regional 3,3,False,,,NC State,7,22.0,SEC,5.0,11.0,0.312,2.25,2.0,8.0,0.2,7.0,6.0,0.538,Non,0.0,True
+Michigan,Michigan,2,Regional 3,3,False,,,Holy Cross,15,6.0,Big Ten,9.0,6.0,0.6,10.12,7.0,3.0,0.7,8.0,2.0,0.8,Non,0.0,True
+Holy Cross,Holy Cross,15,Regional 3,3,False,,,Michigan,2,154.0,Patriot,0.0,1.0,0.0,-6.17,9.0,1.0,0.9,9.0,6.0,0.6,Non,0.0,False
+Nebraska,Nebraska,11,Regional 2,2,True,11.0,Richmond,Baylor,6,28.0,Big Ten,1.0,10.0,0.091,1.03,3.0,7.0,0.3,2.0,7.0,0.222,Non,0.0,True
+Richmond,Richmond,11,Regional 2,2,True,11.0,Nebraska,Baylor,6,37.0,Atlantic 10,0.0,2.0,0.0,-0.7,7.0,3.0,0.7,9.0,4.0,0.692,Non,0.0,True
+Southern,Southern,16,Regional 4,4,True,16.0,Samford,South Carolina,1,,,,,,,,,,,,,,,False
+Samford,Samford,16,Regional 4,4,True,16.0,Southern,South Carolina,1,280.0,SoCon,0.0,4.0,0.0,-13.77,8.0,2.0,0.8,4.0,13.0,0.235,AQ,1.0,False
+Virginia,Virginia,10,Regional 4,4,True,10.0,Arizona State,Georgia,7,36.0,ACC,3.0,6.0,0.333,-0.72,5.0,5.0,0.5,6.0,4.0,0.6,Non,0.0,True
+Arizona State,Arizona State,10,Regional 4,4,True,10.0,Virginia,Georgia,7,51.0,Big 12,1.0,6.0,0.143,0.81,5.0,5.0,0.5,7.0,7.0,0.5,Non,0.0,False
+Missouri State,Missouri State,16,Regional 3,3,True,16.0,Stephen F. Austin,Texas,1,,,,,,,,,,,,,,,False
+Stephen F. Austin,Stephen F. Austin,16,Regional 3,3,True,16.0,Missouri State,Texas,1,,,,,,,,,,,,,,,False
