@@ -59,10 +59,10 @@ SEASON_LABEL  = "2025-26"     # human-readable label
 # =============================================================================
 
 # ── Live / updatable files ────────────────────────────────────────────────────
-PLAYER_BOX_FILE  = RAW_DIR / "player_box_2026.parquet"
+PLAYER_BOX_FILE  = RAW_DIR / "player_box_2026_final.parquet"
 PBP_FILE         = RAW_DIR / "play_by_play_20260327.parquet"
-SCHEDULE_FILE    = RAW_DIR / "schedule_filtered_20260309.csv"     # ← ⏳ UPDATE FILENAME when new data arrives
-NET_FILE         = RAW_DIR / "net_rankings_manual_20260316.csv"   # ← ⏳ UPDATE FILENAME when new data arrives
+SCHEDULE_FILE    = RAW_DIR / "schedule_filtered_20260405.csv"     
+NET_FILE         = RAW_DIR / "net_rankings_manual_20260405.csv"   
 
 # ── Postseason raw files ──────────────────────────────────────────────────────
 POSTSEASON_PBP_FILE  = POSTSEASON_DIR / "march_pbp_2026.parquet"
