@@ -60,7 +60,7 @@ SEASON_LABEL  = "2025-26"     # human-readable label
 
 # ── Live / updatable files ────────────────────────────────────────────────────
 PLAYER_BOX_FILE  = RAW_DIR / "player_box_2026_final.parquet"
-PBP_FILE         = RAW_DIR / "play_by_play_20260327.parquet"
+PBP_FILE         = RAW_DIR / "play_by_play_2026_final.parquet"
 SCHEDULE_FILE    = RAW_DIR / "schedule_filtered_20260405.csv"     
 NET_FILE         = RAW_DIR / "net_rankings_manual_20260405.csv"
 SCHEDULE_FILE_FULL    = RAW_DIR / "wbb_schedule_2026_final.parquet"     
@@ -68,7 +68,7 @@ TEAM_BOX_FILE_FULL    = RAW_DIR / "team_box_2026_final.parquet"
 
 
 # ── Postseason raw files ──────────────────────────────────────────────────────
-POSTSEASON_PBP_FILE  = POSTSEASON_DIR / "march_pbp_2026.parquet"
+POSTSEASON_PBP_FILE  = POSTSEASON_DIR / "play_by_play_2026_final.parquet"
 POSTSEASON_BOX_FILE  = POSTSEASON_DIR / "player_box_2026_postseason.parquet"
 POSTSEASON_CLEAN_BOX = POSTSEASON_DIR / "clean_player_box_postseason.parquet"
 CONF_PBP_FILE        = POSTSEASON_DIR / "clean_conference_pbp.parquet"
