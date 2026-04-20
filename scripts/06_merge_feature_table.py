@@ -34,21 +34,31 @@ import warnings
 warnings.filterwarnings('ignore')
 from pathlib import Path
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_DIR.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
 # ── Config import ─────────────────────────────────────────────────────────────
 try:
     from config import (
         PLAYER_ONOFF, PLAYER_BOX_ADVANCED, PBP_PLAYER_METRICS,
         POSTSEASON_ONOFF, ROSTER_FILE, RECRUIT_RANKINGS, TOURNAMENT_BRACKET,
-        PLAYER_FEATURE_TABLE, SEASON, validate_inputs,
+        PLAYER_FEATURE_TABLE, PROCESSED_DIR, RECRUITING_DIR, SEASON, validate_inputs,
     )
 except ImportError:
     # Allow running from scripts/ subdirectory
-    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    sys.path.insert(0, str(REPO_ROOT))
     from config import (
         PLAYER_ONOFF, PLAYER_BOX_ADVANCED, PBP_PLAYER_METRICS,
         POSTSEASON_ONOFF, ROSTER_FILE, RECRUIT_RANKINGS, TOURNAMENT_BRACKET,
-        PLAYER_FEATURE_TABLE, SEASON, validate_inputs,
+        PLAYER_FEATURE_TABLE, PROCESSED_DIR, RECRUITING_DIR, SEASON, validate_inputs,
     )
+
+TEAM_SEASON_BASE = PROCESSED_DIR / f"team_season_analytic_{SEASON}.csv"
+TEAM_SEASON_ENRICHED = PROCESSED_DIR / f"team_season_analytic_{SEASON}_top25_enriched.csv"
+TEAM_STYLE_HISTORY = REPO_ROOT / "analysis" / "conference_efficiency" / "team_style_efficiency_2021_2026.csv"
+RECRUIT_DRAFT_FILE = RECRUITING_DIR / "player_recruit_to_draft_analysis.csv"
 
 
 # =============================================================================
@@ -89,7 +99,7 @@ def to_int_id(series):
 
 if not validate_inputs(
     required=[PLAYER_ONOFF, PLAYER_BOX_ADVANCED, TOURNAMENT_BRACKET],
-    optional=[PBP_PLAYER_METRICS, POSTSEASON_ONOFF, ROSTER_FILE, RECRUIT_RANKINGS],
+    optional=[PBP_PLAYER_METRICS, POSTSEASON_ONOFF, ROSTER_FILE, RECRUIT_RANKINGS, TEAM_SEASON_BASE, TEAM_SEASON_ENRICHED, TEAM_STYLE_HISTORY, RECRUIT_DRAFT_FILE],
 ):
     sys.exit(1)
 
@@ -143,6 +153,37 @@ else:
 # Tournament bracket (seed, region)
 bracket = pd.read_csv(TOURNAMENT_BRACKET)
 print(f"  tournament_bracket:            {len(bracket):>5,} rows  |  {len(bracket.columns)} cols")
+
+# Team context (optional — conference + efficiency style context)
+team_base = None
+if TEAM_SEASON_BASE.exists():
+    team_base = pd.read_csv(TEAM_SEASON_BASE)
+    print(f"  {TEAM_SEASON_BASE.name:<30} {len(team_base):>5,} rows  |  {len(team_base.columns)} cols")
+else:
+    print(f"  ⚠️  {TEAM_SEASON_BASE.name} not found — full conference context will be missing")
+
+team_enriched = None
+if TEAM_SEASON_ENRICHED.exists():
+    team_enriched = pd.read_csv(TEAM_SEASON_ENRICHED)
+    print(f"  {TEAM_SEASON_ENRICHED.name:<30} {len(team_enriched):>5,} rows  |  {len(team_enriched.columns)} cols")
+else:
+    print(f"  ⚠️  {TEAM_SEASON_ENRICHED.name} not found — offensive/defensive efficiency + pace may be missing")
+
+team_style_hist = None
+if TEAM_STYLE_HISTORY.exists():
+    team_style_hist = pd.read_csv(TEAM_STYLE_HISTORY, low_memory=False)
+    print(f"  {TEAM_STYLE_HISTORY.name:<30} {len(team_style_hist):>5,} rows  |  {len(team_style_hist.columns)} cols")
+else:
+    print(f"  ⚠️  {TEAM_STYLE_HISTORY.name} not found — fallback team style metrics unavailable")
+
+# Recruit-to-draft context (optional)
+recruit_draft = None
+if RECRUIT_DRAFT_FILE.exists():
+    recruit_draft = pd.read_csv(RECRUIT_DRAFT_FILE)
+    print(f"  {RECRUIT_DRAFT_FILE.name:<30} {len(recruit_draft):>5,} rows  |  {len(recruit_draft.columns)} cols")
+else:
+    print(f"  ⚠️  {RECRUIT_DRAFT_FILE.name} not found — draft-proxy context will be missing")
+
 print()
 
 
@@ -407,6 +448,97 @@ print(f"  After bracket merge: {len(feature):,} rows  |  {len(feature.columns)} 
 
 
 # =============================================================================
+# STEP 7B — MERGE TEAM CONTEXT (conference + style)
+# =============================================================================
+
+if team_base is not None or team_enriched is not None:
+    print("Merging team context...")
+    if 'team_id' in feature.columns:
+        feature['team_id'] = to_int_id(feature['team_id'])
+
+    if team_base is not None and 'team_id' in team_base.columns and 'team_id' in feature.columns:
+        team_base['team_id'] = to_int_id(team_base['team_id'])
+        base_keep = [c for c in ['team_id', 'conference', 'division', 'team_state'] if c in team_base.columns]
+        if base_keep:
+            feature = feature.merge(
+                team_base[base_keep].drop_duplicates('team_id'),
+                on='team_id',
+                how='left',
+                suffixes=('', '_teambase')
+            )
+            _drop_dupes(feature)
+
+    if team_enriched is not None and 'team_id' in team_enriched.columns and 'team_id' in feature.columns:
+        team_enriched['team_id'] = to_int_id(team_enriched['team_id'])
+        enrich_keep = [
+            c for c in [
+                'team_id',
+                'offensive_eff', 'defensive_eff', 'net_eff', 'pace',
+                'weeks_in_top25', 'top25_win_pct', 'best_rank'
+            ] if c in team_enriched.columns
+        ]
+        if enrich_keep:
+            feature = feature.merge(
+                team_enriched[enrich_keep].drop_duplicates('team_id'),
+                on='team_id',
+                how='left',
+                suffixes=('', '_teamenr')
+            )
+            _drop_dupes(feature)
+
+    # Fallback: fill missing style metrics from full team style history (raw-team-box derived).
+    if team_style_hist is not None and 'team_id' in team_style_hist.columns and 'team_id' in feature.columns:
+        team_style_hist['team_id'] = to_int_id(team_style_hist['team_id'])
+        if 'season' in team_style_hist.columns:
+            team_style_hist['season'] = pd.to_numeric(team_style_hist['season'], errors='coerce')
+            team_style_hist = team_style_hist[team_style_hist['season'] == SEASON].copy()
+        style_keep = [c for c in ['team_id', 'offensive_eff', 'defensive_eff', 'net_eff', 'pace'] if c in team_style_hist.columns]
+        if style_keep:
+            feature = feature.merge(
+                team_style_hist[style_keep].drop_duplicates('team_id').rename(
+                    columns={c: f"{c}_stylefb" for c in style_keep if c != 'team_id'}
+                ),
+                on='team_id',
+                how='left',
+            )
+            for c in ['offensive_eff', 'defensive_eff', 'net_eff', 'pace']:
+                fb = f"{c}_stylefb"
+                if c in feature.columns and fb in feature.columns:
+                    feature[c] = feature[c].fillna(feature[fb])
+            drop_fb = [c for c in feature.columns if c.endswith('_stylefb')]
+            if drop_fb:
+                feature.drop(columns=drop_fb, inplace=True)
+            _drop_dupes(feature)
+
+    print(f"  After team context merge: {len(feature):,} rows  |  {len(feature.columns)} cols")
+
+
+# =============================================================================
+# STEP 7C — MERGE RECRUIT-TO-DRAFT CONTEXT
+# =============================================================================
+
+if recruit_draft is not None and 'athlete_id' in recruit_draft.columns:
+    print("Merging recruit-to-draft context...")
+    recruit_draft['athlete_id'] = to_int_id(recruit_draft['athlete_id'])
+    draft_keep = [
+        c for c in [
+            'athlete_id', 'in_draft_2026',
+            'draft_prob_early', 'draft_prob_mid', 'draft_prob_late',
+            'impact_delta', 'recruit_rank'
+        ] if c in recruit_draft.columns
+    ]
+    if draft_keep:
+        feature = feature.merge(
+            recruit_draft[draft_keep].drop_duplicates('athlete_id'),
+            on='athlete_id',
+            how='left',
+            suffixes=('', '_draft')
+        )
+        _drop_dupes(feature)
+    print(f"  After draft context merge: {len(feature):,} rows  |  {len(feature.columns)} cols")
+
+
+# =============================================================================
 # STEP 8 — COMPUTE CROSS-TABLE FEATURES
 # =============================================================================
 # Derived columns that require data from multiple sources (computed after all merges).
@@ -421,11 +553,18 @@ if 'on_net_rtg' in feature.columns and 'tourney_net_rtg' in feature.columns:
     print("  ✓ net_rtg_reg_to_tourney (regular → tournament delta)")
 
 # Scoring efficiency composite: TS% × per-40 points (weighted production score)
-if 'true_shooting_pct' in feature.columns and 'points_per40' in feature.columns:
+if 'ts_pct' in feature.columns and 'true_shooting_pct' not in feature.columns:
+    feature['true_shooting_pct'] = feature['ts_pct']
+if 'pts_per40' in feature.columns and 'points_per40' not in feature.columns:
+    feature['points_per40'] = feature['pts_per40']
+
+ts_col = next((c for c in ['true_shooting_pct', 'ts_pct'] if c in feature.columns), None)
+pts_col = next((c for c in ['points_per40', 'pts_per40'] if c in feature.columns), None)
+if ts_col and pts_col:
     feature['weighted_production'] = (
-        feature['true_shooting_pct'].fillna(0) * feature['points_per40'].fillna(0)
+        feature[ts_col].fillna(0) * feature[pts_col].fillna(0)
     ).round(3)
-    print("  ✓ weighted_production (TS% × per-40 points)")
+    print(f"  ✓ weighted_production ({ts_col} × {pts_col})")
 
 # Two-way impact flag: positive net_rtg_diff AND positive on_net_rtg
 if 'net_rtg_diff' in feature.columns and 'on_net_rtg' in feature.columns:
@@ -481,6 +620,10 @@ PRIORITY_COLS = [
     'is_top25_recruit', 'is_top100_recruit', 'is_ranked_recruit',
     # Tournament context
     'seed', 'region', 'bracket_display',
+    # Team style context
+    'conference', 'offensive_eff', 'defensive_eff', 'net_eff', 'pace',
+    # Draft proxy context
+    'in_draft_2026', 'draft_prob_early', 'draft_prob_mid', 'draft_prob_late', 'impact_delta',
     'season',
 ]
 

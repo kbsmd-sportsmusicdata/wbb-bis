@@ -419,7 +419,9 @@ stints_df['midrange_pct'] = stints_df['midrange_fga'] / total_fga
 stints_df['three_pct']    = stints_df['three_fga']    / total_fga
 
 # Save stint-level (lighter version — no lineup object)
-stint_save = stints_df.drop(columns=['lineup', 'stint_start_idx'], errors='ignore')
+stint_save = stints_df.copy()
+stint_save['lineup'] = stint_save['lineup_str']
+stint_save = stint_save.drop(columns=['stint_start_idx'], errors='ignore')
 stint_save.to_csv(LINEUP_STINTS_RAW, index=False)
 print(f"  Saved lineup_stints_raw.csv ({len(stint_save):,} rows)")
 
@@ -626,6 +628,13 @@ for df_split in [h1, h2, cls, cmp, blw, q1, q2]:
 
 # Lineup summaries
 final = final.merge(lineup_player_df, on=['athlete_id', 'team_id'], how='left')
+
+
+# Backward-compatible aliases used by downstream consumers
+if 'on_min_est' in final.columns and 'on_minutes' not in final.columns:
+    final['on_minutes'] = final['on_min_est']
+if 'on_poss_for' in final.columns and 'poss_on' not in final.columns:
+    final['poss_on'] = final['on_poss_for']
 
 # ─────────────────────────────────────────────
 # STEP 10: EXPORT

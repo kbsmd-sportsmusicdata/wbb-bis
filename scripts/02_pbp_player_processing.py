@@ -479,6 +479,38 @@ def merge_and_label(shot_profiles: pd.DataFrame,
     return result
 
 
+
+def attach_primary_team_id(result_df: pd.DataFrame, pbp_df: pd.DataFrame) -> pd.DataFrame:
+    """Attach most frequent team_id per athlete-season from raw PBP events."""
+    id_events = pbp_df[
+        pbp_df["athlete_id_1"].notna() & pbp_df["team_id"].notna()
+    ][["athlete_id_1", "season", "team_id"]].copy()
+
+    if id_events.empty:
+        result_df["team_id"] = pd.NA
+        return result_df
+
+    id_events["athlete_id"] = pd.to_numeric(id_events["athlete_id_1"], errors="coerce").astype("Int64")
+    id_events["team_id"] = pd.to_numeric(id_events["team_id"], errors="coerce").astype("Int64")
+    id_events = id_events.dropna(subset=["athlete_id", "team_id"])
+
+    counts = (
+        id_events.groupby(["athlete_id", "season", "team_id"])
+        .size()
+        .reset_index(name="event_count")
+    )
+    primary = (
+        counts.sort_values(["athlete_id", "season", "event_count"], ascending=[True, True, False])
+        .drop_duplicates(["athlete_id", "season"], keep="first")
+    )
+
+    out = result_df.merge(
+        primary[["athlete_id", "season", "team_id"]],
+        on=["athlete_id", "season"],
+        how="left",
+    )
+    return out
+
 # =============================================================================
 # 8. EXPORT
 # =============================================================================
@@ -530,6 +562,7 @@ def run_pipeline():
 
     # 7. Merge & label
     result = merge_and_label(shot_profiles, assist_metrics, phase_metrics, hustle_metrics)
+    result = attach_primary_team_id(result, pbp_df)
     print()
 
     # 8. Export

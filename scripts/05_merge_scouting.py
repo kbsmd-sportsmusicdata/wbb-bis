@@ -34,6 +34,15 @@ merged = box_68.merge(pbp, on="athlete_id", how="left", suffixes=("", "_pbp"))
 dup_cols = [c for c in merged.columns if c.endswith("_pbp")]
 merged = merged.drop(columns=dup_cols)
 
+# Add bracket metadata (seed/region) expected by downstream consumers.
+if all(c in brkt.columns for c in ["team_location", "seed", "region"]) and "team_location" in merged.columns:
+    merged = merged.merge(
+        brkt[["team_location", "seed", "region"]].drop_duplicates("team_location"),
+        on="team_location",
+        how="left",
+        suffixes=("", "_brkt"),
+    )
+
 PLAYER_SCOUTING_68.parent.mkdir(parents=True, exist_ok=True)
 merged.to_csv(PLAYER_SCOUTING_68, index=False)
 print(f"Written: {PLAYER_SCOUTING_68.name}  ({len(merged)} rows, {len(merged.columns)} cols)")

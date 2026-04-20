@@ -1,0 +1,43 @@
+{
+  "timestamp_utc": "2026-04-20T11:07:44Z",
+  "season": 2026,
+  "passed": [
+    "team_style: file exists",
+    "program_track: file exists",
+    "wpba_fit: file exists",
+    "feature_table: file exists",
+    "team_style: row count 3,484",
+    "program_track: row count 606",
+    "wpba_fit: row count matches feature table (403)",
+    "team_style: required columns present",
+    "program_track: required columns present",
+    "wpba_fit: required columns present",
+    "feature_table: conference null rate 0.0% within threshold",
+    "wpba_fit: program_fr_sr_track_score_0_100 null rate 9.7% within threshold",
+    "wpba_fit: in_draft_2026 coverage 28.3%",
+    "wpba_fit: archetype_score_0_100 null rate 0.0% within threshold",
+    "wpba_fit: archetype_score_0_100 within [0.0, 100.0]",
+    "wpba_fit: development_trajectory_score_0_100 null rate 0.0% within threshold",
+    "wpba_fit: development_trajectory_score_0_100 within [0.0, 100.0]",
+    "wpba_fit: conference_program_context_score_0_100 null rate 0.0% within threshold",
+    "wpba_fit: conference_program_context_score_0_100 within [0.0, 100.0]",
+    "wpba_fit: wpba_pathway_fit_score_0_100 null rate 0.0% within threshold",
+    "wpba_fit: wpba_pathway_fit_score_0_100 within [0.0, 100.0]",
+    "wpba_fit: score std 10.19",
+    "wpba_fit: score spread q90-q10 = 26.80",
+    "wpba_fit: fit-band distribution is non-collapsed",
+    "wpba_fit: one-row-per-athlete integrity holds"
+  ],
+  "warnings": [
+    "feature_table: offensive_eff null rate 10.7% > warn threshold 10.0%",
+    "feature_table: defensive_eff null rate 10.7% > warn threshold 10.0%",
+    "feature_table: pace null rate 10.7% > warn threshold 10.0%",
+    "team_style: conference null rate 75.4% > warn threshold 50.0%"
+  ],
+  "failures": [],
+  "counts": {
+    "passed": 25,
+    "warnings": 4,
+    "failures": 0
+  }
+}
