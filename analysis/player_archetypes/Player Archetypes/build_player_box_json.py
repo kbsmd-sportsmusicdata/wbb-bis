@@ -25,7 +25,7 @@ import numpy as np
 import pandas as pd
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-REPO_ROOT = SCRIPT_DIR.parents[3]
+REPO_ROOT = SCRIPT_DIR.parents[2]
 
 PLAYER_BOX_CANDIDATES = [
     Path(os.getenv("PLAYER_BOX_FILE", "")),
