@@ -277,7 +277,7 @@ def _finalize(tracker: GateTracker) -> int:
     print(f"  Failed : {len(tracker.failures)}")
 
     report = {
-        "timestamp_utc": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+        "timestamp_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "season": SEASON,
         "passed": tracker.passes,
         "warnings": tracker.warnings,
@@ -290,7 +290,7 @@ def _finalize(tracker: GateTracker) -> int:
     }
 
     VALIDATION_DIR.mkdir(parents=True, exist_ok=True)
-    ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+    ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     report_path = VALIDATION_DIR / f"wpba_quality_gate_report_{ts}.json"
     latest_path = VALIDATION_DIR / "wpba_quality_gate_report_latest.json"
 

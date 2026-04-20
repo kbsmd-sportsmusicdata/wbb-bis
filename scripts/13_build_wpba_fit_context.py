@@ -11,6 +11,7 @@ Outputs:
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 import re
 from typing import Optional
@@ -36,12 +37,10 @@ from config import (  # noqa: E402
 
 HISTORICAL_DIR = RAW_DIR / "historical"
 ROSTER_DIR = REPO_ROOT / "data" / "static" / "rosters"
-KAGGLE_CANDIDATE_DIRS = [
-    REPO_ROOT / "data" / "static" / "kaggle",
-    Path(
-        "/Users/krystalbeasley/Library/CloudStorage/GoogleDrive-hey@krystalbcreative.com/My Drive/WBB/Player Roles + Breakouts/Kaggle Datasets copy"
-    ),
-]
+_KAGGLE_ENV = os.getenv("KAGGLE_DATASET_DIR")
+KAGGLE_CANDIDATE_DIRS = [REPO_ROOT / "data" / "static" / "kaggle"]
+if _KAGGLE_ENV:
+    KAGGLE_CANDIDATE_DIRS.append(Path(_KAGGLE_ENV))
 
 TEAM_STYLE_OUT = REPO_ROOT / "analysis" / "conference_efficiency" / "team_style_efficiency_2021_2026.csv"
 PROGRAM_TRACK_OUT = REPO_ROOT / "analysis" / "player_development" / "program_fr_sr_track_2021_2026.csv"
@@ -54,20 +53,26 @@ DEV_PROFILES_FILE = REPO_ROOT / "analysis" / "player_development" / f"player_dev
 
 RECRUIT_DRAFT_CANDIDATES = [
     RECRUITING_DIR / "player_recruit_to_draft_analysis.csv",
-    Path(
-        "/Users/krystalbeasley/Library/CloudStorage/GoogleDrive-hey@krystalbcreative.com/My Drive/WBB/Player Roles + Breakouts/player_recruit_to_draft_analysis.csv"
-    ),
 ]
+_RECRUIT_DRAFT_ENV = os.getenv("RECRUIT_DRAFT_FILE")
+if _RECRUIT_DRAFT_ENV:
+    RECRUIT_DRAFT_CANDIDATES.append(Path(_RECRUIT_DRAFT_ENV))
 
 HIST_DRAFT_CONFERENCE_CANDIDATES = [
     RECRUITING_DIR / "historical_draft_data_2014_2025.xlsx",
-    Path("/Users/krystalbeasley/Downloads/historical_draft_data_2014_2025.xlsx"),
+    Path.home() / "Downloads" / "historical_draft_data_2014_2025.xlsx",
 ]
+_HIST_DRAFT_ENV = os.getenv("HIST_DRAFT_FILE")
+if _HIST_DRAFT_ENV:
+    HIST_DRAFT_CONFERENCE_CANDIDATES.append(Path(_HIST_DRAFT_ENV))
 
 MASTER_PLAYER_MAP_CANDIDATES = [
     ROSTER_DIR / "master_player_season_mapping_2026.csv",
-    Path("/Users/krystalbeasley/Downloads/master_player_season_mapping_2026.csv"),
+    Path.home() / "Downloads" / "master_player_season_mapping_2026.csv",
 ]
+_MASTER_MAP_ENV = os.getenv("MASTER_PLAYER_MAP_FILE")
+if _MASTER_MAP_ENV:
+    MASTER_PLAYER_MAP_CANDIDATES.append(Path(_MASTER_MAP_ENV))
 
 PAC12_REALIGN_TEAM_NORMS = {
     "arizona",

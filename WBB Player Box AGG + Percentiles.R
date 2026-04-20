@@ -68,7 +68,7 @@ weighted_percentile <- function(x, w) {
 ###############################################
 
 # We aggregate game-log level data into season totals for each player
-player_season_stats <- raw_box %>%
+player_season_stats <- raw_source_data %>%
   # Ensure minutes are numeric (sometimes they come as strings)
   mutate(minutes = as.numeric(minutes)) %>%
   group_by(athlete_id, athlete_display_name, team_short_display_name, athlete_position_abbreviation, season) %>% # Added 'season' here
@@ -117,7 +117,7 @@ player_season_stats <- raw_box %>%
     stl_per_40  = (stl_total / pmax(minutes_total, 1)) * 40,
     blk_per_40  = (blk_total / pmax(minutes_total, 1)) * 40,
     tov_per_40  = (tov_total / pmax(minutes_total, 1)) * 40
-  ) %>%n  # Efficiency & Advanced Metrics
+  ) %>%  # Efficiency & Advanced Metrics
   mutate(
     # Shooting Percentages
     fg_pct  = ifelse(fga > 0, fgm / fga, 0),
@@ -258,4 +258,3 @@ final_dataset <- player_season_stats %>%
 # 4. Export to CSV (Backup)
 ###############################################
 write_csv(final_dataset, "wbb_player_data_2026.csv")
-
