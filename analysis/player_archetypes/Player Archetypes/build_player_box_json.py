@@ -40,8 +40,8 @@ OUT_PATH = Path(
     os.getenv("PLAYER_BOX_JSON_OUT", str(SCRIPT_DIR / "player_box_with_game_type.json"))
 )
 
-PLAYER_BOX = next((p for p in PLAYER_BOX_CANDIDATES if str(p) and p.exists()), None)
-JSON_IN = next((p for p in JSON_IN_CANDIDATES if str(p) and p.exists()), None)
+PLAYER_BOX = next((p for p in PLAYER_BOX_CANDIDATES if p and p.is_file()), None)
+JSON_IN = next((p for p in JSON_IN_CANDIDATES if p and p.is_file()), None)
 if PLAYER_BOX is None or JSON_IN is None:
     raise FileNotFoundError(
         "Required input file missing. Set PLAYER_BOX_FILE/DASHBOARD_SLIM_JSON env vars "
