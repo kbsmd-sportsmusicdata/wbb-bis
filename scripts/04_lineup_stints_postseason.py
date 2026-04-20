@@ -435,7 +435,9 @@ stints_df['midrange_pct'] = stints_df['midrange_fga'] / total_fga
 stints_df['three_pct']    = stints_df['three_fga']    / total_fga
 
 # Save stint-level output (drop non-serializable columns)
-stint_save = stints_df.drop(columns=['lineup', 'stint_start_idx'], errors='ignore')
+stint_save = stints_df.copy()
+stint_save['lineup'] = stint_save['lineup_str']
+stint_save = stint_save.drop(columns=['stint_start_idx'], errors='ignore')
 stint_save.to_csv(POSTSEASON_STINTS, index=False)
 print(f"  ✅  Saved {POSTSEASON_STINTS.name} ({len(stint_save):,} rows)")
 
@@ -646,6 +648,10 @@ final = final.merge(lineup_player_df, on=['athlete_id', 'team_id'], how='left')
 # Round floats
 float_cols = final.select_dtypes(include='float').columns
 final[float_cols] = final[float_cols].round(2)
+
+# Backward-compatible alias used by downstream validators/consumers
+if 'on_poss_for' in final.columns and 'tourney_poss_on' not in final.columns:
+    final['tourney_poss_on'] = final['on_poss_for']
 
 # Export
 final.to_csv(POSTSEASON_ONOFF, index=False)

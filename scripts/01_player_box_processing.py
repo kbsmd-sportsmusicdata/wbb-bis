@@ -52,6 +52,7 @@ from config import (
     NET_FILE,
     SCHEDULE_FILE,
     BENCHMARKS_FILE,
+    TOURNAMENT_BRACKET,
     PROCESSED_DIR,
 )
 
@@ -883,16 +884,28 @@ def export_datasets(season_df: pd.DataFrame,
     out.mkdir(parents=True, exist_ok=True)
     print("Exporting datasets...")
 
+    season_out = season_df.copy()
+
+    # Backward-compatible metric aliases for downstream consumers.
+    if "minutes_total" in season_out.columns and "minutes" not in season_out.columns:
+        season_out["minutes"] = season_out["minutes_total"]
+    if "ts_pct" in season_out.columns and "true_shooting_pct" not in season_out.columns:
+        season_out["true_shooting_pct"] = season_out["ts_pct"]
+    if "ppg" in season_out.columns and "points_pg" not in season_out.columns:
+        season_out["points_pg"] = season_out["ppg"]
+    if "pts_per40" in season_out.columns and "points_per40" not in season_out.columns:
+        season_out["points_per40"] = season_out["pts_per40"]
+
     # --- Season-level export ---
     season_path = out / "player_box_advanced_metrics.csv"
-    season_df.to_csv(season_path, index=False)
-    print(f"  ✓ Season-level: {season_path.name}  ({len(season_df):,} rows, {len(season_df.columns)} cols)")
+    season_out.to_csv(season_path, index=False)
+    print(f"  ✓ Season-level: {season_path.name}  ({len(season_out):,} rows, {len(season_out.columns)} cols)")
 
     # --- Game-level export (select key columns to keep file manageable) ---
     game_cols = [
         "game_id", "game_date", "season",
         "athlete_id", "athlete_display_name",
-        "team_abbreviation", "team_location",
+        "team_id", "team_abbreviation", "team_location",
         "opponent_team_abbreviation", "opponent_team_location",
         "opponent_net_rank", "location", "game_result", "point_diff",
         "minutes", "points", "rebounds", "assists", "steals", "blocks", "turnovers",
@@ -907,15 +920,37 @@ def export_datasets(season_df: pd.DataFrame,
         "improvement_zscore_L10", "game_score_slope_L10",
         "consistency_rating_L10",
     ]
-    # Only export columns that exist
     game_cols_exist = [c for c in game_cols if c in game_df.columns]
     game_path = out / "player_game_log_enriched.csv"
     game_df[game_cols_exist].to_csv(game_path, index=False)
     print(f"  ✓ Game-level: {game_path.name}  ({len(game_df):,} rows, {len(game_cols_exist)} cols)")
 
-    # --- Top-50 NET filtered scouting file (used by dashboard main tab) ---
-    if "team_net_rank" in season_df.columns:
-        top50 = season_df[season_df["team_net_rank"] <= 50].copy()
+    # --- Top 50 player scouting export (dashboard input) ---
+    if "team_net_rank" in season_out.columns:
+        pool = season_out[season_out["team_net_rank"] <= 50].copy()
+
+        rank_col = None
+        for candidate in ["tournament_readiness_index", "pts_per40", "ppg"]:
+            if candidate in pool.columns:
+                rank_col = candidate
+                break
+
+        if rank_col:
+            top50 = pool.sort_values(rank_col, ascending=False).head(50).copy()
+        else:
+            top50 = pool.head(50).copy()
+
+        # Add bracket context where team names align.
+        if "team_location" in top50.columns and TOURNAMENT_BRACKET.exists():
+            brkt = pd.read_csv(TOURNAMENT_BRACKET)
+            if all(c in brkt.columns for c in ["team_location", "seed", "region"]):
+                top50 = top50.merge(
+                    brkt[["team_location", "seed", "region"]].drop_duplicates("team_location"),
+                    on="team_location",
+                    how="left",
+                    suffixes=("", "_brkt"),
+                )
+
         top50_path = out / "player_scouting_top50.csv"
         top50.to_csv(top50_path, index=False)
         print(f"  ✓ Top-50 scouting: {top50_path.name}  ({len(top50):,} rows, {top50['team_location'].nunique()} teams)")
