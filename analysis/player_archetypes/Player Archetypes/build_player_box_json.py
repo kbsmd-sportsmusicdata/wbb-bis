@@ -15,15 +15,38 @@ Conference identification strategy:
   2. Supplement with hardcoded full membership for all D1 major conferences
   3. Conference game = opponent_team_location resolves to same conf as player's team
 
-Output: /sessions/happy-sharp-wozniak/mnt/outputs/player_box_with_game_type.json
+Output: analysis/player_archetypes/Player Archetypes/player_box_with_game_type.json
 """
 
-import json, pandas as pd
+import json
+import os
 from pathlib import Path
+import numpy as np
+import pandas as pd
 
-PLAYER_BOX = "/sessions/happy-sharp-wozniak/mnt/uploads/player_box_2026_0322.parquet"
-JSON_IN    = "/sessions/happy-sharp-wozniak/dashboard_slim_k6_enriched.json"
-OUT_PATH   = "/sessions/happy-sharp-wozniak/mnt/outputs/player_box_with_game_type.json"
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_DIR.parents[3]
+
+PLAYER_BOX_CANDIDATES = [
+    Path(os.getenv("PLAYER_BOX_FILE", "")),
+    REPO_ROOT / "data" / "raw" / "player_box_2026_final.parquet",
+    REPO_ROOT / "data" / "player_box_2026.parquet",
+]
+JSON_IN_CANDIDATES = [
+    Path(os.getenv("DASHBOARD_SLIM_JSON", "")),
+    SCRIPT_DIR / "dashboard_slim_k6_enriched.json",
+]
+OUT_PATH = Path(
+    os.getenv("PLAYER_BOX_JSON_OUT", str(SCRIPT_DIR / "player_box_with_game_type.json"))
+)
+
+PLAYER_BOX = next((p for p in PLAYER_BOX_CANDIDATES if str(p) and p.exists()), None)
+JSON_IN = next((p for p in JSON_IN_CANDIDATES if str(p) and p.exists()), None)
+if PLAYER_BOX is None or JSON_IN is None:
+    raise FileNotFoundError(
+        "Required input file missing. Set PLAYER_BOX_FILE/DASHBOARD_SLIM_JSON env vars "
+        "or place files at expected default paths."
+    )
 
 # ── Comprehensive 2025-26 WBB conference membership ─────────────────────────
 # team_location strings as they appear in ESPN data
@@ -211,18 +234,21 @@ pb = pb[pb['season_type'].isin([2, 3])].copy()
 print(f"  Total rows (RS+TOURN): {len(pb):,}")
 
 # ── Tag game_type ────────────────────────────────────────────────────────────
-def classify_game(row):
-    if row['season_type'] == 3:
-        return 'tournament'
-    # Regular season — check if conference game
-    team_conf = CONFERENCE_MAP.get(row['team_location'])
-    opp_conf  = CONFERENCE_MAP.get(row['opponent_team_location'])
-    if team_conf and opp_conf and team_conf == opp_conf:
-        return 'conference'
-    return 'regular_season'
-
 print("Classifying games...")
-pb['game_type'] = pb.apply(classify_game, axis=1)
+team_conf = pb["team_location"].map(CONFERENCE_MAP)
+opp_conf = pb["opponent_team_location"].map(CONFERENCE_MAP)
+is_tournament = pb["season_type"] == 3
+is_conference = (
+    (pb["season_type"] == 2)
+    & team_conf.notna()
+    & opp_conf.notna()
+    & (team_conf == opp_conf)
+)
+pb["game_type"] = np.select(
+    [is_tournament, is_conference],
+    ["tournament", "conference"],
+    default="regular_season",
+)
 
 dist = pb['game_type'].value_counts()
 print(f"\ngame_type distribution:")
