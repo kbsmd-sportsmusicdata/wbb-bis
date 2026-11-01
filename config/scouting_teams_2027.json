@@ -1,0 +1,2914 @@
+{
+  "season": 2027,
+  "source_url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/wbb_groups/wbb_team_group_seasons_2027.parquet",
+  "source_sha256": "373616be93a510ba8db5973d3d5da987631a7cb68d4621b96a35e10879a004b7",
+  "source_updated_at": "2026-10-12T06:14:57Z",
+  "verified_at": "2026-11-01",
+  "conference_reference_url": "https://theacc.com/news/2026/10/30/acc-womens-basketball-begins-2026-27-regular-season-on-sunday.aspx",
+  "teams": [
+    {
+      "season": 2027,
+      "team_id": "103",
+      "team_name": "Boston College Eagles",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "104",
+      "team_name": "Boston University Terriers",
+      "conference": "wbb:patriot",
+      "conference_id": "wbb:patriot",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "107",
+      "team_name": "Holy Cross Crusaders",
+      "conference": "wbb:patriot",
+      "conference_id": "wbb:patriot",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "108",
+      "team_name": "Harvard Crimson",
+      "conference": "wbb:ivy",
+      "conference_id": "wbb:ivy",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "111",
+      "team_name": "Northeastern Huskies",
+      "conference": "wbb:caa",
+      "conference_id": "wbb:caa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "112358",
+      "team_name": "Long Island University Sharks",
+      "conference": "wbb:nec",
+      "conference_id": "wbb:nec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "113",
+      "team_name": "Massachusetts Minutewomen",
+      "conference": "wbb:mac",
+      "conference_id": "wbb:mac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "116",
+      "team_name": "Mount St. Mary's Mountaineers",
+      "conference": "wbb:maac",
+      "conference_id": "wbb:maac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "119",
+      "team_name": "Towson Tigers",
+      "conference": "wbb:caa",
+      "conference_id": "wbb:caa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "12",
+      "team_name": "Arizona Wildcats",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "120",
+      "team_name": "Maryland Terrapins",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "127",
+      "team_name": "Michigan State Spartans",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "13",
+      "team_name": "Cal Poly Mustangs",
+      "conference": "wbb:big-west",
+      "conference_id": "wbb:big-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "130",
+      "team_name": "Michigan Wolverines",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "135",
+      "team_name": "Minnesota Golden Gophers",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "139",
+      "team_name": "Saint Louis Billikens",
+      "conference": "wbb:atlantic-10",
+      "conference_id": "wbb:atlantic-10",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "140",
+      "team_name": "Kansas City Roos",
+      "conference": "wbb:summit",
+      "conference_id": "wbb:summit",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "142",
+      "team_name": "Missouri Tigers",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "145",
+      "team_name": "Ole Miss Rebels",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "147",
+      "team_name": "Montana State Bobcats",
+      "conference": "wbb:big-sky",
+      "conference_id": "wbb:big-sky",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "149",
+      "team_name": "Montana Lady Griz",
+      "conference": "wbb:big-sky",
+      "conference_id": "wbb:big-sky",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "150",
+      "team_name": "Duke Blue Devils",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "151",
+      "team_name": "East Carolina Pirates",
+      "conference": "wbb:american",
+      "conference_id": "wbb:american",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "152",
+      "team_name": "NC State Wolfpack",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "153",
+      "team_name": "North Carolina Tar Heels",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "154",
+      "team_name": "Wake Forest Demon Deacons",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "155",
+      "team_name": "North Dakota Fighting Hawks",
+      "conference": "wbb:summit",
+      "conference_id": "wbb:summit",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "156",
+      "team_name": "Creighton Bluejays",
+      "conference": "wbb:big-east",
+      "conference_id": "wbb:big-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "158",
+      "team_name": "Nebraska Cornhuskers",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "159",
+      "team_name": "Dartmouth Big Green",
+      "conference": "wbb:ivy",
+      "conference_id": "wbb:ivy",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "16",
+      "team_name": "Sacramento State Hornets",
+      "conference": "wbb:big-west",
+      "conference_id": "wbb:big-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "160",
+      "team_name": "New Hampshire Wildcats",
+      "conference": "wbb:america-east",
+      "conference_id": "wbb:america-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "161",
+      "team_name": "Fairleigh Dickinson Knights",
+      "conference": "wbb:nec",
+      "conference_id": "wbb:nec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "163",
+      "team_name": "Princeton Tigers",
+      "conference": "wbb:ivy",
+      "conference_id": "wbb:ivy",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "164",
+      "team_name": "Rutgers Scarlet Knights",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "166",
+      "team_name": "New Mexico State Aggies",
+      "conference": "wbb:cusa",
+      "conference_id": "wbb:cusa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "167",
+      "team_name": "New Mexico Lobos",
+      "conference": "wbb:mountain-west",
+      "conference_id": "wbb:mountain-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "171",
+      "team_name": "Columbia Lions",
+      "conference": "wbb:ivy",
+      "conference_id": "wbb:ivy",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "172",
+      "team_name": "Cornell Big Red",
+      "conference": "wbb:ivy",
+      "conference_id": "wbb:ivy",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "179",
+      "team_name": "St. Bonaventure Bonnies",
+      "conference": "wbb:atlantic-10",
+      "conference_id": "wbb:atlantic-10",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "183",
+      "team_name": "Syracuse Orange",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "189",
+      "team_name": "Bowling Green Falcons",
+      "conference": "wbb:mac",
+      "conference_id": "wbb:mac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "193",
+      "team_name": "Miami (OH) RedHawks",
+      "conference": "wbb:mac",
+      "conference_id": "wbb:mac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "194",
+      "team_name": "Ohio State Buckeyes",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "195",
+      "team_name": "Ohio Bobcats",
+      "conference": "wbb:mac",
+      "conference_id": "wbb:mac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "197",
+      "team_name": "Oklahoma State Cowgirls",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "198",
+      "team_name": "Oral Roberts Golden Eagles",
+      "conference": "wbb:summit",
+      "conference_id": "wbb:summit",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2",
+      "team_name": "Auburn Tigers",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2000",
+      "team_name": "Abilene Christian Wildcats",
+      "conference": "wbb:wac",
+      "conference_id": "wbb:wac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2005",
+      "team_name": "Air Force Falcons",
+      "conference": "wbb:mountain-west",
+      "conference_id": "wbb:mountain-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2006",
+      "team_name": "Akron Zips",
+      "conference": "wbb:mac",
+      "conference_id": "wbb:mac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "201",
+      "team_name": "Oklahoma Sooners",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2010",
+      "team_name": "Alabama A&M Bulldogs",
+      "conference": "wbb:swac",
+      "conference_id": "wbb:swac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2011",
+      "team_name": "Alabama State Lady Hornets",
+      "conference": "wbb:swac",
+      "conference_id": "wbb:swac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2016",
+      "team_name": "Alcorn State Lady Braves",
+      "conference": "wbb:swac",
+      "conference_id": "wbb:swac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "202",
+      "team_name": "Tulsa Golden Hurricane",
+      "conference": "wbb:american",
+      "conference_id": "wbb:american",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2026",
+      "team_name": "App State Mountaineers",
+      "conference": "wbb:sun-belt",
+      "conference_id": "wbb:sun-belt",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2029",
+      "team_name": "Arkansas-Pine Bluff Golden Lions",
+      "conference": "wbb:swac",
+      "conference_id": "wbb:swac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2031",
+      "team_name": "Little Rock Trojans",
+      "conference": "wbb:wac",
+      "conference_id": "wbb:wac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2032",
+      "team_name": "Arkansas State Red Wolves",
+      "conference": "wbb:sun-belt",
+      "conference_id": "wbb:sun-belt",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "204",
+      "team_name": "Oregon State Beavers",
+      "conference": "wbb:pac-12",
+      "conference_id": "wbb:pac-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2046",
+      "team_name": "Austin Peay Governors",
+      "conference": "wbb:wac",
+      "conference_id": "wbb:wac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2050",
+      "team_name": "Ball State Cardinals",
+      "conference": "wbb:mac",
+      "conference_id": "wbb:mac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2057",
+      "team_name": "Belmont Bruins",
+      "conference": "wbb:mvc",
+      "conference_id": "wbb:mvc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2065",
+      "team_name": "Bethune-Cookman Wildcats",
+      "conference": "wbb:swac",
+      "conference_id": "wbb:swac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2066",
+      "team_name": "Binghamton Bearcats",
+      "conference": "wbb:america-east",
+      "conference_id": "wbb:america-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2083",
+      "team_name": "Bucknell Bison",
+      "conference": "wbb:patriot",
+      "conference_id": "wbb:patriot",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2084",
+      "team_name": "Buffalo Bulls",
+      "conference": "wbb:mac",
+      "conference_id": "wbb:mac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2086",
+      "team_name": "Butler Bulldogs",
+      "conference": "wbb:big-east",
+      "conference_id": "wbb:big-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2097",
+      "team_name": "Campbell Fighting Camels",
+      "conference": "wbb:caa",
+      "conference_id": "wbb:caa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2099",
+      "team_name": "Canisius Golden Griffins",
+      "conference": "wbb:maac",
+      "conference_id": "wbb:maac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "21",
+      "team_name": "San Diego State Aztecs",
+      "conference": "wbb:pac-12",
+      "conference_id": "wbb:pac-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2110",
+      "team_name": "Central Arkansas Sugar Bears",
+      "conference": "wbb:wac",
+      "conference_id": "wbb:wac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2115",
+      "team_name": "Central Connecticut Blue Devils",
+      "conference": "wbb:nec",
+      "conference_id": "wbb:nec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2116",
+      "team_name": "UCF Knights",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2117",
+      "team_name": "Central Michigan Chippewas",
+      "conference": "wbb:mac",
+      "conference_id": "wbb:mac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2127",
+      "team_name": "Charleston Southern Buccaneers",
+      "conference": "wbb:big-south",
+      "conference_id": "wbb:big-south",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "213",
+      "team_name": "Penn State Lady Lions",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2130",
+      "team_name": "Chicago State Cougars",
+      "conference": "wbb:nec",
+      "conference_id": "wbb:nec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2132",
+      "team_name": "Cincinnati Bearcats",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2142",
+      "team_name": "Colgate Raiders",
+      "conference": "wbb:patriot",
+      "conference_id": "wbb:patriot",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2154",
+      "team_name": "Coppin State Eagles",
+      "conference": "wbb:meac",
+      "conference_id": "wbb:meac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2166",
+      "team_name": "Davidson Wildcats",
+      "conference": "wbb:atlantic-10",
+      "conference_id": "wbb:atlantic-10",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2168",
+      "team_name": "Dayton Flyers",
+      "conference": "wbb:atlantic-10",
+      "conference_id": "wbb:atlantic-10",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2169",
+      "team_name": "Delaware State Hornets",
+      "conference": "wbb:meac",
+      "conference_id": "wbb:meac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2172",
+      "team_name": "Denver Pioneers",
+      "conference": "wbb:wcc",
+      "conference_id": "wbb:wcc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2174",
+      "team_name": "Detroit Mercy Titans",
+      "conference": "wbb:horizon",
+      "conference_id": "wbb:horizon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "218",
+      "team_name": "Temple Owls",
+      "conference": "wbb:american",
+      "conference_id": "wbb:american",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2181",
+      "team_name": "Drake Bulldogs",
+      "conference": "wbb:mvc",
+      "conference_id": "wbb:mvc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2182",
+      "team_name": "Drexel Dragons",
+      "conference": "wbb:caa",
+      "conference_id": "wbb:caa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2184",
+      "team_name": "Duquesne Dukes",
+      "conference": "wbb:atlantic-10",
+      "conference_id": "wbb:atlantic-10",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "219",
+      "team_name": "Pennsylvania Quakers",
+      "conference": "wbb:ivy",
+      "conference_id": "wbb:ivy",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2193",
+      "team_name": "East Tennessee State Buccaneers",
+      "conference": "wbb:socon",
+      "conference_id": "wbb:socon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2197",
+      "team_name": "Eastern Illinois Panthers",
+      "conference": "wbb:ovc",
+      "conference_id": "wbb:ovc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2198",
+      "team_name": "Eastern Kentucky Colonels",
+      "conference": "wbb:wac",
+      "conference_id": "wbb:wac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2199",
+      "team_name": "Eastern Michigan Eagles",
+      "conference": "wbb:mac",
+      "conference_id": "wbb:mac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "221",
+      "team_name": "Pittsburgh Panthers",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2210",
+      "team_name": "Elon Phoenix",
+      "conference": "wbb:caa",
+      "conference_id": "wbb:caa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2217",
+      "team_name": "Fairfield Stags",
+      "conference": "wbb:maac",
+      "conference_id": "wbb:maac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "222",
+      "team_name": "Villanova Wildcats",
+      "conference": "wbb:big-east",
+      "conference_id": "wbb:big-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2226",
+      "team_name": "Florida Atlantic Owls",
+      "conference": "wbb:american",
+      "conference_id": "wbb:american",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2229",
+      "team_name": "Florida International Panthers",
+      "conference": "wbb:cusa",
+      "conference_id": "wbb:cusa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2230",
+      "team_name": "Fordham Rams",
+      "conference": "wbb:atlantic-10",
+      "conference_id": "wbb:atlantic-10",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2239",
+      "team_name": "Cal State Fullerton Titans",
+      "conference": "wbb:big-west",
+      "conference_id": "wbb:big-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2241",
+      "team_name": "Gardner-Webb Runnin' Bulldogs",
+      "conference": "wbb:big-south",
+      "conference_id": "wbb:big-south",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2244",
+      "team_name": "George Mason Patriots",
+      "conference": "wbb:atlantic-10",
+      "conference_id": "wbb:atlantic-10",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2247",
+      "team_name": "Georgia State Panthers",
+      "conference": "wbb:sun-belt",
+      "conference_id": "wbb:sun-belt",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "225",
+      "team_name": "Brown Bears",
+      "conference": "wbb:ivy",
+      "conference_id": "wbb:ivy",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2250",
+      "team_name": "Gonzaga Bulldogs",
+      "conference": "wbb:pac-12",
+      "conference_id": "wbb:pac-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2253",
+      "team_name": "Grand Canyon Lopes",
+      "conference": "wbb:mountain-west",
+      "conference_id": "wbb:mountain-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2261",
+      "team_name": "Hampton Lady Pirates",
+      "conference": "wbb:caa",
+      "conference_id": "wbb:caa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "227",
+      "team_name": "Rhode Island Rams",
+      "conference": "wbb:atlantic-10",
+      "conference_id": "wbb:atlantic-10",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2272",
+      "team_name": "High Point Panthers",
+      "conference": "wbb:big-south",
+      "conference_id": "wbb:big-south",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2275",
+      "team_name": "Hofstra Pride",
+      "conference": "wbb:caa",
+      "conference_id": "wbb:caa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2277",
+      "team_name": "Houston Christian Huskies",
+      "conference": "wbb:southland",
+      "conference_id": "wbb:southland",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "228",
+      "team_name": "Clemson Tigers",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2287",
+      "team_name": "Illinois State Redbirds",
+      "conference": "wbb:mvc",
+      "conference_id": "wbb:mvc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2294",
+      "team_name": "Iowa Hawkeyes",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2296",
+      "team_name": "Jackson State Lady Tigers",
+      "conference": "wbb:swac",
+      "conference_id": "wbb:swac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "23",
+      "team_name": "San Jos\u00e9 State Spartans",
+      "conference": "wbb:mountain-west",
+      "conference_id": "wbb:mountain-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2305",
+      "team_name": "Kansas Jayhawks",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2306",
+      "team_name": "Kansas State Wildcats",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2309",
+      "team_name": "Kent State Golden Flashes",
+      "conference": "wbb:mac",
+      "conference_id": "wbb:mac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "231",
+      "team_name": "Furman Paladins",
+      "conference": "wbb:socon",
+      "conference_id": "wbb:socon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "232",
+      "team_name": "Charleston Cougars",
+      "conference": "wbb:caa",
+      "conference_id": "wbb:caa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2320",
+      "team_name": "Lamar Cardinals",
+      "conference": "wbb:southland",
+      "conference_id": "wbb:southland",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2325",
+      "team_name": "La Salle Explorers",
+      "conference": "wbb:atlantic-10",
+      "conference_id": "wbb:atlantic-10",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2329",
+      "team_name": "Lehigh Mountain Hawks",
+      "conference": "wbb:patriot",
+      "conference_id": "wbb:patriot",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "233",
+      "team_name": "South Dakota Coyotes",
+      "conference": "wbb:summit",
+      "conference_id": "wbb:summit",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2330",
+      "team_name": "Le Moyne Dolphins",
+      "conference": "wbb:nec",
+      "conference_id": "wbb:nec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2335",
+      "team_name": "Liberty Flames",
+      "conference": "wbb:cusa",
+      "conference_id": "wbb:cusa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2344",
+      "team_name": "Longwood Lancers",
+      "conference": "wbb:big-south",
+      "conference_id": "wbb:big-south",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2348",
+      "team_name": "Louisiana Tech Lady Techsters",
+      "conference": "wbb:sun-belt",
+      "conference_id": "wbb:sun-belt",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2349",
+      "team_name": "UMass Lowell River Hawks",
+      "conference": "wbb:america-east",
+      "conference_id": "wbb:america-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "235",
+      "team_name": "Memphis Tigers",
+      "conference": "wbb:american",
+      "conference_id": "wbb:american",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2350",
+      "team_name": "Loyola Chicago Ramblers",
+      "conference": "wbb:atlantic-10",
+      "conference_id": "wbb:atlantic-10",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2351",
+      "team_name": "Loyola Marymount Lions",
+      "conference": "wbb:wcc",
+      "conference_id": "wbb:wcc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2352",
+      "team_name": "Loyola Maryland Greyhounds",
+      "conference": "wbb:patriot",
+      "conference_id": "wbb:patriot",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "236",
+      "team_name": "Chattanooga Mocs",
+      "conference": "wbb:socon",
+      "conference_id": "wbb:socon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2363",
+      "team_name": "Manhattan Jaspers",
+      "conference": "wbb:maac",
+      "conference_id": "wbb:maac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2368",
+      "team_name": "Marist Red Foxes",
+      "conference": "wbb:maac",
+      "conference_id": "wbb:maac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2377",
+      "team_name": "McNeese Cowgirls",
+      "conference": "wbb:southland",
+      "conference_id": "wbb:southland",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2378",
+      "team_name": "UMBC Retrievers",
+      "conference": "wbb:america-east",
+      "conference_id": "wbb:america-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2379",
+      "team_name": "Maryland Eastern Shore Hawks",
+      "conference": "wbb:meac",
+      "conference_id": "wbb:meac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "238",
+      "team_name": "Vanderbilt Commodores",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2382",
+      "team_name": "Mercer Bears",
+      "conference": "wbb:socon",
+      "conference_id": "wbb:socon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2385",
+      "team_name": "Mercyhurst Lakers",
+      "conference": "wbb:nec",
+      "conference_id": "wbb:nec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "239",
+      "team_name": "Baylor Bears",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2390",
+      "team_name": "Miami Hurricanes",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2393",
+      "team_name": "Middle Tennessee Blue Raiders",
+      "conference": "wbb:cusa",
+      "conference_id": "wbb:cusa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "24",
+      "team_name": "Stanford Cardinal",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2400",
+      "team_name": "Mississippi Valley State Devilettes",
+      "conference": "wbb:swac",
+      "conference_id": "wbb:swac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2405",
+      "team_name": "Monmouth Hawks",
+      "conference": "wbb:caa",
+      "conference_id": "wbb:caa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2413",
+      "team_name": "Morehead State Eagles",
+      "conference": "wbb:ovc",
+      "conference_id": "wbb:ovc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2415",
+      "team_name": "Morgan State Lady Bears",
+      "conference": "wbb:meac",
+      "conference_id": "wbb:meac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "242",
+      "team_name": "Rice Owls",
+      "conference": "wbb:american",
+      "conference_id": "wbb:american",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2426",
+      "team_name": "Navy Midshipmen",
+      "conference": "wbb:patriot",
+      "conference_id": "wbb:patriot",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2427",
+      "team_name": "UNC Asheville Bulldogs",
+      "conference": "wbb:big-south",
+      "conference_id": "wbb:big-south",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2428",
+      "team_name": "North Carolina Central Eagles",
+      "conference": "wbb:meac",
+      "conference_id": "wbb:meac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2429",
+      "team_name": "Charlotte 49ers",
+      "conference": "wbb:american",
+      "conference_id": "wbb:american",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2430",
+      "team_name": "UNC Greensboro Spartans",
+      "conference": "wbb:socon",
+      "conference_id": "wbb:socon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2433",
+      "team_name": "UL Monroe Warhawks",
+      "conference": "wbb:sun-belt",
+      "conference_id": "wbb:sun-belt",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2437",
+      "team_name": "Omaha Mavericks",
+      "conference": "wbb:summit",
+      "conference_id": "wbb:summit",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2439",
+      "team_name": "UNLV Lady Rebels",
+      "conference": "wbb:mountain-west",
+      "conference_id": "wbb:mountain-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2440",
+      "team_name": "Nevada Wolf Pack",
+      "conference": "wbb:mountain-west",
+      "conference_id": "wbb:mountain-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2441",
+      "team_name": "New Haven Chargers",
+      "conference": "wbb:nec",
+      "conference_id": "wbb:nec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2443",
+      "team_name": "LSU New Orleans Privateers",
+      "conference": "wbb:southland",
+      "conference_id": "wbb:southland",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2447",
+      "team_name": "Nicholls Colonels",
+      "conference": "wbb:southland",
+      "conference_id": "wbb:southland",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2448",
+      "team_name": "North Carolina A&T Aggies",
+      "conference": "wbb:caa",
+      "conference_id": "wbb:caa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2449",
+      "team_name": "North Dakota State Bison",
+      "conference": "wbb:summit",
+      "conference_id": "wbb:summit",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "245",
+      "team_name": "Texas A&M Aggies",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2450",
+      "team_name": "Norfolk State Spartans",
+      "conference": "wbb:meac",
+      "conference_id": "wbb:meac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2453",
+      "team_name": "North Alabama Lions",
+      "conference": "wbb:wac",
+      "conference_id": "wbb:wac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2454",
+      "team_name": "North Florida Ospreys",
+      "conference": "wbb:asun",
+      "conference_id": "wbb:asun",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2458",
+      "team_name": "Northern Colorado Bears",
+      "conference": "wbb:big-sky",
+      "conference_id": "wbb:big-sky",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2459",
+      "team_name": "Northern Illinois Huskies",
+      "conference": "wbb:horizon",
+      "conference_id": "wbb:horizon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2460",
+      "team_name": "Northern Iowa Panthers",
+      "conference": "wbb:mvc",
+      "conference_id": "wbb:mvc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2463",
+      "team_name": "Cal State Northridge Matadors",
+      "conference": "wbb:big-west",
+      "conference_id": "wbb:big-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2464",
+      "team_name": "Northern Arizona Lumberjacks",
+      "conference": "wbb:big-sky",
+      "conference_id": "wbb:big-sky",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2466",
+      "team_name": "Northwestern State Lady Demons",
+      "conference": "wbb:southland",
+      "conference_id": "wbb:southland",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2473",
+      "team_name": "Oakland Golden Grizzlies",
+      "conference": "wbb:horizon",
+      "conference_id": "wbb:horizon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "248",
+      "team_name": "Houston Cougars",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2483",
+      "team_name": "Oregon Ducks",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "249",
+      "team_name": "North Texas Mean Green",
+      "conference": "wbb:american",
+      "conference_id": "wbb:american",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2492",
+      "team_name": "Pepperdine Waves",
+      "conference": "wbb:wcc",
+      "conference_id": "wbb:wcc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "25",
+      "team_name": "California Golden Bears",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "250",
+      "team_name": "UT Arlington Mavericks",
+      "conference": "wbb:wac",
+      "conference_id": "wbb:wac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2501",
+      "team_name": "Portland Pilots",
+      "conference": "wbb:wcc",
+      "conference_id": "wbb:wcc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2502",
+      "team_name": "Portland State Vikings",
+      "conference": "wbb:big-sky",
+      "conference_id": "wbb:big-sky",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2504",
+      "team_name": "Prairie View A&M Lady Panthers",
+      "conference": "wbb:swac",
+      "conference_id": "wbb:swac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2506",
+      "team_name": "Presbyterian Blue Hose",
+      "conference": "wbb:big-south",
+      "conference_id": "wbb:big-south",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2507",
+      "team_name": "Providence Friars",
+      "conference": "wbb:big-east",
+      "conference_id": "wbb:big-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2509",
+      "team_name": "Purdue Boilermakers",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "251",
+      "team_name": "Texas Longhorns",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2511",
+      "team_name": "Queens University Royals",
+      "conference": "wbb:asun",
+      "conference_id": "wbb:asun",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2514",
+      "team_name": "Quinnipiac Bobcats",
+      "conference": "wbb:maac",
+      "conference_id": "wbb:maac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2515",
+      "team_name": "Radford Highlanders",
+      "conference": "wbb:big-south",
+      "conference_id": "wbb:big-south",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "252",
+      "team_name": "BYU Cougars",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2520",
+      "team_name": "Rider Broncs",
+      "conference": "wbb:maac",
+      "conference_id": "wbb:maac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2523",
+      "team_name": "Robert Morris Colonials",
+      "conference": "wbb:horizon",
+      "conference_id": "wbb:horizon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2529",
+      "team_name": "Sacred Heart Pioneers",
+      "conference": "wbb:maac",
+      "conference_id": "wbb:maac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "253",
+      "team_name": "Southern Utah Thunderbirds",
+      "conference": "wbb:big-sky",
+      "conference_id": "wbb:big-sky",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2534",
+      "team_name": "Sam Houston Bearkats",
+      "conference": "wbb:cusa",
+      "conference_id": "wbb:cusa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2535",
+      "team_name": "Samford Bulldogs",
+      "conference": "wbb:socon",
+      "conference_id": "wbb:socon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2539",
+      "team_name": "San Francisco Dons",
+      "conference": "wbb:wcc",
+      "conference_id": "wbb:wcc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "254",
+      "team_name": "Utah Utes",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2540",
+      "team_name": "UC Santa Barbara Gauchos",
+      "conference": "wbb:big-west",
+      "conference_id": "wbb:big-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2541",
+      "team_name": "Santa Clara Broncos",
+      "conference": "wbb:wcc",
+      "conference_id": "wbb:wcc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2545",
+      "team_name": "SE Louisiana Lady Lions",
+      "conference": "wbb:southland",
+      "conference_id": "wbb:southland",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2546",
+      "team_name": "Southeast Missouri State Redhawks",
+      "conference": "wbb:ovc",
+      "conference_id": "wbb:ovc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2547",
+      "team_name": "Seattle U Redhawks",
+      "conference": "wbb:wcc",
+      "conference_id": "wbb:wcc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2550",
+      "team_name": "Seton Hall Pirates",
+      "conference": "wbb:big-east",
+      "conference_id": "wbb:big-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "256",
+      "team_name": "James Madison Dukes",
+      "conference": "wbb:sun-belt",
+      "conference_id": "wbb:sun-belt",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2561",
+      "team_name": "Siena Saints",
+      "conference": "wbb:maac",
+      "conference_id": "wbb:maac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2565",
+      "team_name": "SIU Edwardsville Cougars",
+      "conference": "wbb:ovc",
+      "conference_id": "wbb:ovc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2567",
+      "team_name": "SMU Mustangs",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2569",
+      "team_name": "South Carolina State Lady Bulldogs",
+      "conference": "wbb:meac",
+      "conference_id": "wbb:meac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "257",
+      "team_name": "Richmond Spiders",
+      "conference": "wbb:atlantic-10",
+      "conference_id": "wbb:atlantic-10",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2571",
+      "team_name": "South Dakota State Jackrabbits",
+      "conference": "wbb:summit",
+      "conference_id": "wbb:summit",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2572",
+      "team_name": "Southern Miss Lady Eagles",
+      "conference": "wbb:sun-belt",
+      "conference_id": "wbb:sun-belt",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2579",
+      "team_name": "South Carolina Gamecocks",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "258",
+      "team_name": "Virginia Cavaliers",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2582",
+      "team_name": "Southern Jaguars",
+      "conference": "wbb:swac",
+      "conference_id": "wbb:swac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "259",
+      "team_name": "Virginia Tech Hokies",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2599",
+      "team_name": "St. John's Red Storm",
+      "conference": "wbb:big-east",
+      "conference_id": "wbb:big-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "26",
+      "team_name": "UCLA Bruins",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2603",
+      "team_name": "Saint Joseph's Hawks",
+      "conference": "wbb:atlantic-10",
+      "conference_id": "wbb:atlantic-10",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2608",
+      "team_name": "Saint Mary's Gaels",
+      "conference": "wbb:wcc",
+      "conference_id": "wbb:wcc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "261",
+      "team_name": "Vermont Catamounts",
+      "conference": "wbb:america-east",
+      "conference_id": "wbb:america-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2612",
+      "team_name": "Saint Peter's Peacocks",
+      "conference": "wbb:maac",
+      "conference_id": "wbb:maac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2617",
+      "team_name": "Stephen F. Austin Ladyjacks",
+      "conference": "wbb:southland",
+      "conference_id": "wbb:southland",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2619",
+      "team_name": "Stony Brook Seawolves",
+      "conference": "wbb:caa",
+      "conference_id": "wbb:caa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2623",
+      "team_name": "Missouri State Lady Bears",
+      "conference": "wbb:cusa",
+      "conference_id": "wbb:cusa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2627",
+      "team_name": "Tarleton State Texans",
+      "conference": "wbb:wac",
+      "conference_id": "wbb:wac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2628",
+      "team_name": "TCU Horned Frogs",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2630",
+      "team_name": "UT Martin Skyhawks",
+      "conference": "wbb:ovc",
+      "conference_id": "wbb:ovc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2633",
+      "team_name": "Tennessee Lady Volunteers",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2634",
+      "team_name": "Tennessee State Lady Tigers",
+      "conference": "wbb:ovc",
+      "conference_id": "wbb:ovc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2635",
+      "team_name": "Tennessee Tech Golden Eagles",
+      "conference": "wbb:socon",
+      "conference_id": "wbb:socon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2636",
+      "team_name": "UTSA Roadrunners",
+      "conference": "wbb:american",
+      "conference_id": "wbb:american",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2638",
+      "team_name": "UTEP Miners",
+      "conference": "wbb:mountain-west",
+      "conference_id": "wbb:mountain-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "264",
+      "team_name": "Washington Huskies",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2640",
+      "team_name": "Texas Southern Tigers",
+      "conference": "wbb:swac",
+      "conference_id": "wbb:swac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2641",
+      "team_name": "Texas Tech Lady Raiders",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2649",
+      "team_name": "Toledo Rockets",
+      "conference": "wbb:mac",
+      "conference_id": "wbb:mac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "265",
+      "team_name": "Washington State Cougars",
+      "conference": "wbb:pac-12",
+      "conference_id": "wbb:pac-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2653",
+      "team_name": "Troy Trojans",
+      "conference": "wbb:sun-belt",
+      "conference_id": "wbb:sun-belt",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2655",
+      "team_name": "Tulane Green Wave",
+      "conference": "wbb:american",
+      "conference_id": "wbb:american",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2670",
+      "team_name": "VCU Rams",
+      "conference": "wbb:atlantic-10",
+      "conference_id": "wbb:atlantic-10",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2674",
+      "team_name": "Valparaiso Beacons",
+      "conference": "wbb:mvc",
+      "conference_id": "wbb:mvc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2681",
+      "team_name": "Wagner Seahawks",
+      "conference": "wbb:nec",
+      "conference_id": "wbb:nec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "269",
+      "team_name": "Marquette Golden Eagles",
+      "conference": "wbb:big-east",
+      "conference_id": "wbb:big-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2692",
+      "team_name": "Weber State Wildcats",
+      "conference": "wbb:big-sky",
+      "conference_id": "wbb:big-sky",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2697",
+      "team_name": "West Florida Argonauts",
+      "conference": "wbb:asun",
+      "conference_id": "wbb:asun",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2698",
+      "team_name": "West Georgia Wolves",
+      "conference": "wbb:wac",
+      "conference_id": "wbb:wac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "27",
+      "team_name": "UC Riverside Highlanders",
+      "conference": "wbb:big-west",
+      "conference_id": "wbb:big-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "270",
+      "team_name": "Milwaukee Panthers",
+      "conference": "wbb:horizon",
+      "conference_id": "wbb:horizon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2710",
+      "team_name": "Western Illinois Leathernecks",
+      "conference": "wbb:ovc",
+      "conference_id": "wbb:ovc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2711",
+      "team_name": "Western Michigan Broncos",
+      "conference": "wbb:mac",
+      "conference_id": "wbb:mac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2717",
+      "team_name": "Western Carolina Catamounts",
+      "conference": "wbb:socon",
+      "conference_id": "wbb:socon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2724",
+      "team_name": "Wichita State Shockers",
+      "conference": "wbb:american",
+      "conference_id": "wbb:american",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2729",
+      "team_name": "William & Mary Tribe",
+      "conference": "wbb:caa",
+      "conference_id": "wbb:caa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2737",
+      "team_name": "Winthrop Eagles",
+      "conference": "wbb:big-south",
+      "conference_id": "wbb:big-south",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2739",
+      "team_name": "Green Bay Phoenix",
+      "conference": "wbb:horizon",
+      "conference_id": "wbb:horizon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2747",
+      "team_name": "Wofford Terriers",
+      "conference": "wbb:socon",
+      "conference_id": "wbb:socon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "275",
+      "team_name": "Wisconsin Badgers",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2750",
+      "team_name": "Wright State Raiders",
+      "conference": "wbb:horizon",
+      "conference_id": "wbb:horizon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2751",
+      "team_name": "Wyoming Cowgirls",
+      "conference": "wbb:mountain-west",
+      "conference_id": "wbb:mountain-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2752",
+      "team_name": "Xavier Musketeers",
+      "conference": "wbb:big-east",
+      "conference_id": "wbb:big-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2754",
+      "team_name": "Youngstown State Penguins",
+      "conference": "wbb:horizon",
+      "conference_id": "wbb:horizon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2755",
+      "team_name": "Grambling Lady Tigers",
+      "conference": "wbb:swac",
+      "conference_id": "wbb:swac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "276",
+      "team_name": "Marshall Thundering Herd",
+      "conference": "wbb:sun-belt",
+      "conference_id": "wbb:sun-belt",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "277",
+      "team_name": "West Virginia Mountaineers",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2771",
+      "team_name": "Merrimack Warriors",
+      "conference": "wbb:maac",
+      "conference_id": "wbb:maac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "278",
+      "team_name": "Fresno State Bulldogs",
+      "conference": "wbb:pac-12",
+      "conference_id": "wbb:pac-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "279",
+      "team_name": "Pacific Tigers",
+      "conference": "wbb:wcc",
+      "conference_id": "wbb:wcc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "28",
+      "team_name": "UC San Diego Tritons",
+      "conference": "wbb:big-west",
+      "conference_id": "wbb:big-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2803",
+      "team_name": "Bryant Bulldogs",
+      "conference": "wbb:america-east",
+      "conference_id": "wbb:america-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2815",
+      "team_name": "Lindenwood Lions",
+      "conference": "wbb:ovc",
+      "conference_id": "wbb:ovc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "282",
+      "team_name": "Indiana State Sycamores",
+      "conference": "wbb:mvc",
+      "conference_id": "wbb:mvc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2837",
+      "team_name": "East Texas A&M Lions",
+      "conference": "wbb:southland",
+      "conference_id": "wbb:southland",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "284",
+      "team_name": "Stonehill Skyhawks",
+      "conference": "wbb:nec",
+      "conference_id": "wbb:nec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2856",
+      "team_name": "California Baptist Lancers",
+      "conference": "wbb:big-west",
+      "conference_id": "wbb:big-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2870",
+      "team_name": "Purdue Fort Wayne Mastodons",
+      "conference": "wbb:horizon",
+      "conference_id": "wbb:horizon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "288",
+      "team_name": "Lipscomb Bisons",
+      "conference": "wbb:asun",
+      "conference_id": "wbb:asun",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2885",
+      "team_name": "NJIT Highlanders",
+      "conference": "wbb:america-east",
+      "conference_id": "wbb:america-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "290",
+      "team_name": "Georgia Southern Eagles",
+      "conference": "wbb:sun-belt",
+      "conference_id": "wbb:sun-belt",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2900",
+      "team_name": "St. Thomas Tommies",
+      "conference": "wbb:summit",
+      "conference_id": "wbb:summit",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2908",
+      "team_name": "South Carolina Upstate Spartans",
+      "conference": "wbb:big-south",
+      "conference_id": "wbb:big-south",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2916",
+      "team_name": "Incarnate Word Cardinals",
+      "conference": "wbb:southland",
+      "conference_id": "wbb:southland",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "292",
+      "team_name": "UT Rio Grande Valley Vaqueros",
+      "conference": "wbb:southland",
+      "conference_id": "wbb:southland",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "2934",
+      "team_name": "Cal State Bakersfield Roadrunners",
+      "conference": "wbb:big-west",
+      "conference_id": "wbb:big-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "294",
+      "team_name": "Jacksonville Dolphins",
+      "conference": "wbb:asun",
+      "conference_id": "wbb:asun",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "295",
+      "team_name": "Old Dominion Monarchs",
+      "conference": "wbb:sun-belt",
+      "conference_id": "wbb:sun-belt",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "299",
+      "team_name": "Long Beach State Beach",
+      "conference": "wbb:big-west",
+      "conference_id": "wbb:big-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "30",
+      "team_name": "USC Trojans",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "300",
+      "team_name": "UC Irvine Anteaters",
+      "conference": "wbb:big-west",
+      "conference_id": "wbb:big-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "301",
+      "team_name": "San Diego Toreros",
+      "conference": "wbb:wcc",
+      "conference_id": "wbb:wcc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "302",
+      "team_name": "UC Davis Aggies",
+      "conference": "wbb:mountain-west",
+      "conference_id": "wbb:mountain-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "304",
+      "team_name": "Idaho State Bengals",
+      "conference": "wbb:big-sky",
+      "conference_id": "wbb:big-sky",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "305",
+      "team_name": "DePaul Blue Demons",
+      "conference": "wbb:big-east",
+      "conference_id": "wbb:big-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "3084",
+      "team_name": "Utah Valley Wolverines",
+      "conference": "wbb:big-west",
+      "conference_id": "wbb:big-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "309",
+      "team_name": "Louisiana Ragin' Cajuns",
+      "conference": "wbb:sun-belt",
+      "conference_id": "wbb:sun-belt",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "3101",
+      "team_name": "Utah Tech Trailblazers",
+      "conference": "wbb:big-sky",
+      "conference_id": "wbb:big-sky",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "311",
+      "team_name": "Maine Black Bears",
+      "conference": "wbb:america-east",
+      "conference_id": "wbb:america-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "314",
+      "team_name": "Iona Gaels",
+      "conference": "wbb:maac",
+      "conference_id": "wbb:maac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "315",
+      "team_name": "Niagara Purple Eagles",
+      "conference": "wbb:maac",
+      "conference_id": "wbb:maac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "322",
+      "team_name": "Lafayette Leopards",
+      "conference": "wbb:patriot",
+      "conference_id": "wbb:patriot",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "324",
+      "team_name": "Coastal Carolina Chanticleers",
+      "conference": "wbb:sun-belt",
+      "conference_id": "wbb:sun-belt",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "325",
+      "team_name": "Cleveland State Vikings",
+      "conference": "wbb:horizon",
+      "conference_id": "wbb:horizon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "326",
+      "team_name": "Texas State Bobcats",
+      "conference": "wbb:pac-12",
+      "conference_id": "wbb:pac-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "328",
+      "team_name": "Utah State Aggies",
+      "conference": "wbb:pac-12",
+      "conference_id": "wbb:pac-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "331",
+      "team_name": "Eastern Washington Eagles",
+      "conference": "wbb:big-sky",
+      "conference_id": "wbb:big-sky",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "333",
+      "team_name": "Alabama Crimson Tide",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "338",
+      "team_name": "Kennesaw State Owls",
+      "conference": "wbb:cusa",
+      "conference_id": "wbb:cusa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "339",
+      "team_name": "Evansville Purple Aces",
+      "conference": "wbb:mvc",
+      "conference_id": "wbb:mvc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "344",
+      "team_name": "Mississippi State Bulldogs",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "349",
+      "team_name": "Army Black Knights",
+      "conference": "wbb:patriot",
+      "conference_id": "wbb:patriot",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "350",
+      "team_name": "UNC Wilmington Seahawks",
+      "conference": "wbb:caa",
+      "conference_id": "wbb:caa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "356",
+      "team_name": "Illinois Fighting Illini",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "357",
+      "team_name": "Texas A&M-Corpus Christi Islanders",
+      "conference": "wbb:southland",
+      "conference_id": "wbb:southland",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "36",
+      "team_name": "Colorado State Rams",
+      "conference": "wbb:pac-12",
+      "conference_id": "wbb:pac-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "38",
+      "team_name": "Colorado Buffaloes",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "399",
+      "team_name": "UAlbany Great Danes",
+      "conference": "wbb:america-east",
+      "conference_id": "wbb:america-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "41",
+      "team_name": "UConn Huskies",
+      "conference": "wbb:big-east",
+      "conference_id": "wbb:big-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "43",
+      "team_name": "Yale Bulldogs",
+      "conference": "wbb:ivy",
+      "conference_id": "wbb:ivy",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "44",
+      "team_name": "American University Eagles",
+      "conference": "wbb:patriot",
+      "conference_id": "wbb:patriot",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "45",
+      "team_name": "George Washington Revolutionaries",
+      "conference": "wbb:atlantic-10",
+      "conference_id": "wbb:atlantic-10",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "46",
+      "team_name": "Georgetown Hoyas",
+      "conference": "wbb:big-east",
+      "conference_id": "wbb:big-east",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "47",
+      "team_name": "Howard Bison",
+      "conference": "wbb:meac",
+      "conference_id": "wbb:meac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "48",
+      "team_name": "Delaware Blue Hens",
+      "conference": "wbb:cusa",
+      "conference_id": "wbb:cusa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "5",
+      "team_name": "UAB Blazers",
+      "conference": "wbb:american",
+      "conference_id": "wbb:american",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "50",
+      "team_name": "Florida A&M Rattlers",
+      "conference": "wbb:swac",
+      "conference_id": "wbb:swac",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "52",
+      "team_name": "Florida State Seminoles",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "526",
+      "team_name": "Florida Gulf Coast Eagles",
+      "conference": "wbb:asun",
+      "conference_id": "wbb:asun",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "55",
+      "team_name": "Jacksonville State Gamecocks",
+      "conference": "wbb:cusa",
+      "conference_id": "wbb:cusa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "56",
+      "team_name": "Stetson Hatters",
+      "conference": "wbb:asun",
+      "conference_id": "wbb:asun",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "57",
+      "team_name": "Florida Gators",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "58",
+      "team_name": "South Florida Bulls",
+      "conference": "wbb:american",
+      "conference_id": "wbb:american",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "59",
+      "team_name": "Georgia Tech Yellow Jackets",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "6",
+      "team_name": "South Alabama Jaguars",
+      "conference": "wbb:sun-belt",
+      "conference_id": "wbb:sun-belt",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "61",
+      "team_name": "Georgia Lady Bulldogs",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "62",
+      "team_name": "Hawai'i Rainbow Wahine",
+      "conference": "wbb:mountain-west",
+      "conference_id": "wbb:mountain-west",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "66",
+      "team_name": "Iowa State Cyclones",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "68",
+      "team_name": "Boise State Broncos",
+      "conference": "wbb:pac-12",
+      "conference_id": "wbb:pac-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "70",
+      "team_name": "Idaho Vandals",
+      "conference": "wbb:big-sky",
+      "conference_id": "wbb:big-sky",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "71",
+      "team_name": "Bradley Braves",
+      "conference": "wbb:mvc",
+      "conference_id": "wbb:mvc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "77",
+      "team_name": "Northwestern Wildcats",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "79",
+      "team_name": "Southern Illinois Salukis",
+      "conference": "wbb:mvc",
+      "conference_id": "wbb:mvc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "8",
+      "team_name": "Arkansas Razorbacks",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "82",
+      "team_name": "UIC Flames",
+      "conference": "wbb:mvc",
+      "conference_id": "wbb:mvc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "84",
+      "team_name": "Indiana Hoosiers",
+      "conference": "wbb:big-ten",
+      "conference_id": "wbb:big-ten",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "85",
+      "team_name": "IU Indianapolis Jaguars",
+      "conference": "wbb:horizon",
+      "conference_id": "wbb:horizon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "87",
+      "team_name": "Notre Dame Fighting Irish",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "88",
+      "team_name": "Southern Indiana Screaming Eagles",
+      "conference": "wbb:ovc",
+      "conference_id": "wbb:ovc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "9",
+      "team_name": "Arizona State Sun Devils",
+      "conference": "wbb:big-12",
+      "conference_id": "wbb:big-12",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "91",
+      "team_name": "Bellarmine Knights",
+      "conference": "wbb:asun",
+      "conference_id": "wbb:asun",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "93",
+      "team_name": "Murray State Racers",
+      "conference": "wbb:mvc",
+      "conference_id": "wbb:mvc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "94",
+      "team_name": "Northern Kentucky Norse",
+      "conference": "wbb:horizon",
+      "conference_id": "wbb:horizon",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "96",
+      "team_name": "Kentucky Wildcats",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "97",
+      "team_name": "Louisville Cardinals",
+      "conference": "ACC",
+      "conference_id": "wbb:acc",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "98",
+      "team_name": "Western Kentucky Lady Toppers",
+      "conference": "wbb:cusa",
+      "conference_id": "wbb:cusa",
+      "is_d1": true
+    },
+    {
+      "season": 2027,
+      "team_id": "99",
+      "team_name": "LSU Tigers",
+      "conference": "wbb:sec",
+      "conference_id": "wbb:sec",
+      "is_d1": true
+    }
+  ]
+}
