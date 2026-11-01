@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,">
+<title>WBB • Game scouting</title>
+<style>
+:root{--ink:#172b35;--muted:#596c74;--paper:#f6f5f0;--line:#d9e0dc;--blue:#1d5262;--red:#bb5a42;--amber:#805b17}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 system-ui,-apple-system,sans-serif}button,select{font:inherit;color:inherit}button,a,select{touch-action:manipulation}button{cursor:pointer}a{color:var(--blue)}.mast{background:var(--ink);color:#fff;padding:22px max(24px,calc((100vw - 1280px)/2));display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#c7d4d8}.mast h1{font-size:25px;line-height:1.2;margin:6px 0}.mast p{font-size:12px;margin:0;color:#c7d4d8}.wrap{max-width:1280px;margin:auto;padding:24px}.notice{border-left:3px solid var(--amber);background:#f0eadc;padding:12px 16px;margin-bottom:20px;font-size:13px}.notice strong{color:var(--amber)}.filters{display:grid;grid-template-columns:1fr .8fr 1.8fr .9fr;gap:14px;margin-bottom:24px}label{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}select{width:100%;min-height:44px;margin-top:5px;border:1px solid #bccacb;background:white;padding:9px 30px 9px 10px;border-radius:5px;max-width:100%}.topline{display:flex;justify-content:space-between;gap:20px;align-items:center}.eyebrow{text-transform:uppercase;font-size:11px;letter-spacing:.13em;font-weight:700;color:var(--blue)}h2{font-size:34px;letter-spacing:-.04em;line-height:1.12;margin:10px 0}h3{font-size:18px;letter-spacing:-.02em;margin:0 0 6px}h4{font-size:14px;margin:14px 0 8px}.sub,.caption{color:var(--muted);font-size:12px}.sub{font-size:13px}.badge{font-size:11px;padding:5px 9px;background:#e5eceb;color:var(--blue);border-radius:3px;display:inline-block}.badge.warn{background:#eee3cd;color:var(--amber)}.actions{display:flex;gap:7px;flex-wrap:wrap}.btn{border:1px solid #bdc9cb;border-radius:4px;padding:9px 12px;background:#fff;font-size:12px;font-weight:600}.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}.rule{border:0;border-top:1px solid var(--line);margin:22px 0}.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:#fff;margin:24px 0;border-radius:6px}.stat{padding:20px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat .num{font-size:30px;line-height:1.2;font-weight:650;letter-spacing:-.04em;margin:8px 0}.stat label{font-size:10px}.grid{display:grid;grid-template-columns:1.12fr 1fr;gap:20px;margin:20px 0}.panel{background:#fff;border:1px solid var(--line);padding:23px;border-radius:6px;min-width:0}.panel.full{grid-column:1/-1}.legend{display:flex;gap:18px;font-size:11px;color:var(--muted);margin:16px 0}.dot{display:inline-block;width:9px;height:9px;background:var(--blue);border-radius:2px;margin-right:5px}.dot.other{background:var(--red)}.factor{margin:16px 0}.factor-head{display:flex;justify-content:space-between;font-size:12px;gap:8px}.factor-label{font-weight:600}.track{height:9px;background:#eef1ef;margin:5px 0;position:relative;border-radius:2px;overflow:hidden}.bar{height:100%;background:var(--blue)}.bar.other{background:var(--red)}.axis{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}.empty{padding:26px 16px;background:#f4f6f3;border:1px dashed #bccac4;border-radius:4px;color:var(--muted);font-size:13px}.empty strong{color:var(--ink);display:block;margin-bottom:6px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:12px;white-space:nowrap}th{text-align:right;font-size:10px;text-transform:uppercase;color:var(--muted);letter-spacing:.04em;background:#f6f7f4}td,th{padding:10px 9px;border-bottom:1px solid #e5e9e5}td{text-align:right;font-variant-numeric:tabular-nums}td:first-child,th:first-child{text-align:left}tbody tr:hover{background:#f7f8f6}.toggle{display:flex;gap:6px;margin:12px 0}.toggle button[aria-pressed=true]{background:#e0ebeb;border-color:var(--blue)}details{margin-top:20px;border-top:1px solid var(--line);padding-top:14px}summary{cursor:pointer;font-weight:600;font-size:13px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;background:#f2f4f0;padding:12px}.source-list{overflow-wrap:anywhere;font-size:12px}.footer{display:flex;justify-content:space-between;gap:15px;margin:25px 0;font-size:11px;color:var(--muted)}.logs{display:flex;align-items:flex-end;gap:8px;height:116px;margin:16px 0}.game-col{flex:1;min-width:24px;text-align:center;font-size:10px;color:var(--muted)}.paired{height:90px;display:flex;align-items:flex-end;justify-content:center;gap:3px}.paired span{display:block;min-width:9px;width:28%;background:var(--blue)}.paired span:last-child{background:var(--red)}[hidden]{display:none!important}
+@media(max-width:760px){.mast{padding:20px}.mast h1{font-size:21px}.mast .sub{display:none}.wrap{padding:16px}.filters{grid-template-columns:1fr 1fr;gap:10px}.filters .matchup{grid-column:1/-1;grid-row:2}.topline{align-items:flex-start;flex-direction:column}h2{font-size:28px}.stats{grid-template-columns:1fr 1fr}.stat{padding:15px}.stat:nth-child(2){border:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.stat .num{font-size:26px}.grid{grid-template-columns:1fr;gap:14px}.panel{padding:18px}.footer{flex-direction:column}.caption{font-size:11px}.actions .btn{padding:9px}.mast p{font-size:10px}}
+@media print{.filters,.actions,.toggle,.mast .sub,.notice,#archive-note{display:none}body{background:white;font-size:11px}.mast{background:white;color:#172b35;padding:8px 0}.mast p,.brand{color:#596c74}.wrap{padding:0}.panel,.stats{break-inside:avoid}.grid{gap:12px}.panel{padding:12px}details{display:block}details>*{display:block}h2{font-size:24px}}
+</style></head><body>
+<header class="mast"><div><div class="brand">Women's college basketball</div><h1>Game scouting</h1><p>NET top 50 + every ACC team</p></div><div class="sub" style="color:#c7d4d8;text-align:right">Morning checks<br><strong>Monday · Wednesday · Friday</strong></div></header>
+<main class="wrap">
+<div id="notice" class="notice"></div>
+<div class="filters">
+<label>Team<select id="team" aria-label="Team"></select></label>
+<label>Report<select id="mode" aria-label="Report mode"><option value="pregame">Pregame</option><option value="postgame">Postgame</option></select></label>
+<label class="matchup">Matchup & date<select id="matchup" aria-label="Matchup and date"></select></label>
+<label>Edition<select id="edition" aria-label="Report edition"></select></label>
+</div>
+<div id="no-report" class="empty" hidden></div>
+<article id="report">
+<div class="topline"><div><div id="kicker" class="eyebrow"></div><h2 id="title"></h2><div id="game-sub" class="sub"></div><p id="reason" class="caption"></p></div>
+<div class="actions"><button class="btn primary" id="json">Save JSON</button><button class="btn" id="csv">Save CSV</button><button class="btn" id="print">Print report</button></div></div>
+<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px"><span id="status" class="badge"></span><span id="cutoff" class="caption"></span></div>
+<div id="stats" class="stats"></div>
+<div class="grid">
+<section class="panel"><h3 id="compare-title">Matchup profile</h3><div id="compare-note" class="caption"></div><div id="comparison"></div></section>
+<section class="panel"><h3>Recent results</h3><div class="caption">Last five validated games before tip · points scored / allowed</div><div id="recent"></div></section>
+<section id="opponent-game" class="panel full" hidden><h3>Opponent game against its pregame baseline</h3><div id="opponent-comparison"></div></section>
+<section id="historical" class="panel full" hidden><div class="eyebrow">Historical reference only</div><h3 id="historical-title"></h3><p class="caption">Team results from the previous season. Different rosters and roles; these are not current-player projections.</p><div id="historical-chart"></div></section>
+<section class="panel full"><div class="topline"><div><h3>Players</h3><div id="player-note" class="caption"></div></div><div class="toggle" id="player-tabs"><button class="btn" data-window="season">Season</button><button class="btn" data-window="last_five">Last five</button><button class="btn" data-window="game">This game</button><button class="btn" data-window="roster">Roster</button></div></div><div id="players" class="table-wrap"></div></section>
+<section id="pbp-section" class="panel full" hidden><h3>Validated scoring</h3><div id="pbp" class="caption"></div></section>
+</div>
+<details><summary>Coverage, sources & methods</summary><div id="coverage" class="source-list"></div><p class="caption">Rates use summed numerators and denominators. Possessions and ratings are box-score estimates using a 0.44 free-throw coefficient. Turnover rate uses estimated possessions; offensive rebounding uses available rebounds. Play-by-play is limited to validated scoring events. No lineup or possession-level tactical claims are inferred.</p><div id="sources" class="source-list"></div></details>
+</article>
+<div class="footer"><div id="refresh"></div><div id="archive-note"></div></div>
+</main>
+<script id="scouting-data" type="application/json">__SCOUTING_PAYLOAD__</script>
+<script>
+"use strict";
+const DATA=JSON.parse(document.getElementById("scouting-data").textContent),$=id=>document.getElementById(id);
+const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt=(v,d=1)=>v===null||v===undefined?"Unavailable":Number(v).toFixed(d),pct=v=>v==null?"Unavailable":(v*100).toFixed(1)+"%";
+const dt=v=>v?new Date(v).toLocaleString("en-US",{month:"short",day:"numeric",year:"numeric",hour:"numeric",minute:"2-digit",timeZoneName:"short"}):"Unavailable";
+const statuses={ready:"Ready",complete:"Complete",historical_context_only:"Current game data pending · historical context available",awaiting_first_game:"Awaiting first game",awaiting_box_scores:"Awaiting box scores",partial_baseline:"Partial baseline",box_score_only:"Box score only · scoring detail pending",partial_player_box:"Player box scores incomplete"};
+let selected=null,playerWindow="season";
+function option(value,label){return '<option value="'+esc(value)+'">'+esc(label)+'</option>'}
+const teams=new Map(DATA.cohort.map(t=>[String(t.team_id),t.team_name]));DATA.reports.forEach(r=>teams.set(r.team_id,r.team_name));
+$("team").innerHTML=option("all","All covered teams")+[...teams].sort((a,b)=>a[1].localeCompare(b[1])).map(([id,name])=>option(id,name)).join("");
+function matching(){return DATA.reports.filter(r=>($("team").value==="all"||r.team_id===$("team").value)&&r.mode===$("mode").value)}
+function rebuild(){
+ const groups=new Map();matching().forEach(r=>groups.set(r.report_id,r));
+ const sorted=[...groups.values()].sort((a,b)=>a.mode==="postgame"?b.tip_at.localeCompare(a.tip_at):a.tip_at.localeCompare(b.tip_at));
+ $("matchup").innerHTML=sorted.map(r=>option(r.report_id,r.team_name+" vs "+r.opponent_name+" · "+dt(r.tip_at))).join("");
+ editions();
+}
+function editions(){
+ const rows=matching().filter(r=>r.report_id===$("matchup").value).sort((a,b)=>b.edition-a.edition);
+ $("edition").innerHTML=rows.map(r=>option(r.edition_id,"v"+r.edition+" · "+dt(r.generated_at))).join("");render();
+}
+function factorChart(a,b,team,other){
+ const metrics=[["efg_pct","Effective FG%"],["turnover_rate","Turnover rate"],["offensive_rebound_rate","Offensive rebound%"],["free_throw_rate","FTA / FGA"]];
+ if(!a?.games&&!b?.games)return '<div class="empty"><strong>No validated current-season baseline yet</strong>Report data will appear after the source publishes completed games and checks pass.</div>';
+ let html='<div class="legend"><span><i class="dot"></i>'+esc(team)+' · '+(a?.games||0)+' games</span><span><i class="dot other"></i>'+esc(other)+' · '+(b?.games||0)+' games</span></div>';
+ for(const [key,label] of metrics){
+  const x=a?.[key],y=b?.[key],max=Math.max(1,Math.ceil(Math.max(x||0,y||0)*10)/10);
+  html+='<div class="factor"><div class="factor-head"><span class="factor-label">'+label+'</span><span>'+pct(x)+' / '+pct(y)+'</span></div><div class="track"><div class="bar" style="width:'+(x==null?0:100*x/max)+'%"></div></div><div class="track"><div class="bar other" style="width:'+(y==null?0:100*y/max)+'%"></div></div><div class="axis"><span>0%</span><span>'+Math.round(max*100)+'%</span></div></div>';
+ }
+ return html+'<div class="caption">Shooting sample: '+fmt(a?.field_goals_attempted,0)+' / '+fmt(b?.field_goals_attempted,0)+' FGA. Each measure starts at zero; lower turnover rate is favorable.</div>';
+}
+function table(headers,rows){return '<table><thead><tr>'+headers.map(x=>'<th>'+esc(x)+'</th>').join("")+'</tr></thead><tbody>'+rows.map(row=>'<tr>'+row.map(x=>'<td>'+esc(x)+'</td>').join("")+'</tr>').join("")+'</tbody></table>'}
+function renderPlayers(){
+ if(!selected)return;
+ const r=selected;
+ document.querySelectorAll("[data-window]").forEach(b=>{b.setAttribute("aria-pressed",String(b.dataset.window===playerWindow));b.hidden=b.dataset.window==="game"&&r.mode!=="postgame"});
+ let rows=playerWindow==="game"?r.game_players:playerWindow==="last_five"?r.profile?.last_five_players:r.profile?.players;
+ $("player-note").textContent=playerWindow==="roster"?"Published current roster · no inferred playing role or availability":"Averages per game played. GP is player appearances; team games are listed separately.";
+ if(playerWindow==="roster"){
+  $("players").innerHTML=r.roster?.length?table(["Player","Position","Experience"],r.roster.map(p=>[p.player_name||p.player_id,p.position_abbreviation||"Unavailable",p.experience_display_value||"Unavailable"])):'<div class="empty">Roster not published.</div>';return;
+ }
+ $("players").innerHTML=rows?.length?table(["Player","GP / team","MIN","PTS","REB","AST","TS%"],rows.map(p=>[p.player_name,p.games_played+" / "+p.team_games,fmt(p.minutes_per_game),fmt(p.points_per_game),fmt(p.rebounds_per_game),fmt(p.assists_per_game),pct(p.ts_pct)])):'<div class="empty"><strong>Player box scores pending</strong>Use Roster to view published names. Historical team results do not describe current players.</div>';
+}
+function render(){
+ selected=matching().find(r=>r.edition_id===$("edition").value);$("report").hidden=!selected;$("no-report").hidden=!!selected;
+ if(!selected){$("no-report").innerHTML='<strong>No '+esc($("mode").value)+' report in this window</strong>Upcoming reports cover games until the next scheduled check. Older editions remain in the full report archive.';return}
+ const r=selected,a=r.profile?.season||{},b=r.opponent_profile?.season||{},game=r.game_metrics||{},post=r.mode==="postgame";
+ $("kicker").textContent=(post?"Postgame":"Pregame")+" · "+(r.season-1)+"–"+String(r.season).slice(-2);
+ $("title").textContent=r.team_name+" vs "+r.opponent_name;$("game-sub").textContent=dt(r.tip_at)+" · "+(r.home_away==="home"?"Home":"Away")+(r.venue?" · "+r.venue:"");
+ $("reason").textContent=(r.cohort?.inclusion_reason||"Cohort selection unavailable")+(r.cohort?.net_rank?" · NET #"+r.cohort.net_rank:"")+(r.cohort?.ranking_date?" · Rankings "+r.cohort.ranking_date:"");
+ $("status").textContent=statuses[r.status]||r.status;$("status").className="badge"+(["ready","complete"].includes(r.status)?"":" warn");
+ $("cutoff").textContent="Report cutoff "+dt(r.cutoff_at)+" · edition "+r.edition;
+ const m=post?game:a;
+ const stats=post?[["Points",fmt(m.points_total,0),"Final validated box score"],["Points allowed",fmt(m.opponent_points_per_game),"Final validated box score"],["eFG%",pct(m.efg_pct),fmt(m.field_goals_attempted,0)+" field goal attempts"],["Baseline games",String(r.baseline?.season?.games??0),r.baseline_label]]:[["Season games",String(a.games||0),"Validated before scheduled tip"],["Points / game",fmt(a.points_per_game),"Team season baseline"],["eFG%",pct(a.efg_pct),fmt(a.field_goals_attempted,0)+" field goal attempts"],["Last five PPG",fmt(r.profile?.last_five?.points_per_game),String(r.profile?.last_five?.games||0)+" available games"]];
+ $("stats").innerHTML=stats.map(([k,v,n])=>'<div class="stat"><label>'+esc(k)+'</label><div class="num">'+esc(v)+'</div><div class="caption">'+esc(n)+'</div></div>').join("");
+ $("compare-title").textContent=post?"Game against pregame baseline":"Matchup profile";
+ $("compare-note").textContent=post?r.baseline_label+" · baseline excludes this game":"Season totals before scheduled tip · unequal samples stay visible";
+ $("comparison").innerHTML=factorChart(post?game:a,post?r.baseline?.season:b,post?"This game":r.team_name,post?"Baseline":r.opponent_name);
+ const logs=r.profile?.game_log?.slice(-5)||[];
+ $("recent").innerHTML=logs.length?'<div class="legend"><span><i class="dot"></i>Scored</span><span><i class="dot other"></i>Allowed</span></div><div class="logs">'+logs.map(g=>'<div class="game-col"><div class="paired"><span title="'+esc(g.points)+' scored" style="height:'+Math.min(100,(g.points||0)/1.3)+'%"></span><span title="'+esc(g.opponent_points)+' allowed" style="height:'+Math.min(100,(g.opponent_points||0)/1.3)+'%"></span></div>'+esc(new Date(g.game_at).toLocaleDateString("en-US",{month:"short",day:"numeric"}))+'</div>').join("")+'</div>'+table(["Date","Opponent ID","PF","PA"],logs.map(g=>[new Date(g.game_at).toLocaleDateString(),g.opponent_id,fmt(g.points,0),fmt(g.opponent_points,0)])):'<div class="empty"><strong>No validated current-season results yet</strong>Recent form will appear here after game data is published.</div>';
+ $("opponent-game").hidden=!post;
+ const opponentGame={games:game.games,field_goals_attempted:game.opponent_field_goals_attempted};for(const k of ["efg_pct","turnover_rate","offensive_rebound_rate","free_throw_rate"])opponentGame[k]=game["opponent_"+k];
+ $("opponent-comparison").innerHTML=factorChart(opponentGame,r.opponent_baseline?.season,r.opponent_name+" this game",r.opponent_name+" baseline");
+ const h=r.historical_reference,oh=r.opponent_historical_reference;$("historical").hidden=!h?.metrics?.games&&!oh?.metrics?.games;
+ $("historical-title").textContent=h?.season?String(h.season-1)+"–"+String(h.season).slice(-2)+" team context":"Previous season";
+ $("historical-chart").innerHTML=factorChart(h?.metrics,oh?.metrics,r.team_name,r.opponent_name);
+ renderPlayers();
+ $("pbp-section").hidden=!post;$("pbp").textContent=r.pbp?"Period points: "+Object.entries(r.pbp.points_by_period||{}).map(([p,n])=>p+": "+n).join(" · ")+" · "+r.pbp.scoring_events+" scoring events. Validated against the final box score.":"Play-by-play is pending or withheld after validation. Box-score reporting remains available when its checks pass.";
+ $("coverage").innerHTML='<p>'+esc(a.games||0)+' accepted team-box games; '+esc(r.profile?.coverage?.player_box_games||0)+' player-box games; '+esc(r.profile?.coverage?.pbp_games||0)+' games with validated scoring. Expected completed games: '+esc(r.profile?.coverage?.expected_games??"Unavailable")+'.</p><p>Report age: '+esc(Math.max(0,Math.floor((Date.now()-Date.parse(r.generated_at))/3600000)))+' hours. Baseline cutoff: '+esc(dt(r.baseline_cutoff_at||r.cutoff_at))+'.</p>';
+ const refs=r.source_references||{};$("sources").innerHTML='<h4>Source snapshots used by this edition</h4>'+Object.entries(refs).map(([name,items])=>'<p><strong>'+esc(name)+'</strong>: '+esc(typeof items==="string"?items:items.map(i=>i.sha256+" ("+i.games.length+" games)").join("; "))+'</p>').join("")+Object.entries(DATA.sources).filter(([sha])=>JSON.stringify(refs).includes(sha)).map(([sha,s])=>'<p>'+esc(s.name||sha)+' · <a href="'+esc(s.source_url||s.url||"#")+'" rel="noreferrer">Published SDV source</a> · SHA-256 '+esc(sha)+'</p>').join("");
+}
+$("team").onchange=rebuild;$("mode").onchange=rebuild;$("matchup").onchange=editions;$("edition").onchange=render;
+document.querySelectorAll("[data-window]").forEach(b=>b.onclick=()=>{playerWindow=b.dataset.window;renderPlayers()});
+function download(text,type,ext){if(!selected)return;const a=document.createElement("a"),u=URL.createObjectURL(new Blob([text],{type}));a.href=u;a.download="wbb-"+selected.edition_id+"."+ext;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
+$("json").onclick=()=>download(JSON.stringify(selected,null,2),"application/json","json");
+function csvCell(v){const s=typeof v==="object"?JSON.stringify(v):String(v??"");return '"'+s.replace(/"/g,'""')+'"'}
+$("csv").onclick=()=>{if(!selected)return;const r=selected,rows=[["edition_id","cutoff_at","baseline_cutoff_at","status","section","entity_id","name","value","source_references"]];
+ const metric=(section,values)=>{for(const [k,v] of Object.entries(values||{}))rows.push([r.edition_id,r.cutoff_at,r.baseline_cutoff_at,r.status,section,r.team_id,k,v,(section.includes("baseline")&&Object.keys(r.baseline_source_references||{}).length?r.baseline_source_references:r.source_references)])};
+ const players=(section,values)=>{for(const p of values||[])for(const [k,v] of Object.entries(p))rows.push([r.edition_id,r.cutoff_at,r.baseline_cutoff_at,r.status,section,p.player_id,k,v,r.source_references])};
+ metric("season",r.profile?.season);metric("last_five",r.profile?.last_five);metric("game_metrics",r.game_metrics);metric("baseline",r.baseline?.season);metric("opponent_baseline",r.opponent_baseline?.season);metric("opponent_season",r.opponent_profile?.season);
+ players("season_players",r.profile?.players);players("last_five_players",r.profile?.last_five_players);players("game_players",r.game_players);
+ download(rows.map(row=>row.map(csvCell).join(",")).join("\r\n"),"text/csv","csv")};
+$("print").onclick=()=>window.print();
+const pending=DATA.pending.length?"Pending: "+DATA.pending.join(", ")+". ":"";
+const overdue=Date.now()>Date.parse(DATA.next_primary_at)+135*60000;
+$("notice").innerHTML=(DATA.preview_label?"<strong>"+esc(DATA.preview_label)+"</strong> · ":"")+esc(pending)+(DATA.cohort.some(t=>t.selection_status==="pending_net")?"Verified NCAA NET is not available. Coverage currently includes the ACC; top-50 selection will be added when a checked ranking is available. ":"")+(overdue?"<strong>A scheduled refresh is overdue.</strong>":"");
+$("notice").hidden=!$("notice").textContent;
+$("refresh").textContent="Data checked "+dt(DATA.attempted_at)+". Next expected check "+dt(DATA.next_primary_at)+" · Pacific schedule.";
+$("archive-note").textContent=DATA.window_label+". "+DATA.total_editions+" archived editions.";
+rebuild();
+</script></body></html>
