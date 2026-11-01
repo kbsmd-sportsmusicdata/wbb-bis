@@ -1,0 +1,31 @@
+{
+  "repository": "sportsdataverse/sportsdataverse-data",
+  "family": "sdv_espn_wbb",
+  "league": "womens_college_basketball",
+  "datasets": {
+    "schedule": {
+      "tag": "espn_womens_college_basketball_schedules",
+      "pattern": "wbb_schedule_{season}.parquet"
+    },
+    "team_box": {
+      "tag": "espn_womens_college_basketball_team_boxscores",
+      "pattern": "team_box_{season}.parquet"
+    },
+    "player_box": {
+      "tag": "espn_womens_college_basketball_player_boxscores",
+      "pattern": "player_box_{season}.parquet"
+    },
+    "pbp": {
+      "tag": "espn_womens_college_basketball_pbp",
+      "pattern": "play_by_play_{season}.parquet"
+    },
+    "rosters": {
+      "tag": "espn_womens_college_basketball_rosters",
+      "pattern": "rosters_{season}.parquet"
+    },
+    "teams": {
+      "tag": "wbb_groups",
+      "pattern": "wbb_team_group_seasons_{season}.parquet"
+    }
+  }
+}
