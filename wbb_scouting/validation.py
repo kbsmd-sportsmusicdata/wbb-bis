@@ -119,6 +119,13 @@ def validate_snapshot(dataset,frame,context):
         expected=set(schedule.loc[final,"game_id"].astype(str))
     if "game_id" not in frame:
         return {"accepted_games":set(),"quarantine":{},"coverage":{"expected_games":len(expected),"available_games":0,"missing_game_ids":sorted(expected),"latest_usable_game_at":None},"reference_valid":True}
+    box_lookup={}
+    previous_lookup={}
+    if dataset=="player_box":
+        boxes=context.get("team_box",pd.DataFrame())
+        previous=context.get("previous_player_box",pd.DataFrame())
+        if len(boxes):box_lookup={str(g):rows for g,rows in boxes.groupby("game_id",sort=False)}
+        if len(previous):previous_lookup={str(g):rows for g,rows in previous.groupby("game_id",sort=False)}
     for game,group in frame.groupby("game_id",sort=False):
         game=str(game)
         errors=[]
@@ -150,8 +157,7 @@ def validate_snapshot(dataset,frame,context):
                         if tid not in by_team or by_team[tid]["points"]!=event[side+"_score"]:
                             errors.append("team points disagree with final schedule")
         elif dataset=="player_box":
-            boxes=context.get("team_box",pd.DataFrame())
-            expected_boxes=boxes[boxes.game_id.astype(str).eq(game)] if len(boxes) else pd.DataFrame()
+            expected_boxes=box_lookup.get(game,pd.DataFrame())
             if len(expected_boxes)!=2:
                 errors.append("validated team boxes unavailable")
             else:
@@ -159,8 +165,7 @@ def validate_snapshot(dataset,frame,context):
                     errors.append("player teams disagree with matchup")
                 for row in expected_boxes.to_dict("records"):
                     player_rows=group[group.team_id.astype(str).eq(str(row["team_id"]))]
-                    previous=context.get("previous_player_box",pd.DataFrame())
-                    if len(previous):previous=previous[previous.game_id.astype(str).eq(game)]
+                    previous=previous_lookup.get(game,pd.DataFrame())
                     errors+=_player_completeness(player_rows,row,event,previous)
                     points=player_rows.points.sum(min_count=1)
                     if pd.isna(points) or points!=row["points"]:

@@ -37,3 +37,7 @@ The official NCAA.com women's NET page currently presents browser verification i
 ## Real reconciliation pilot
 
 The historical California-and-opponents pilot validated 36 season-2026 games / 72 team-box rows against the same season's final schedule, with no quarantined games. Initial ingestion inserted 72 rows. The identical rerun inserted 0, updated 0, removed 0 and retained 72 unchanged rows. Five monthly canonical partitions were written under temporary pilot state. This is a bounded historical reconciliation check, not current-season coverage or a national completeness certification.
+
+## Review-strengthened validation
+
+The November 1 source-backed run with minute/duration checks accepts 6,025 historical team-box games and 6,020 player-box games. Player game 401826058 additionally fails minute completeness, beyond the prior point/identity checks. Nine player game groups are quarantined in total; five expected historical team-box games and ten player-box games are unavailable or withheld. These historical results never satisfy season-2027 freshness. The report preview excludes withheld groups even though canonical storage retains last-known inputs for recovery.
