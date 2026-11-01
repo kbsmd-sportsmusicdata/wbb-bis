@@ -18,19 +18,31 @@ def _team_rows(frame,team_id,cutoff):
     if frame.empty:return frame.copy()
     return frame[frame.team_id.astype(str).eq(str(team_id)) & (pd.to_datetime(frame.game_date_time,utc=True)<cutoff)].copy()
 
-def _profile(tables,team_id,season,cutoff):
-    boxes=_season_table(tables,"team_box",season)
+
+def _chronological(tables,name,season):
+    frame=_season_table(tables,name,season)
+    schedule=_season_table(tables,"schedule",season)
+    if frame.empty or schedule.empty:return frame
+    frame=frame.copy()
+    times=schedule.drop_duplicates("game_id").set_index("game_id").game_date_time
+    frame["game_date_time"]=frame.game_id.map(times)
+    return frame[frame.game_date_time.notna()]
+
+
+def _profile(tables,team_id,season,cutoff,exclude_game_id=None):
+    boxes=_chronological(tables,"team_box",season)
+    if len(boxes) and exclude_game_id is not None:boxes=boxes[~boxes.game_id.astype(str).eq(str(exclude_game_id))]
     boxes=boxes[pd.to_datetime(boxes.game_date_time,utc=True)<cutoff] if len(boxes) else boxes
     own=_team_rows(attach_opponents(boxes),team_id,cutoff)
     own=own.sort_values("game_date_time") if len(own) else own
     last=own.tail(5)
     games=set(own.game_id.astype(str)) if len(own) else set()
     recent=set(last.game_id.astype(str)) if len(last) else set()
-    players=_season_table(tables,"player_box",season)
+    players=_chronological(tables,"player_box",season)
     players=_team_rows(players,team_id,cutoff)
     if len(players):players=players[players.game_id.astype(str).isin(games)]
     recent_players=players[players.game_id.astype(str).isin(recent)] if len(players) else players
-    events=_season_table(tables,"pbp",season)
+    events=_chronological(tables,"pbp",season)
     if len(events):
         events=events[events.game_id.astype(str).isin(games)&(pd.to_datetime(events.game_date_time,utc=True)<cutoff)]
     schedule=_season_table(tables,"schedule",season)
@@ -59,7 +71,7 @@ def _cohort_context(row):
     return clean_json({field:row.get(field) for field in fields})
 
 def _historical(tables,team,season,cutoff):
-    boxes=_season_table(tables,"team_box",season-1)
+    boxes=_chronological(tables,"team_box",season-1)
     own=_team_rows(attach_opponents(boxes),team,cutoff)
     return {"season":season-1,"metrics":team_metrics(own),"game_ids":sorted(set(own.game_id.astype(str))) if len(own) else [],
             "label":"Historical team context; not a current-roster projection"}
@@ -91,8 +103,9 @@ def _report_sources(snapshots,profile,opponent_profile,historical,opponent_histo
         if grouped:
             refs[dataset]=[{"sha256":checksum,"games":ids} for checksum,ids in sorted(grouped.items())]
     for name,checksum in snapshots.get("dataset_snapshots",{}).items():
-        if name.split(":")[-1] not in ("team_box","player_box","pbp","schedule"):
+        if name.split(":")[-1] not in ("team_box","player_box","pbp","schedule","net"):
             refs[name]=checksum
+    refs.update(snapshots.get("active_net_snapshot",{}))
     return refs
 
 def build_reports(tables,cohort,now,previous_reports,snapshots,bootstrap=False):
@@ -131,8 +144,8 @@ def build_reports(tables,cohort,now,previous_reports,snapshots,bootstrap=False):
             team_name=member.get("team_name") or game.get(side+"_display_name") or game.get(side+"_location") or team
             opponent_name=cohort_lookup.get(opponent,{}).get("team_name") or game.get(other+"_display_name") or game.get(other+"_location") or opponent
             cutoff=now if mode=="pregame" else tip
-            profile=_profile(tables,team,season,cutoff)
-            opponent_profile=_profile(tables,opponent,season,cutoff)
+            profile=_profile(tables,team,season,cutoff,game_id)
+            opponent_profile=_profile(tables,opponent,season,cutoff,game_id)
             historical=_historical(tables,team,season,cutoff)
             opponent_historical=_historical(tables,opponent,season,cutoff)
             baseline=None

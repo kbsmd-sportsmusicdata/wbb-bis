@@ -101,3 +101,27 @@ def test_redirect_does_not_forward_authorization_to_storage_host():
  request=Request("https://api.github.com/repos/owner/repo/releases/assets/1",headers={"Authorization":"Bearer test-secret"})
  redirected=SafeRedirectHandler().redirect_request(request,None,302,"Found",{},"https://release-assets.githubusercontent.com/asset")
  assert not redirected.has_header("Authorization")
+
+def test_production_404_exception_falls_back_to_prior_checkpoint(tmp_path):
+ from wbb_scouting.sources import SourceUnavailable
+ c=Fake();m,files=setup(tmp_path);first=publish_run(REPO,m,files,c,"a"*40)
+ m2={**restore_state(REPO,tmp_path/"one",c),"parent_release":first["tag_name"],"attempted_at":"2026-11-04T14:17:00+00:00"}
+ second=publish_run(REPO,m2,[],c,"a"*40)
+ missing=next(a["browser_download_url"] for a in second["assets"] if a["name"]=="manifest.json")
+ original=c.download
+ def download(url,path,headers=None):
+  if url==missing:raise SourceUnavailable("Published asset is unavailable")
+  return original(url,path,headers)
+ c.download=download
+ assert restore_state(REPO,tmp_path/"fresh",c)["state_release"]==first["tag_name"]
+
+def test_restore_does_not_materialize_obsolete_raw_archive(tmp_path):
+ c=Fake();m,files=setup(tmp_path);sources={};raws=[]
+ for i in range(8):
+  path=tmp_path/("raw-"+str(i)+".parquet");path.write_bytes(("snapshot"+str(i)).encode());sha=sha256_file(path)
+  sources[sha]={"sha256":sha,"path":"raw/"+sha+".parquet","bytes":path.stat().st_size};raws.append(path)
+ m["sources"]=sources;active=sha256_file(raws[-1]);m["dataset_snapshots"]={"2027:team_box":active}
+ publish_run(REPO,m,files+raws,c,"a"*40)
+ out=tmp_path/"fresh";restored=restore_state(REPO,out,c)
+ assert len(restored["sources"])==8
+ assert [p.name for p in (out/"raw").iterdir()]==[active+".parquet"]

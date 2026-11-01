@@ -3,7 +3,7 @@ from __future__ import annotations
 import copy,hashlib,http.client,json,re,shutil,tempfile,uuid
 from pathlib import Path,PurePosixPath
 from urllib.parse import urlparse,quote
-from .sources import HTTPClient,sha256_file
+from .sources import HTTPClient,sha256_file,SourceUnavailable
 from .store import json_text,write_manifest,split_asset
 
 PREFIX="scouting-v1-"
@@ -77,6 +77,13 @@ def _references(manifest):
     for source in manifest.get("sources",{}).values():
         if "path" in source:yield source
 
+def _restore_references(manifest):
+    yield from manifest.get("partitions",[])
+    yield from manifest.get("artifacts",[])
+    active=set(manifest.get("dataset_snapshots",{}).values())
+    for sha,source in manifest.get("sources",{}).items():
+        if "path" in source and ("dataset_snapshots" not in manifest or sha in active):yield source
+
 def _download_ref(repository,ref,root,client):
     relative=_safe_path(ref["path"]);checksum=_checksum(ref["sha256"])
     path=root/relative;path.parent.mkdir(parents=True,exist_ok=True)
@@ -109,15 +116,18 @@ def restore_state(repository,destination,client,season=None):
                 if manifest.get("schema_version")!=1 or manifest.get("status") not in ("complete","partial"):
                     raise StateError("Unsupported or failed checkpoint")
                 if season and manifest.get("season")!=season:raise StateError("Unexpected checkpoint season")
-                for ref in _references(manifest):_download_ref(repository,ref,staging,client)
+                for ref in _references(manifest):
+                    _safe_path(ref["path"]);_checksum(ref["sha256"])
+                    if ref.get("url"):_safe_url(repository,ref["url"])
+                for ref in _restore_references(manifest):_download_ref(repository,ref,staging,client)
                 manifest.update(state_release=release["tag_name"],state_head=candidates[0]["tag_name"])
                 destination.mkdir(parents=True,exist_ok=True)
-                for ref in _references(manifest):
+                for ref in _restore_references(manifest):
                     target=destination/_safe_path(ref["path"]);target.parent.mkdir(parents=True,exist_ok=True)
-                    shutil.copyfile(staging/ref["path"],target)
+                    (staging/ref["path"]).replace(target)
                 write_manifest(manifest,destination/"manifest.json")
                 return manifest
-        except (OSError,ValueError,KeyError,StateError):
+        except (OSError,ValueError,KeyError,StateError,SourceUnavailable):
             continue
     raise StateError("Published scouting checkpoints exist but none can be verified; refusing empty bootstrap")
 

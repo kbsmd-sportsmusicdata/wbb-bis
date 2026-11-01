@@ -30,7 +30,7 @@ def render_dashboard(reports,manifest,destination):
 def write_exports(reports,destination):
     destination=Path(destination);destination.mkdir(parents=True,exist_ok=True)
     (destination/"reports.json").write_text(json_text(reports))
-    fields=["edition_id","mode","season","game_id","team_id","team_name","opponent_id","opponent_name","tip_at","generated_at","cutoff_at","status","baseline_origin","calculation_version","source_references"]
+    fields=["edition_id","mode","season","game_id","team_id","team_name","opponent_id","opponent_name","tip_at","generated_at","cutoff_at","baseline_cutoff_at","status","baseline_origin","baseline_source_references","calculation_version","source_references"]
     metric_groups={"season":lambda r:r.get("profile",{}).get("season",{}),"last_five":lambda r:r.get("profile",{}).get("last_five",{}),"game":lambda r:r.get("game_metrics") or {},"baseline":lambda r:(r.get("baseline") or {}).get("season",{})}
     metric_fields={prefix:sorted({key for r in reports for key in getter(r)}) for prefix,getter in metric_groups.items()}
     fields += [prefix+"_"+key for prefix,keys in metric_fields.items() for key in keys]

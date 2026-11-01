@@ -68,6 +68,35 @@ def _stat_issues(dataset,group):
                 errors.append("points disagree with shooting totals")
     return errors
 
+
+def _player_completeness(player_rows,team_row,event,previous):
+    """Whole-minute source rounding permits at most half a minute per participant."""
+    errors=[]
+    values=pd.to_numeric(player_rows.get("minutes",pd.Series(dtype=float)),errors="coerce")
+    playing=~player_rows.get("did_not_play",pd.Series(False,index=player_rows.index)).fillna(False).astype(bool)
+    if "minutes" not in player_rows or values.loc[playing].isna().any():
+        return ["player minutes completeness unavailable"]
+    total=values.sum(min_count=1)
+    expected=pd.to_numeric(pd.Series([team_row.get("minutes")]),errors="coerce").iloc[0]
+    if pd.isna(expected) or expected<=0:
+        final=pd.to_numeric(pd.Series([event.get("status_period") if event else None]),errors="coerce").iloc[0]
+        regulation=pd.to_numeric(pd.Series([event.get("format_regulation_periods") if event else None]),errors="coerce").iloc[0]
+        if pd.isna(final) or pd.isna(regulation) or regulation not in (2,4) or final<regulation or final%1:
+            return ["game duration unavailable for player completeness"]
+        expected=200+25*(final-regulation)
+    participants=int(values.gt(0).sum())
+    tolerance=max(.5,participants*.5)
+    if pd.isna(total) or abs(total-expected)>tolerance:
+        errors.append("player minutes disagree with team duration")
+    if len(previous):
+        prior=previous[previous.team_id.astype(str).eq(str(team_row["team_id"]))]
+        prior_minutes=pd.to_numeric(prior.get("minutes",pd.Series(dtype=float)),errors="coerce")
+        missing=set(prior.loc[prior_minutes.gt(0),"player_id"].astype(str))-set(player_rows.player_id.astype(str))
+        if missing and (pd.isna(total) or abs(total-expected)>.01):
+            errors.append("participating player removed without complete minute reconciliation")
+    return errors
+
+
 def validate_snapshot(dataset,frame,context):
     season=int(context["season"])
     schedule=context.get("schedule",pd.DataFrame())
@@ -130,6 +159,9 @@ def validate_snapshot(dataset,frame,context):
                     errors.append("player teams disagree with matchup")
                 for row in expected_boxes.to_dict("records"):
                     player_rows=group[group.team_id.astype(str).eq(str(row["team_id"]))]
+                    previous=context.get("previous_player_box",pd.DataFrame())
+                    if len(previous):previous=previous[previous.game_id.astype(str).eq(game)]
+                    errors+=_player_completeness(player_rows,row,event,previous)
                     points=player_rows.points.sum(min_count=1)
                     if pd.isna(points) or points!=row["points"]:
                         errors.append("player points disagree with team box")

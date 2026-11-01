@@ -187,3 +187,21 @@ def test_postgame_preserves_issued_opponent_baseline_and_sources():
  post=next(r for r in result if r["mode"]=="postgame" and r["game_id"]=="g2" and r["team_id"]=="A")
  assert post["opponent_baseline"]["season"]["points_per_game"]==8
  assert post["baseline_source_references"]["team_box"]=="original"
+
+def test_rescheduled_target_and_other_future_games_cannot_enter_baseline():
+ from wbb_scouting.reports import build_reports
+ t=tables()
+ t["schedule"].loc[t["schedule"].game_id.eq("g2"),["completed","home_score","away_score"]]=[True,10,8]
+ future=schedule("g3").assign(game_date_time="2026-11-04T20:00:00Z",completed=True)
+ t["schedule"]=pd.concat([t["schedule"],future],ignore_index=True)
+ # Source timestamps predate the revised official schedule for both games.
+ t["team_box"]=pd.concat([team_boxes(),team_boxes("g2"),team_boxes("g3")],ignore_index=True)
+ result=build_reports(t,cohort(),clock("2026-11-05T14:17:00Z"),[],{},bootstrap=True)
+ target=next(r for r in result if r["team_id"]=="A" and r["game_id"]=="g2")
+ assert target["baseline"]["input_game_ids"]["team_box"]==["g1"]
+ assert target["baseline"]["season"]["games"]==1
+
+def test_future_net_source_is_not_cited_by_pending_cohort_report():
+ from wbb_scouting.reports import build_reports
+ result=build_reports(tables(),cohort(),clock("2026-11-02T14:17:00Z"),[],{"game_sources":{},"dataset_snapshots":{"2027:net":"future-snapshot"},"active_net_snapshot":{}},bootstrap=False)
+ assert all("2027:net" not in r["source_references"] for r in result)

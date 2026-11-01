@@ -87,3 +87,23 @@ def test_absent_dataset_still_lists_expected_missing_games():
  result=validate_snapshot("team_box",pd.DataFrame(),{"season":2027,"schedule":schedule(),"now":"2026-11-02T00:00:00Z"})
  assert result["coverage"]["expected_games"]==1
  assert result["coverage"]["missing_game_ids"]==["g1"]
+
+def test_truncated_scoreless_participant_group_fails_minutes_completeness():
+ boxes=team_boxes().assign(minutes=40)
+ complete=players();complete.loc[complete.team_id.eq("A"),"minutes"]=30
+ scoreless=complete.iloc[[0]].copy();scoreless["player_id"]="scoreless";scoreless["minutes"]=10
+ for column in ("points","field_goals_made","three_point_field_goals_made","free_throws_made"):scoreless[column]=0
+ complete=pd.concat([complete,scoreless],ignore_index=True)
+ context={"season":2027,"schedule":schedule(),"team_box":boxes,"now":"2026-11-02T00:00:00Z"}
+ assert validate_snapshot("player_box",complete,context)["accepted_games"]=={"g1"}
+ truncated=complete[~complete.player_id.eq("scoreless")]
+ context["previous_player_box"]=complete
+ assert not validate_snapshot("player_box",truncated,context)["accepted_games"]
+
+def test_real_wbb_team_minutes_derive_from_schedule_overtime():
+ boxes=team_boxes().drop(columns="minutes")
+ rows=players().assign(minutes=225)
+ context={"season":2027,"schedule":schedule().assign(status_period=5,format_regulation_periods=4),"team_box":boxes,"now":"2026-11-02T00:00:00Z"}
+ assert validate_snapshot("player_box",rows,context)["accepted_games"]=={"g1"}
+ rows.loc[rows.team_id.eq("A"),"minutes"]=200
+ assert not validate_snapshot("player_box",rows,context)["accepted_games"]

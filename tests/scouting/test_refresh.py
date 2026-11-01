@@ -120,3 +120,16 @@ def test_reviewed_net_original_bytes_are_archived_with_lineage(tmp_path):
  assert sources and snapshots[0]["sha256"] in sources
  source=next(iter(sources.values()))
  assert (state/source["path"]).read_bytes()==path.read_bytes()
+
+def test_current_asset_reuses_restored_raw_bytes_by_published_checksum(tmp_path):
+ from wbb_scouting.runner import collect_source
+ from wbb_scouting.sources import source_config
+ state=tmp_path/"state";raw=state/"raw";raw.mkdir(parents=True)
+ path=raw/"temporary.parquet";team_boxes().to_parquet(path,index=False);sha=sha256_file(path);path.rename(raw/(sha+".parquet"))
+ spec=source_config()["datasets"]["team_box"]
+ asset={"name":"team_box_2027.parquet","digest":"sha256:"+sha,"browser_download_url":"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/"+spec["tag"]+"/team_box_2027.parquet"}
+ class Cached:
+  def get_json(self,url):return {"assets":[asset]}
+  def download(self,*args):raise AssertionError("unchanged restored source downloaded again")
+ result=collect_source("team_box",2027,state/"incoming/2027-team_box.parquet",Cached())
+ assert result["reused"] and result["sha256"]==sha

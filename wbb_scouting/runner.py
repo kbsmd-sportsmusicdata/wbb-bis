@@ -16,7 +16,7 @@ from .reports import build_reports
 from .dashboard import render_dashboard,write_exports
 from .github_state import GitHubClient,restore_state,publish_run
 
-ADAPTER_VERSION="scouting-normalization-1"
+ADAPTER_VERSION="scouting-normalization-2"
 EMPTY=pd.DataFrame()
 DATASETS=("teams","schedule","team_box","player_box","pbp","rosters")
 
@@ -48,7 +48,10 @@ def collect_source(dataset,season,destination,client,local_input=None):
             "schema_fingerprint":fingerprint(str(pf.schema_arrow)),"source_url":"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/"+spec["tag"]+"/"+path.name,"local_input":True}
     assets=discover_assets(dataset,season,client)
     if not assets:return None
-    result=download_asset(assets[0],destination,client)
+    expected=(assets[0].get("digest") or "").removeprefix("sha256:")
+    cached=destination.parent.parent/"raw"/(expected+".parquet")
+    chosen=cached if expected and cached.exists() and sha256_file(cached)==expected else destination
+    result=download_asset(assets[0],chosen,client)
     result["source_url"]=assets[0]["browser_download_url"]
     return result
 
@@ -138,7 +141,7 @@ def refresh(config,now,trigger,clients=None):
                     continue
                 checksum=metadata["sha256"];path=Path(metadata["local_path"]);raw_path=state/"raw"/(checksum+".parquet")
                 raw_path.parent.mkdir(exist_ok=True)
-                if not raw_path.exists():shutil.copyfile(path,raw_path)
+                if not raw_path.exists():path.replace(raw_path)
                 if sha256_file(raw_path)!=checksum:raise ValueError("Raw archive checksum mismatch")
                 safe={k:metadata[k] for k in ("name","season","dataset","family","league","source_url","row_count","schema_fingerprint","tag","updated_at","bytes","local_input") if k in metadata}
                 m["sources"].setdefault(checksum,{**safe,"sha256":checksum,"retrieved_at":now.isoformat(),"path":str(raw_path.relative_to(state)),"bytes":raw_path.stat().st_size})
@@ -171,7 +174,7 @@ def refresh(config,now,trigger,clients=None):
                         incoming=incoming[incoming.home_team_id.isin(d1)|incoming.away_team_id.isin(d1)]
                     accepted=set(incoming.game_id.astype(str));bad=identity_bad
                 elif dataset in ("team_box","player_box","pbp"):
-                    context={"season":year,"schedule":_year(tables.get("schedule",EMPTY),year),"teams":teams,"team_box":_year(tables.get("team_box",EMPTY),year),"now":now.isoformat()}
+                    context={"season":year,"schedule":_year(tables.get("schedule",EMPTY),year),"teams":teams,"team_box":_year(tables.get("team_box",EMPTY),year),"previous_player_box":old if dataset=="player_box" else EMPTY,"now":now.isoformat()}
                     validation=validate_snapshot(dataset,incoming,context)
                     accepted=validation["accepted_games"];bad={**identity_bad,**validation["quarantine"]}
                 else:
@@ -225,6 +228,13 @@ def refresh(config,now,trigger,clients=None):
             if item.get("sha256"):m["dataset_snapshots"][str(item["publication"]["season"])+":net"]=item["sha256"]
     cohort=select_cohort(net,checked,now,season,prior);m["cohort"]=clean_json(cohort.to_dict("records"))
     if cohort.selection_status.isin(["pending_net","stale_net","provisional_prior_season"]).any():m["pending"].append("Verified current-season NCAA NET")
+    m["active_net_snapshot"]={}
+    if len(cohort) and cohort.ranking_date.notna().any():
+        year=int(cohort.ranking_season.iloc[0]);date=str(cohort.ranking_date.iloc[0])
+        for item in m.get("net_snapshots",[]):
+            pub=item["publication"]
+            if pub["season"]==year and pub["publication_date"]==date and item.get("sha256"):
+                m["active_net_snapshot"][str(year)+":net"]=item["sha256"]
     m["new_game_ids"]=sorted(new_games)
     m["reports"]=build_reports(report_tables,cohort,now,previous.get("reports",[]),m,bootstrap=not bool(previous))
     m["partitions"]=[]

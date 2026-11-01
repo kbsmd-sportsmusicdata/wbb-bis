@@ -18,7 +18,7 @@ The initial delivery is a downloaded, self-contained \`index.html\`, with full \
 
 Public GitHub Releases tagged \`scouting-v1-2027-*\` retain canonical Parquet partitions, original changed source bytes, report editions, and checksummed manifests. These files are publicly visible, like this repository. Do not add private scouting notes or credentials.
 
-A fresh runner enumerates scouting releases for the requested season, independently of generic latest releases or caches. It verifies the manifest checksum and every referenced asset. A damaged latest release can fall back to an older verified checkpoint; if scouting checkpoints exist but none verify, collection fails closed instead of pretending to start empty.
+A fresh runner enumerates scouting releases for the requested season, independently of generic latest releases or caches. It verifies the manifest checksum, active canonical partitions, report assets, and current raw versions needed by the collector. Historical raw versions remain remotely archived under immutable, checksummed links and are not all downloaded on each run. A damaged latest release can fall back to an older verified checkpoint; if scouting checkpoints exist but none verify, collection fails closed instead of pretending to start empty.
 
 Each publisher creates a new draft, uploads only new data, downloads uploaded bytes to verify SHA-256, checks its parent head again, then publishes. Unchanged partitions and raw versions retain immutable links to earlier releases. Sources over 512 MiB are split, checked individually, and reassembled and checked on restore. Workflow concurrency provides the primary serialization guard; a stale parent rejects a competing publisher. GitHub does not offer a transactional compare-and-swap release promotion, so do not run a second publisher outside this workflow.
 
@@ -55,3 +55,9 @@ Reviewed saved official snapshots may be placed in config/scouting_net/*.json (o
 --local-input /path/to/verified/downloads reads explicit SDV-named snapshots. Original bytes remain archived and labeled local inputs. The live NET page may still be checked. --now accepts an explicit timezone-aware timestamp. Keep retrospective examples separate and never publish a historical clock as a current operational run.
 
 To disable publication set WBB_SCOUTING_ENABLED=false. Preserve published releases while investigating. A new season requires a checked season-specific team/conference reference and reviewed workflow season.
+
+## Player completeness and chronology
+
+Player groups must reconcile points and team minutes. Where a team-minute total is absent, verified WBB schedule periods determine 200 player-minutes in regulation plus 25 per overtime. Whole-minute source rounding allows at most half a minute per participating player; an unexplained removal of a prior positive-minute player requires exact minute reconciliation or is quarantined. Unsupported duration or missing playing minutes withholds the group. This can reduce player coverage while team-box reporting stays usable. Pregame and reconstructed baselines explicitly exclude the target game ID and use schedule chronology, including reschedules.
+
+A normalization-version change reprocesses source bytes with the updated contracts. Restored current raw files are reused by their published checksum. Historical raw corruption is checked when that version is explicitly restored, while every new uploaded version is verified before publication.

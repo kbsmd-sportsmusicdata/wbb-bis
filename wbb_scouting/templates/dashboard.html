@@ -112,7 +112,12 @@ document.querySelectorAll("[data-window]").forEach(b=>b.onclick=()=>{playerWindo
 function download(text,type,ext){if(!selected)return;const a=document.createElement("a"),u=URL.createObjectURL(new Blob([text],{type}));a.href=u;a.download="wbb-"+selected.edition_id+"."+ext;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
 $("json").onclick=()=>download(JSON.stringify(selected,null,2),"application/json","json");
 function csvCell(v){const s=typeof v==="object"?JSON.stringify(v):String(v??"");return '"'+s.replace(/"/g,'""')+'"'}
-$("csv").onclick=()=>{if(!selected)return;const r=selected,rows=[["edition_id","cutoff_at","section","name","value","source_references"]];for(const [k,v] of Object.entries(r.profile?.season||{}))rows.push([r.edition_id,r.cutoff_at,"team_season",k,v,r.source_references]);for(const p of r.profile?.players||[])for(const [k,v] of Object.entries(p))rows.push([r.edition_id,r.cutoff_at,"player:"+p.player_id,k,v,r.source_references]);download(rows.map(row=>row.map(csvCell).join(",")).join("\r\n"),"text/csv","csv")};
+$("csv").onclick=()=>{if(!selected)return;const r=selected,rows=[["edition_id","cutoff_at","baseline_cutoff_at","status","section","entity_id","name","value","source_references"]];
+ const metric=(section,values)=>{for(const [k,v] of Object.entries(values||{}))rows.push([r.edition_id,r.cutoff_at,r.baseline_cutoff_at,r.status,section,r.team_id,k,v,(section.includes("baseline")&&Object.keys(r.baseline_source_references||{}).length?r.baseline_source_references:r.source_references)])};
+ const players=(section,values)=>{for(const p of values||[])for(const [k,v] of Object.entries(p))rows.push([r.edition_id,r.cutoff_at,r.baseline_cutoff_at,r.status,section,p.player_id,k,v,r.source_references])};
+ metric("season",r.profile?.season);metric("last_five",r.profile?.last_five);metric("game_metrics",r.game_metrics);metric("baseline",r.baseline?.season);metric("opponent_baseline",r.opponent_baseline?.season);metric("opponent_season",r.opponent_profile?.season);
+ players("season_players",r.profile?.players);players("last_five_players",r.profile?.last_five_players);players("game_players",r.game_players);
+ download(rows.map(row=>row.map(csvCell).join(",")).join("\r\n"),"text/csv","csv")};
 $("print").onclick=()=>window.print();
 const pending=DATA.pending.length?"Pending: "+DATA.pending.join(", ")+". ":"";
 const overdue=Date.now()>Date.parse(DATA.next_primary_at)+135*60000;

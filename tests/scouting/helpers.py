@@ -1,7 +1,7 @@
 import pandas as pd
 
 def team_boxes(game="g1"):
-    common={"source_family":"sdv_espn_wbb","season":2027,"game_id":game,"game_date_time":"2026-11-01T20:00:00Z","game_date":"2026-11-01","field_goals_attempted":8,"three_point_field_goals_made":1,"three_point_field_goals_attempted":3,"free_throws_made":1,"free_throws_attempted":2,"offensive_rebounds":1,"defensive_rebounds":4,"turnovers":2}
+    common={"source_family":"sdv_espn_wbb","season":2027,"game_id":game,"game_date_time":"2026-11-01T20:00:00Z","game_date":"2026-11-01","field_goals_attempted":8,"three_point_field_goals_made":1,"three_point_field_goals_attempted":3,"free_throws_made":1,"free_throws_attempted":2,"offensive_rebounds":1,"defensive_rebounds":4,"turnovers":2,"minutes":40}
     return pd.DataFrame([{**common,"team_id":"A","opponent_team_id":"B","points":10,"opponent_points":8,"field_goals_made":4},{**common,"team_id":"B","opponent_team_id":"A","points":8,"opponent_points":10,"field_goals_made":3}])
 
 def schedule(*games):
