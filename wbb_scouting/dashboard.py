@@ -31,10 +31,16 @@ def write_exports(reports,destination):
     destination=Path(destination);destination.mkdir(parents=True,exist_ok=True)
     (destination/"reports.json").write_text(json_text(reports))
     fields=["edition_id","mode","season","game_id","team_id","team_name","opponent_id","opponent_name","tip_at","generated_at","cutoff_at","status","baseline_origin","calculation_version","source_references"]
+    metric_groups={"season":lambda r:r.get("profile",{}).get("season",{}),"last_five":lambda r:r.get("profile",{}).get("last_five",{}),"game":lambda r:r.get("game_metrics") or {},"baseline":lambda r:(r.get("baseline") or {}).get("season",{})}
+    metric_fields={prefix:sorted({key for r in reports for key in getter(r)}) for prefix,getter in metric_groups.items()}
+    fields += [prefix+"_"+key for prefix,keys in metric_fields.items() for key in keys]
     with (destination/"reports.csv").open("w",newline="") as handle:
         writer=csv.DictWriter(handle,fieldnames=fields);writer.writeheader()
         for r in reports:
-            writer.writerow({k:json_text(r.get(k)) if isinstance(r.get(k),(dict,list)) else r.get(k) for k in fields})
+            row={k:json_text(r.get(k)) if isinstance(r.get(k),(dict,list)) else r.get(k) for k in fields}
+            for prefix,getter in metric_groups.items():
+                for key,value in getter(r).items():row[prefix+"_"+key]=value
+            writer.writerow(row)
     player_fields=["edition_id","cutoff_at","window","team_id","player_id","player_name","games_played","team_games","minutes_per_game","points_per_game","rebounds_per_game","assists_per_game","ts_pct"]
     with (destination/"players.csv").open("w",newline="") as handle:
         writer=csv.DictWriter(handle,fieldnames=player_fields,extrasaction="ignore");writer.writeheader()

@@ -57,11 +57,11 @@
 
 **Interfaces:** `next_primary_check(now: datetime) -> datetime` returns an aware UTC instant strictly after `now`; `refresh_window(now: datetime) -> tuple[datetime, datetime]`; `retry_required(now: datetime, primary_attempt: dict | None) -> bool`; CLI commands `audit`, `refresh`, `build` accept explicit season, repository, local state path and an injected clock for tests.
 
-- [ ] Write tests: Friday 2026-11-06 at 06:17 Pacific ends at Monday 2026-11-09 06:17 Pacific; Thursday uses Friday; UTC boundary follows local weekdays; spring/fall DST preserve 06:17 local time; retry skips complete successful primary and runs for missing/failed/pending primary.
-- [ ] Run `/usr/bin/python3 -m pytest tests/scouting/test_calendar.py -q`; confirm failure before implementation.
-- [ ] Implement timezone-aware scheduling with `zoneinfo`, explicit UTC storage, scoped requirements, and CLI argument validation. Do not alter existing `config.py` or `pipeline.py`.
-- [ ] Rerun calendar tests and `python -m wbb_scouting --help`; verify no network or writes from help.
-- [ ] Review and commit only Task 1 files when a suitable isolated checkout/branch is available.
+- [x] Write tests: Friday 2026-11-06 at 06:17 Pacific ends at Monday 2026-11-09 06:17 Pacific; Thursday uses Friday; UTC boundary follows local weekdays; spring/fall DST preserve 06:17 local time; retry skips complete successful primary and runs for missing/failed/pending primary.
+- [x] Run `/usr/bin/python3 -m pytest tests/scouting/test_calendar.py -q`; confirm failure before implementation.
+- [x] Implement timezone-aware scheduling with `zoneinfo`, explicit UTC storage, scoped requirements, and CLI argument validation. Do not alter existing `config.py` or `pipeline.py`.
+- [x] Rerun calendar tests and `python -m wbb_scouting --help`; verify no network or writes from help.
+- [x] Review and commit only Task 1 files when a suitable isolated checkout/branch is available.
 
 ## Task 2: Live source inventory and normalization
 
@@ -69,13 +69,13 @@
 
 **Interfaces:** `discover_assets(dataset: str, season: int, client: object) -> list[dict]`; `download_asset(asset: dict, destination: Path, client: object) -> dict`; `normalize_snapshot(dataset: str, frame: DataFrame, source: dict) -> DataFrame`. Metadata contains provider, family, dataset, season, asset ID/name, canonical URL, updated time, byte size, SHA-256 and schema fingerprint. Normalized identifiers are strings.
 
-- [ ] Write tests for exact asset/season discovery, 404 pending publication, 304 reuse, HTTP failures, corrupt Parquet, wrong women's league/season, null IDs, large IDs above float precision, participant-column aliasing, and schema drift.
-- [ ] Run the source tests and confirm expected missing implementation failures.
-- [ ] Inspect SDV release metadata and read real published schemas for schedules, team/player boxes, PBP and rosters. Record actual fields, key grain, division coverage, game coverage, dates and availability for 2027 plus a separately labeled 2026 reference.
-- [ ] Implement explicit aliases supported by those inspected schemas, validation of metadata, streamed atomic downloads with bounded retries, and file fingerprint reuse. A blocked/unavailable source yields a structured pending/error result, not a blank successful snapshot.
-- [ ] Implement and verify official NET retrieval only against an accessible official publication and its own date/season. The official NCAA.com page currently presents a browser verification challenge; record that if it persists and support validated official saved snapshots without inventing current NET. Do not quietly substitute a third-party ranking.
-- [ ] Run source tests and a read-only live `audit`; save the source inventory and coverage result. Capture any unavailable current-season files explicitly.
-- [ ] Review and commit source definitions, adapters, tests and evidence notes only; leave large downloaded data outside Git history.
+- [x] Write tests for exact asset/season discovery, 404 pending publication, 304 reuse, HTTP failures, corrupt Parquet, wrong women's league/season, null IDs, large IDs above float precision, participant-column aliasing, and schema drift.
+- [x] Run the source tests and confirm expected missing implementation failures.
+- [x] Inspect SDV release metadata and read real published schemas for schedules, team/player boxes, PBP and rosters. Record actual fields, key grain, division coverage, game coverage, dates and availability for 2027 plus a separately labeled 2026 reference.
+- [x] Implement explicit aliases supported by those inspected schemas, validation of metadata, streamed atomic downloads with bounded retries, and file fingerprint reuse. A blocked/unavailable source yields a structured pending/error result, not a blank successful snapshot.
+- [x] Implement and verify official NET retrieval only against an accessible official publication and its own date/season. The official NCAA.com page currently presents a browser verification challenge; record that if it persists and support validated official saved snapshots without inventing current NET. Do not quietly substitute a third-party ranking.
+- [x] Run source tests and a read-only live `audit`; save the source inventory and coverage result. Capture any unavailable current-season files explicitly.
+- [x] Review and commit source definitions, adapters, tests and evidence notes only; leave large downloaded data outside Git history.
 
 ## Task 3: Validated game reconciliation and persistent local state
 
@@ -83,13 +83,13 @@
 
 **Interfaces:** `validate_snapshot(dataset: str, frame: DataFrame, context: dict) -> dict` returns accepted game groups and structured quarantine reasons; `reconcile_games(existing: DataFrame, incoming: DataFrame, keys: list[str], accepted_games: set[str]) -> tuple[DataFrame, dict]`; `write_partitions(frame: DataFrame, dataset: str, state_dir: Path) -> list[dict]`; `load_manifest(path: Path) -> dict`; `write_manifest(manifest: dict, path: Path) -> None` writes atomically.
 
-- [ ] Write tests for unchanged rerun, new game, corrected stat, removed/renumbered PBP event, conflicting duplicates, incoming missing game, incomplete game, reciprocal team rows, player/team/final-score disagreement, attempted missed-shot values, and a later game masking an earlier coverage gap.
-- [ ] Run these tests to establish failures.
-- [ ] Implement exact normalized record fingerprints and staging. Partition by family/dataset/season/month; deduplicate byte-identical records, quarantine conflicting keys, replace validated groups, and retain absent games with a coverage regression warning.
-- [ ] Implement season-specific expected-versus-observed coverage, supported score reconciliation, D1 eligibility/opponent-division flags and a structured status per dataset/game. Do not conflate missing PBP with unusable validated boxes.
-- [ ] Record inserted, changed, unchanged, removed-within-replacement, quarantined rows and affected game IDs. Preserve snapshot fingerprints, run IDs and prior manifests. Guard raw assets against the release size limit using deterministic byte-part splitting when necessary.
-- [ ] Run store/validation tests; perform a real initial ingest and unchanged rerun, checking printed counters and actual stored row/key counts.
-- [ ] Review and commit implementation/tests, excluding generated state.
+- [x] Write tests for unchanged rerun, new game, corrected stat, removed/renumbered PBP event, conflicting duplicates, incoming missing game, incomplete game, reciprocal team rows, player/team/final-score disagreement, attempted missed-shot values, and a later game masking an earlier coverage gap.
+- [x] Run these tests to establish failures.
+- [x] Implement exact normalized record fingerprints and staging. Partition by family/dataset/season/month; deduplicate byte-identical records, quarantine conflicting keys, replace validated groups, and retain absent games with a coverage regression warning.
+- [x] Implement season-specific expected-versus-observed coverage, supported score reconciliation, D1 eligibility/opponent-division flags and a structured status per dataset/game. Do not conflate missing PBP with unusable validated boxes.
+- [x] Record inserted, changed, unchanged, removed-within-replacement, quarantined rows and affected game IDs. Preserve snapshot fingerprints, run IDs and prior manifests. Guard raw assets against the release size limit using deterministic byte-part splitting when necessary.
+- [x] Run store/validation tests; perform a real initial ingest and unchanged rerun, checking printed counters and actual stored row/key counts.
+- [x] Review and commit implementation/tests, excluding generated state.
 
 ## Task 4: Dated team references, NET and cohort
 
@@ -97,12 +97,12 @@
 
 **Interfaces:** `load_team_reference(path: Path, season: int) -> DataFrame`; `validate_net(frame: DataFrame, publication: dict, teams: DataFrame) -> DataFrame`; `select_cohort(net: DataFrame | None, teams: DataFrame, as_of: datetime, season: int, historical_net: DataFrame | None = None) -> DataFrame` returns team IDs, names, inclusion reason, ranking source/season/date and selection status.
 
-- [ ] Write tests for NET 1-50 union ACC, overlapping teams once, ACC team outside top 50, unresolved aliases, stale ranking, ranking published after cutoff, new-season ACC membership, and unavailable current NET with dated verified prior-year or ACC-only fallback.
-- [ ] Run tests before implementation.
-- [ ] Verify season-correct ACC membership and stable IDs from authoritative conference/team references; preserve provenance and source dates in the reference file.
-- [ ] Implement strict reference/NET validation and cohort selection; previous-season ranks can select provisional teams but never populate a current-season NET field. Save cohort snapshots by refresh time and preserve source publication time.
-- [ ] Run reference tests and inspect the real selected/provisional cohort with explicit counts, unresolved mappings and inclusion reasons.
-- [ ] Review and commit reference data with its provenance, implementation and tests.
+- [x] Write tests for NET 1-50 union ACC, overlapping teams once, ACC team outside top 50, unresolved aliases, stale ranking, ranking published after cutoff, new-season ACC membership, and unavailable current NET with dated verified prior-year or ACC-only fallback.
+- [x] Run tests before implementation.
+- [x] Verify season-correct ACC membership and stable IDs from authoritative conference/team references; preserve provenance and source dates in the reference file.
+- [x] Implement strict reference/NET validation and cohort selection; previous-season ranks can select provisional teams but never populate a current-season NET field. Save cohort snapshots by refresh time and preserve source publication time.
+- [x] Run reference tests and inspect the real selected/provisional cohort with explicit counts, unresolved mappings and inclusion reasons.
+- [x] Review and commit reference data with its provenance, implementation and tests.
 
 ## Task 5: Metrics and preserved report editions
 
@@ -110,12 +110,12 @@
 
 **Interfaces:** `team_metrics(team_box: DataFrame) -> dict`; `player_metrics(player_box: DataFrame) -> list[dict]`; `build_reports(tables: dict[str, DataFrame], cohort: DataFrame, now: datetime, previous_reports: list[dict], snapshots: dict, bootstrap: bool = False) -> list[dict]`. A report has identity, mode, game/team IDs, generation/cutoff/tip times, source references, cohort/ranking reference, edition fingerprint, status, denominators and supported observations.
 
-- [ ] Write tests with hand-calculated box totals for the spec's eFG%, estimated possessions, ratings, turnover/rebound/FT rates and TS%; test zero/missing denominators and aggregate last-five rates.
-- [ ] Write report tests for no target/future-game leakage, no future NET, Friday-to-Monday matchup coverage, changed matchup revisions, unchanged input producing no duplicate edition, early/late tip rescheduling, first-run seven-day postgames and late source arrivals.
-- [ ] Test using the latest issued pregame edition before tip for postgame baselines; use a labeled reconstructed baseline if absent. Test empty season, stale source, missing PBP with valid boxes, partial pregame editions and source-corrected revisions preserving earlier editions.
-- [ ] Run tests and confirm failures, then implement the explicit formulas and report functions with a common injected clock and immutable prior editions.
-- [ ] Run all metric/report/calendar tests, inspect real source-backed report payloads, and confirm current-season gaps remain visible. Historical 2026 examples must be labeled historical/reconstructed and cannot stand in for current-season evidence.
-- [ ] Review and commit calculations, payload generation and tests.
+- [x] Write tests with hand-calculated box totals for the spec's eFG%, estimated possessions, ratings, turnover/rebound/FT rates and TS%; test zero/missing denominators and aggregate last-five rates.
+- [x] Write report tests for no target/future-game leakage, no future NET, Friday-to-Monday matchup coverage, changed matchup revisions, unchanged input producing no duplicate edition, early/late tip rescheduling, first-run seven-day postgames and late source arrivals.
+- [x] Test using the latest issued pregame edition before tip for postgame baselines; use a labeled reconstructed baseline if absent. Test empty season, stale source, missing PBP with valid boxes, partial pregame editions and source-corrected revisions preserving earlier editions.
+- [x] Run tests and confirm failures, then implement the explicit formulas and report functions with a common injected clock and immutable prior editions.
+- [x] Run all metric/report/calendar tests, inspect real source-backed report payloads, and confirm current-season gaps remain visible. Historical 2026 examples must be labeled historical/reconstructed and cannot stand in for current-season evidence.
+- [x] Review and commit calculations, payload generation and tests.
 
 ## Task 6: Interactive downloadable dashboard and exports
 
@@ -123,12 +123,12 @@
 
 **Interfaces:** `render_dashboard(reports: list[dict], manifest: dict, destination: Path) -> None`; `write_exports(reports: list[dict], destination: Path) -> list[Path]`. HTML includes its own report payload, styles and interaction code; no server or API key required to open it.
 
-- [ ] Write focused tests for safe embedded JSON/HTML escaping, serializable nulls/large string IDs, export cutoff/source fields, and preservation of partial/pending statuses.
-- [ ] Run tests, then implement team/matchup/date and pregame/postgame selectors, cohort reasons, source/coverage indicators, small-sample denominators, concise team/player comparisons, printable report, and filtered CSV/JSON downloads.
-- [ ] Compute stale/missed-run messaging from the next expected M/W/F primary boundary rather than 24 hours. Report age remains visible even when no run is missed.
-- [ ] Run targeted tests and real browser checks at desktop and mobile sizes: selection state, mode changes, populated and empty/partial views, exports, printing and console errors. Use actual current coverage; any synthetic fixture preview is explicitly labeled and separate from operational outputs.
+- [x] Write focused tests for safe embedded JSON/HTML escaping, serializable nulls/large string IDs, export cutoff/source fields, and preservation of partial/pending statuses.
+- [x] Run tests, then implement team/matchup/date and pregame/postgame selectors, cohort reasons, source/coverage indicators, small-sample denominators, concise team/player comparisons, printable report, and filtered CSV/JSON downloads.
+- [x] Compute stale/missed-run messaging from the next expected M/W/F primary boundary rather than 24 hours. Report age remains visible even when no run is missed.
+- [x] Run targeted tests and real browser checks at desktop and mobile sizes: selection state, mode changes, populated and empty/partial views, exports, printing and console errors. Use actual current coverage; any synthetic fixture preview is explicitly labeled and separate from operational outputs.
 - [ ] Review the concrete dashboard and data coverage with the user before activation, as the approved spec requires.
-- [ ] Commit builder/template/tests and keep generated dashboard/state out of normal source history.
+- [x] Commit builder/template/tests and keep generated dashboard/state out of normal source history.
 
 ## Task 7: Durable GitHub Release state
 
@@ -136,11 +136,12 @@
 
 **Interfaces:** `restore_state(repository: str, destination: Path, client: object) -> dict | None`; `publish_run(repository: str, manifest: dict, files: list[Path], client: object, commit_sha: str) -> dict`. Restore selects a valid published scouting run by explicit prefix/schema/status and validates all referenced data assets; publication uses a new draft release and promotes it only after verification.
 
-- [ ] Write tests for fresh-runner restoration, no-cache execution, unrelated latest release, invalid latest manifest, prior valid fallback, unchanged-asset references, corrupted/missing asset, interrupted upload, concurrent publication rejection and files exceeding the configured shard threshold.
-- [ ] Run tests, then implement GitHub API pagination, repository-scoped token use, checksum validation, immutable asset references, bounded API retries and explicit error propagation. Never expose token-bearing headers or temporary signed URLs in logs/manifests.
-- [ ] Verify partial failure cannot replace the last good published state; an invalid persisted asset fails closed rather than silently starting a new empty season.
+- [x] Write tests for fresh-runner restoration, no-cache execution, unrelated latest release, invalid latest manifest, prior valid fallback, unchanged-asset references, corrupted/missing asset, interrupted upload, concurrent publication rejection and files exceeding the configured shard threshold.
+- [x] Run tests, then implement GitHub API pagination, repository-scoped token use, checksum validation, immutable asset references, bounded API retries and explicit error propagation. Never expose token-bearing headers or temporary signed URLs in logs/manifests.
+- [x] Verify partial failure cannot replace the last good published state; an invalid persisted asset fails closed rather than silently starting a new empty season.
 - [ ] Run mocked API tests and local restore/publish simulations. After concrete user review, perform a real draft/verified publication using only authorized project artifacts and verify downloads.
-- [ ] Document public release visibility, file references, restoration, storage growth, no automatic deletion and recovery instructions; commit implementation/tests/docs.
+- [x] Document public release visibility, file references, restoration, storage growth, no automatic deletion and recovery instructions; commit implementation/tests/docs.
+
 
 ## Task 8: Cloud orchestration, schedule and completion evidence
 
@@ -148,10 +149,10 @@
 
 **Interfaces:** `refresh(config: dict, now: datetime, trigger: str, clients: dict) -> dict` orchestrates restore, retry gate, inventory, downloads, validation, canonical reconciliation, cohort, reports, dashboard and publication. It writes a human-readable run summary and machine-readable manifest with attempted/successful times, all dataset/game counters, coverage gaps and output references.
 
-- [ ] Write integration tests with injected sources/storage: first ingest, identical rerun, new game, corrected game, pending 2027 boxes with 2026 available, missing primary attempt, retry after partial failure, no retry after complete success, and failed publication retaining prior state.
-- [ ] Run integration tests, then implement orchestration and explicit exit/status handling. A pending publication is recorded as pending; schema/validation/network failures must not look like a successful empty refresh.
-- [ ] Add a workflow on `workflow_dispatch` and two timezone-aware M/W/F schedules (06:17 primary and 08:17 conditional retry). Use pinned compatible action versions, Python 3.11+, scoped requirements, minimal token permissions and workflow concurrency with no cancellation of an in-progress publisher. Keep activation gated until the source-backed preview has been approved.
-- [ ] Read primary attempt status from GitHub workflow metadata plus persisted run status so a missing or publication-failed primary still triggers the retry. Limit successful/no-change noise to run summaries and standard GitHub notification settings.
+- [x] Write integration tests with injected sources/storage: first ingest, identical rerun, new game, corrected game, pending 2027 boxes with 2026 available, missing primary attempt, retry after partial failure, no retry after complete success, and failed publication retaining prior state.
+- [x] Run integration tests, then implement orchestration and explicit exit/status handling. A pending publication is recorded as pending; schema/validation/network failures must not look like a successful empty refresh.
+- [x] Add a workflow on `workflow_dispatch` and two timezone-aware M/W/F schedules (06:17 primary and 08:17 conditional retry). Use pinned compatible action versions, Python 3.11+, scoped requirements, minimal token permissions and workflow concurrency with no cancellation of an in-progress publisher. Keep activation gated until the source-backed preview has been approved.
+- [x] Read primary attempt status from GitHub workflow metadata plus persisted run status so a missing or publication-failed primary still triggers the retry. Limit successful/no-change noise to run summaries and standard GitHub notification settings.
 - [ ] Run the complete focused scouting test suite and relevant existing repo tests; inspect all output and `git diff --check`. Perform a clean-environment installation to check dependency reproducibility.
 - [ ] Open a reviewable branch/PR containing only this feature, attach it to the chat, and provide the dashboard/coverage preview. Never stage unrelated user work.
 - [ ] Following the authorized activation step, verify a real GitHub run and an unchanged rerun from clean runners, source/gap counters, release restoration, HTML/export URLs, effective M/W/F workflow schedule and conditional retry behavior. If required current-season source data is unavailable, show that exact limitation and do not claim complete current-season reporting.

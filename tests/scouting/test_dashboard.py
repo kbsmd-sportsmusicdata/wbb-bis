@@ -38,3 +38,10 @@ def test_refresh_health_respects_weekend_not_daily():
  p=dashboard_payload([],m)
  assert p["next_primary_at"]=="2026-11-02T14:17:00+00:00"
  assert p["refresh_health"]=="on_schedule"
+
+def test_report_csv_includes_team_metrics(tmp_path):
+ r=report();r["profile"]["season"]["efg_pct"]=0.5
+ write_exports([r],tmp_path)
+ import csv
+ rows=list(csv.DictReader((tmp_path/"reports.csv").open()))
+ assert rows[0]["season_efg_pct"]=="0.5"

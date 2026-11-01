@@ -33,3 +33,25 @@ The report cohort is checked current-season ACC membership union verified NCAA N
 Team and player box reports can remain available while PBP is pending or withheld. Rate denominators, game counts, source checksums, actual coverage, report cutoffs and baseline provenance travel with each edition. Source corrections create new editions; issued pregame reports remain immutable. Historical examples are labeled reconstructed and never presented as current-season production.
 
 See [source inventory](source_inventory.md), [metric conventions](../metric_conventions.md), and the [approved design](../superpowers/specs/2026-11-01-recurring-game-scouting-design.md).
+
+## Schedule and activation
+
+The publisher workflow is `.github/workflows/wbb-scouting.yml`. Monday, Wednesday, Friday checks run at 06:17 America/Los_Angeles, with an 08:17 conditional retry on those same days. The retry checks both GitHub's actual latest primary workflow result and the persisted primary status; a missing primary, failed publication, or pending source can trigger collection. A complete successful primary skips it.
+
+The approved design requires review of a concrete source/coverage preview before activation. Until review, repository Actions variable WBB_SCOUTING_ENABLED is unset and the publisher is disabled. After approval, merge the reviewed PR to the default branch, set WBB_SCOUTING_ENABLED=true, then use Actions → WBB scouting → Run workflow. The scoped Actions token publishes release assets. Confirm a real run, fresh-runner restore, and an unchanged rerun before calling the service operational.
+
+GitHub schedules run only from the default branch, can be delayed, and public repository schedules can be disabled after 60 days without repository activity. Next-check/overdue warnings use the M/W/F calendar, including the weekend and daylight saving; report age is displayed separately. Concurrency serializes publishers without cancelling an in-progress publication. Success/no-change details go to run summaries and failures to standard GitHub notifications. No separate messages are sent.
+
+PR checks run tests and build a source-backed preview with read-only permissions. Their expiring artifact is for review, not durable operational storage. They cannot publish or enable the schedule.
+
+## Official NET setup
+
+The official NCAA page is requested each refresh. Browser verification, unpublished tables, missing dates, or unresolved school mappings remain visibly pending. Never substitute another ranking or silently use an undated copy.
+
+Reviewed saved official snapshots may be placed in config/scouting_net/*.json (or --net-dir). Each has a "publication" object with season, publication_date, first_seen_at, official NCAA source_url, verified:true, id_namespace:"espn"; its "rows" contain checked team_id and net_rank. Include a complete verified top 50 with unique IDs/ranks. A separate school-map.json maps reviewed official school slugs/names to ESPN IDs for HTML retrieval. Prior-year rankings only select a visibly provisional cohort; their numeric ranks never appear as current NET.
+
+## Reproducible local verification
+
+--local-input /path/to/verified/downloads reads explicit SDV-named snapshots. Original bytes remain archived and labeled local inputs. The live NET page may still be checked. --now accepts an explicit timezone-aware timestamp. Keep retrospective examples separate and never publish a historical clock as a current operational run.
+
+To disable publication set WBB_SCOUTING_ENABLED=false. Preserve published releases while investigating. A new season requires a checked season-specific team/conference reference and reviewed workflow season.

@@ -54,7 +54,8 @@ def _releases(repository,client):
 
 def _candidates(repository,client,season=None):
     prefix=PREFIX+(str(season)+"-" if season else "")
-    return [r for r in _releases(repository,client) if str(r.get("tag_name","")).startswith(prefix) and not r.get("draft") and not r.get("prerelease")]
+    rows=[r for r in _releases(repository,client) if str(r.get("tag_name","")).startswith(prefix) and not r.get("draft") and not r.get("prerelease")]
+    return sorted(rows,key=lambda r:(r.get("published_at") or r.get("created_at") or "",r.get("id",0)),reverse=True)
 
 def _safe_path(value):
     path=PurePosixPath(value)

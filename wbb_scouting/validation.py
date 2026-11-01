@@ -89,17 +89,19 @@ def validate_snapshot(dataset,frame,context):
         final=schedule.completed.fillna(False).astype(bool)&(pd.to_datetime(schedule.game_date_time,utc=True)<=now)
         expected=set(schedule.loc[final,"game_id"].astype(str))
     if "game_id" not in frame:
-        return {"accepted_games":set(),"quarantine":{},"coverage":{"expected_games":0,"available_games":0,"missing_game_ids":[]},"reference_valid":True}
+        return {"accepted_games":set(),"quarantine":{},"coverage":{"expected_games":len(expected),"available_games":0,"missing_game_ids":sorted(expected),"latest_usable_game_at":None},"reference_valid":True}
     for game,group in frame.groupby("game_id",sort=False):
         game=str(game)
         errors=[]
         if group[KEYS[dataset]].isna().any().any() or group.duplicated(KEYS[dataset]).any():
             errors.append("invalid or duplicate canonical identity")
         event=schedule_lookup.get(game)
-        if schedule_lookup and event is None:
+        if event is None:
             errors.append("game absent from eligible schedule")
-        if event is not None and not bool(event["completed"]):
+        if event is not None and (pd.isna(event["completed"]) or not bool(event["completed"])):
             errors.append("schedule game not final")
+        if event is not None and pd.to_datetime(event["game_date_time"],utc=True)>now:
+            errors.append("schedule game is in the future")
         if dataset in ("team_box","player_box"):
             errors+=_stat_issues(dataset,group)
         if dataset=="team_box":
@@ -124,6 +126,8 @@ def validate_snapshot(dataset,frame,context):
             if len(expected_boxes)!=2:
                 errors.append("validated team boxes unavailable")
             else:
+                if set(group.team_id.astype(str))!=set(expected_boxes.team_id.astype(str)):
+                    errors.append("player teams disagree with matchup")
                 for row in expected_boxes.to_dict("records"):
                     player_rows=group[group.team_id.astype(str).eq(str(row["team_id"]))]
                     points=player_rows.points.sum(min_count=1)
@@ -147,6 +151,8 @@ def validate_snapshot(dataset,frame,context):
                         if last.home_score!=event["home_score"] or last.away_score!=event["away_score"]:
                             errors.append("PBP final score disagrees with schedule")
                 scoring=group[group.scoring_play.fillna(False).astype(bool)]
+                if not set(scoring.team_id.astype(str)).issubset({str(event["home_team_id"]),str(event["away_team_id"])}):
+                    errors.append("PBP scoring team outside matchup")
                 if group.scoring_play.isna().any():
                     errors.append("PBP scoring flags missing")
                 for side in ("home","away"):
@@ -179,7 +185,7 @@ def annotate_division(frame,teams):
         out["comparison_eligible"]=out.home_division.eq("I")&out.away_division.eq("I")
         if "away_non_div1_team" in out:
             from .adapters import boolean
-            explicit=out.away_non_div1_team.map(boolean).fillna(False).astype(bool)
+            explicit=out.away_non_div1_team.map(boolean).astype("boolean").fillna(False).astype(bool)
             out.loc[explicit,"away_division"]="NON_D1"
             out.loc[explicit,"comparison_eligible"]=False
     else:

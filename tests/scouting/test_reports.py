@@ -177,3 +177,13 @@ def test_unrelated_snapshot_change_does_not_reissue_unchanged_report():
     first=build_reports(tables(),cohort(),clock("2026-11-02T14:17:00Z"),[],{"dataset_snapshots":{"team_box":"old"}},bootstrap=False)
     second=build_reports(tables(),cohort(),clock("2026-11-02T16:17:00Z"),first,{"dataset_snapshots":{"team_box":"new"}},bootstrap=False)
     assert second==first
+
+def test_postgame_preserves_issued_opponent_baseline_and_sources():
+ from wbb_scouting.reports import build_reports
+ first=build_reports(tables(),cohort(),clock("2026-11-02T14:17:00Z"),[],{"dataset_snapshots":{"team_box":"original"}},bootstrap=False)
+ t=tables();t["schedule"].loc[t["schedule"].game_id.eq("g2"),["completed","home_score","away_score"]]=[True,10,8]
+ t["team_box"]=pd.concat([t["team_box"],team_boxes("g2").assign(game_date_time="2026-11-03T20:00:00Z")],ignore_index=True)
+ result=build_reports(t,cohort(),clock("2026-11-04T14:17:00Z"),first,{},bootstrap=False)
+ post=next(r for r in result if r["mode"]=="postgame" and r["game_id"]=="g2" and r["team_id"]=="A")
+ assert post["opponent_baseline"]["season"]["points_per_game"]==8
+ assert post["baseline_source_references"]["team_box"]=="original"

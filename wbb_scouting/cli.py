@@ -12,6 +12,7 @@ def parser() -> argparse.ArgumentParser:
     result.add_argument("--trigger", choices=("manual", "primary", "retry"), default="manual")
     result.add_argument("--publish", action="store_true", help="Publish verified run to GitHub Releases")
     result.add_argument("--local-input", type=Path, help="Use explicitly supplied local snapshots")
+    result.add_argument("--net-dir", type=Path, help="Reviewed official NET snapshot folder")
     return result
 
 def main(argv=None) -> int:

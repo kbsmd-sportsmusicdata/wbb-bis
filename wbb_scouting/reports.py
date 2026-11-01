@@ -136,6 +136,8 @@ def build_reports(tables,cohort,now,previous_reports,snapshots,bootstrap=False):
             historical=_historical(tables,team,season,cutoff)
             opponent_historical=_historical(tables,opponent,season,cutoff)
             baseline=None
+            opponent_baseline=None
+            baseline_sources={}
             baseline_origin=None
             baseline_report_id=None
             game_metrics=None
@@ -145,9 +147,9 @@ def build_reports(tables,cohort,now,previous_reports,snapshots,bootstrap=False):
                 issued=[r for r in prior_for_team if r["mode"]=="pregame" and parse_time(r["generated_at"])<tip]
                 issued.sort(key=lambda r:r["generated_at"])
                 if issued:
-                    baseline=issued[-1]["profile"];baseline_origin="issued_pregame";baseline_report_id=issued[-1]["edition_id"]
+                    baseline=issued[-1]["profile"];opponent_baseline=issued[-1]["opponent_profile"];baseline_sources=issued[-1].get("source_references",{});baseline_origin="issued_pregame";baseline_report_id=issued[-1]["edition_id"]
                 else:
-                    baseline=profile;baseline_origin="reconstructed"
+                    baseline=profile;opponent_baseline=opponent_profile;baseline_origin="reconstructed"
                 target=enriched[enriched.game_id.astype(str).eq(game_id)&enriched.team_id.astype(str).eq(team)] if len(enriched) else enriched
                 game_metrics=team_metrics(target)
                 game_players=player_metrics(players[players.game_id.astype(str).eq(game_id)&players.team_id.astype(str).eq(team)]) if len(players) else []
@@ -170,7 +172,7 @@ def build_reports(tables,cohort,now,previous_reports,snapshots,bootstrap=False):
                 "opponent_id":opponent,"opponent_name":opponent_name,"home_away":side,"tip_at":tip.isoformat(),
                 "venue":game.get("venue_full_name"),"status":status,"profile":profile,"opponent_profile":opponent_profile,
                 "historical_reference":historical,"opponent_historical_reference":opponent_historical,"cohort":_cohort_context(member) if member else prior_for_team[-1].get("cohort",{}),
-                "baseline":baseline,"baseline_origin":baseline_origin,"baseline_report_id":baseline_report_id,
+                "baseline":baseline,"opponent_baseline":opponent_baseline,"baseline_source_references":baseline_sources,"baseline_origin":baseline_origin,"baseline_report_id":baseline_report_id,
                 "game_metrics":game_metrics,"game_players":game_players,"pbp":scoring,"roster":roster_rows,
                 "source_references":_report_sources(snapshots,profile,opponent_profile,historical,opponent_historical,season,game_id,mode,game_metrics,game_players,scoring)})
             material["calculation_version"]="scouting-0.1.0"

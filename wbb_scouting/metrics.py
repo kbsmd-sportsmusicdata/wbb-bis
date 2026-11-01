@@ -58,6 +58,7 @@ def team_metrics(frame):
         "estimated_possessions":possessions,
         "offensive_rating":_scale(_ratio(sums["points"],possessions),100),
         "defensive_rating":_scale(_ratio(opp["points"],possessions),100),
+        "opponent_field_goals_attempted":opp["field_goals_attempted"],
         "opponent_efg_pct":_ratio(allowed_efg,opp["field_goals_attempted"]),
         "opponent_turnover_rate":_ratio(opp["turnovers"],possessions),
         "opponent_offensive_rebound_rate":_ratio(opp["offensive_rebounds"],_add(opp["offensive_rebounds"],sums["defensive_rebounds"])),
