@@ -5,9 +5,10 @@ Implementation is proposed in [PR #3](https://github.com/kbsmd-sportsmusicdata/w
 ## Summary
 
 - Independent review found four Important issues; regression tests reproduce and cover the fixes. A selected postgame CSV issue was regraded Important and fixed in the same pass.
-- 124 focused tests pass in the scoped and newly installed Python 3.12 environments.
+- 125 focused tests pass in the scoped and newly installed Python 3.12 environments.
 - Real input now supports 6,025 team-box and 6,020 player-box historical games. Nine player groups are quarantined, including two raw missing-identity groups. Five expected historical team-box games and ten player-box games are missing or withheld. Current season 2027 boxes/PBP and verified NET are pending.
 - The final indexed full local rerun took 125.69 seconds and produced zero logical row additions, updates or removals.
+- Real original-source versus restored-canonical roster order produced identical report payloads: one edition remained one edition.
 - The current preview contains one actual Notre Dame–Villanova pregame report at a frozen November 1, 2026, 16:23 UTC cutoff. Coverage currently includes 18 checked ACC teams; no top-50 NET selection is fabricated.
 - The separate historical example uses actual Duke games from 2025–26, including 87–85 versus LSU. Its baseline is explicitly reconstructed.
 

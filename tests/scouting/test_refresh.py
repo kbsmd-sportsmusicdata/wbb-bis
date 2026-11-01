@@ -133,3 +133,10 @@ def test_current_asset_reuses_restored_raw_bytes_by_published_checksum(tmp_path)
   def download(self,*args):raise AssertionError("unchanged restored source downloaded again")
  result=collect_source("team_box",2027,state/"incoming/2027-team_box.parquet",Cached())
  assert result["reused"] and result["sha256"]==sha
+
+def test_roster_storage_order_does_not_create_a_report_revision(tmp_path):
+ cfg,data,clients=setup(tmp_path)
+ data["rosters"]=pd.DataFrame([{"season":2027,"team_id":"A","player_id":"p2","player_name":"Player Two"},{"season":2027,"team_id":"A","player_id":"p1","player_name":"Player One"}])
+ one=refresh(cfg,NOW,"manual",clients)
+ two=refresh(cfg,NOW,"manual",clients)
+ assert two["reports"]==one["reports"]

@@ -180,7 +180,7 @@ def build_reports(tables,cohort,now,previous_reports,snapshots,bootstrap=False):
             roster_rows=[]
             if len(roster):
                 cols=[c for c in ("player_id","player_name","position_abbreviation","experience_display_value") if c in roster]
-                roster_rows=roster.loc[roster.team_id.astype(str).eq(team),cols].to_dict("records")
+                roster_rows=roster.loc[roster.team_id.astype(str).eq(team),cols].sort_values("player_id",kind="stable").to_dict("records")
             material=clean_json({"mode":mode,"season":season,"game_id":game_id,"team_id":team,"team_name":team_name,
                 "opponent_id":opponent,"opponent_name":opponent_name,"home_away":side,"tip_at":tip.isoformat(),
                 "venue":game.get("venue_full_name"),"status":status,"profile":profile,"opponent_profile":opponent_profile,
