@@ -33,3 +33,7 @@ The official NCAA.com women's NET page currently presents browser verification i
 - [Rosters](https://github.com/sportsdataverse/sportsdataverse-data/releases/tag/espn_womens_college_basketball_rosters)
 - [Dated team membership](https://github.com/sportsdataverse/sportsdataverse-data/releases/tag/wbb_groups)
 - [Official women's NET](https://www.ncaa.com/rankings/basketball-women/d1/ncaa-womens-basketball-net-rankings)
+
+## Real reconciliation pilot
+
+The historical California-and-opponents pilot validated 36 season-2026 games / 72 team-box rows against the same season's final schedule, with no quarantined games. Initial ingestion inserted 72 rows. The identical rerun inserted 0, updated 0, removed 0 and retained 72 unchanged rows. Five monthly canonical partitions were written under temporary pilot state. This is a bounded historical reconciliation check, not current-season coverage or a national completeness certification.

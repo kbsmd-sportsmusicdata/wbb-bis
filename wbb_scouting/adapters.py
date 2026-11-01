@@ -113,6 +113,8 @@ def normalize_snapshot(dataset: str, frame: pd.DataFrame, source: dict) -> pd.Da
         raise ValueError("Missing box-score points")
     if dataset == "team_box" and "total_turnovers" in result:
         result["turnovers"] = pd.to_numeric(result["total_turnovers"], errors="coerce")
+    if result.empty:
+        return result.reset_index(drop=True)
     # Raw nested fields are retained as source bytes; only scalar fields enter canonical tables.
     keep = [c for c in result if not result[c].map(lambda v:isinstance(v,(dict,list))).any()]
     result = result[keep].drop_duplicates().reset_index(drop=True)

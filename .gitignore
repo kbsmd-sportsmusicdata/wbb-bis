@@ -28,3 +28,6 @@ Thumbs.db
 .vscode/
 .idea/
 *.code-workspace
+
+# Recurring scouting state is persisted in release assets
+data/scouting/
