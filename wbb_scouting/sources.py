@@ -7,7 +7,7 @@ import time
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse
-from urllib.request import Request, urlopen
+from urllib.request import Request, urlopen, HTTPRedirectHandler, build_opener
 import pyarrow.parquet as pq
 
 CONFIG = Path(__file__).resolve().parents[1] / "config" / "scouting_sources.json"
@@ -22,6 +22,13 @@ def sha256_file(path: Path) -> str:
             digest.update(block)
     return digest.hexdigest()
 
+class SafeRedirectHandler(HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        redirected=super().redirect_request(req,fp,code,msg,headers,newurl)
+        if redirected is not None and urlparse(req.full_url).hostname!=urlparse(newurl).hostname:
+            redirected.remove_header("Authorization")
+        return redirected
+
 class HTTPClient:
     def __init__(self, token: str | None = None):
         self.token = token or os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
@@ -33,7 +40,7 @@ class HTTPClient:
             selected["Authorization"] = "Bearer " + self.token
         for attempt in range(3):
             try:
-                return urlopen(Request(url, headers=selected), timeout=40)
+                return build_opener(SafeRedirectHandler()).open(Request(url, headers=selected), timeout=40)
             except HTTPError as exc:
                 if exc.code == 404:
                     raise SourceUnavailable("Published asset is unavailable") from exc
