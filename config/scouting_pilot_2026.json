@@ -1,0 +1,109 @@
+{
+  "season": 2026,
+  "label": "2025–26 historical scouting pilot",
+  "teams": [
+    {
+      "team_id": "265",
+      "name": "Washington State",
+      "color": "#981e32"
+    },
+    {
+      "team_id": "25",
+      "name": "California",
+      "color": "#003262"
+    },
+    {
+      "team_id": "120",
+      "name": "Maryland",
+      "color": "#b70d22"
+    },
+    {
+      "team_id": "2579",
+      "name": "South Carolina",
+      "color": "#73000a"
+    },
+    {
+      "team_id": "201",
+      "name": "Oklahoma",
+      "color": "#841617"
+    },
+    {
+      "team_id": "153",
+      "name": "North Carolina",
+      "color": "#477eaa"
+    }
+  ],
+  "matchups": [
+    {
+      "id": "wsa-cal",
+      "team_ids": [
+        "265",
+        "25"
+      ],
+      "schedule_game_id": "401903553",
+      "tip_at": "2026-11-03T03:00:00Z"
+    },
+    {
+      "id": "md-sc",
+      "team_ids": [
+        "120",
+        "2579"
+      ],
+      "schedule_game_id": "401918849",
+      "tip_at": "2026-11-02T17:00:00Z",
+      "user_rank_labels": {
+        "120": 20,
+        "2579": 1
+      }
+    },
+    {
+      "id": "ok-unc",
+      "team_ids": [
+        "201",
+        "153"
+      ],
+      "schedule_game_id": "401906088",
+      "tip_at": "2026-11-02T19:30:00Z",
+      "user_rank_labels": {
+        "153": 12,
+        "201": 21
+      }
+    }
+  ],
+  "sources": {
+    "team_box": {
+      "tag": "espn_womens_college_basketball_team_boxscores",
+      "name": "team_box_2026.parquet"
+    },
+    "player_box": {
+      "tag": "espn_womens_college_basketball_player_boxscores",
+      "name": "player_box_2026.parquet"
+    },
+    "shots": {
+      "tag": "espn_womens_college_basketball_shots",
+      "name": "shots_2026.parquet"
+    },
+    "rosters": {
+      "tag": "espn_womens_college_basketball_rosters",
+      "name": "rosters_2026.parquet"
+    },
+    "schedule": {
+      "tag": "espn_womens_college_basketball_schedules",
+      "name": "wbb_schedule_2026.parquet"
+    },
+    "teams": {
+      "tag": "wbb_groups",
+      "name": "wbb_team_group_seasons_2026.parquet"
+    }
+  },
+  "pairing_source": {
+    "season": 2027,
+    "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_womens_college_basketball_schedules/wbb_schedule_2027.parquet"
+  },
+  "zone_definitions": {
+    "rim": "Located 2-point attempts within 4 feet of the rim",
+    "paint": "Other located 2-point attempts in the 16 by 19 foot paint",
+    "midrange": "Other located 2-point attempts",
+    "three": "Located attempts marked 3 points by the source"
+  }
+}
