@@ -1,6 +1,6 @@
 # Recurring WBB Game Scouting Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Build a source-validated, correction-aware scouting dashboard for the NCAA women's NET top 50 plus ACC, refreshed on GitHub on Monday, Wednesday, and Friday.
 
@@ -127,7 +127,7 @@
 - [x] Run tests, then implement team/matchup/date and pregame/postgame selectors, cohort reasons, source/coverage indicators, small-sample denominators, concise team/player comparisons, printable report, and filtered CSV/JSON downloads.
 - [x] Compute stale/missed-run messaging from the next expected M/W/F primary boundary rather than 24 hours. Report age remains visible even when no run is missed.
 - [x] Run targeted tests and real browser checks at desktop and mobile sizes: selection state, mode changes, populated and empty/partial views, exports, printing and console errors. Use actual current coverage; any synthetic fixture preview is explicitly labeled and separate from operational outputs.
-- [ ] Review the concrete dashboard and data coverage with the user before activation, as the approved spec requires.
+- [x] Review the concrete dashboard and data coverage with the user before activation, as the approved spec requires.
 - [x] Commit builder/template/tests and keep generated dashboard/state out of normal source history.
 
 ## Task 7: Durable GitHub Release state
@@ -139,7 +139,7 @@
 - [x] Write tests for fresh-runner restoration, no-cache execution, unrelated latest release, invalid latest manifest, prior valid fallback, unchanged-asset references, corrupted/missing asset, interrupted upload, concurrent publication rejection and files exceeding the configured shard threshold.
 - [x] Run tests, then implement GitHub API pagination, repository-scoped token use, checksum validation, immutable asset references, bounded API retries and explicit error propagation. Never expose token-bearing headers or temporary signed URLs in logs/manifests.
 - [x] Verify partial failure cannot replace the last good published state; an invalid persisted asset fails closed rather than silently starting a new empty season.
-- [ ] Run mocked API tests and local restore/publish simulations. After concrete user review, perform a real draft/verified publication using only authorized project artifacts and verify downloads.
+- [x] Run mocked API tests and local restore/publish simulations. After concrete user review, perform a real draft/verified publication using only authorized project artifacts and verify downloads.
 - [x] Document public release visibility, file references, restoration, storage growth, no automatic deletion and recovery instructions; commit implementation/tests/docs.
 
 
@@ -153,10 +153,10 @@
 - [x] Run integration tests, then implement orchestration and explicit exit/status handling. A pending publication is recorded as pending; schema/validation/network failures must not look like a successful empty refresh.
 - [x] Add a workflow on `workflow_dispatch` and two timezone-aware M/W/F schedules (06:17 primary and 08:17 conditional retry). Use pinned compatible action versions, Python 3.11+, scoped requirements, minimal token permissions and workflow concurrency with no cancellation of an in-progress publisher. Keep activation gated until the source-backed preview has been approved.
 - [x] Read primary attempt status from GitHub workflow metadata plus persisted run status so a missing or publication-failed primary still triggers the retry. Limit successful/no-change noise to run summaries and standard GitHub notification settings.
-- [ ] Run the complete focused scouting test suite and relevant existing repo tests; inspect all output and `git diff --check`. Perform a clean-environment installation to check dependency reproducibility.
-- [ ] Open a reviewable branch/PR containing only this feature, attach it to the chat, and provide the dashboard/coverage preview. Never stage unrelated user work.
-- [ ] Following the authorized activation step, verify a real GitHub run and an unchanged rerun from clean runners, source/gap counters, release restoration, HTML/export URLs, effective M/W/F workflow schedule and conditional retry behavior. If required current-season source data is unavailable, show that exact limitation and do not claim complete current-season reporting.
-- [ ] Mark completed plan checkboxes based on current-run evidence; record unresolved external blockers separately. A deployed workflow without verification does not satisfy completion.
+- [x] Run the complete focused scouting test suite and relevant existing repo tests; inspect all output and `git diff --check`. Perform a clean-environment installation to check dependency reproducibility.
+- [x] Open a reviewable branch/PR containing only this feature, attach it to the chat, and provide the dashboard/coverage preview. Never stage unrelated user work.
+- [x] Following the authorized activation step, verify a real GitHub run and an unchanged rerun from clean runners, source/gap counters, release restoration, HTML/export URLs, effective M/W/F workflow schedule and conditional retry behavior. If required current-season source data is unavailable, show that exact limitation and do not claim complete current-season reporting.
+- [x] Mark completed plan checkboxes based on current-run evidence; record unresolved external blockers separately. A deployed workflow without verification does not satisfy completion.
 
 ## Plan self-review
 
@@ -165,3 +165,9 @@
 - All five Review Focus items have owning behavioral tests in the tasks above.
 - Calendar amendment covers both job cadence and report lookahead; the weekend is intentionally longer than a daily freshness window.
 - Operational activation remains after concrete result review. Current source availability and GitHub publishing capability are verified during execution, not assumed from this plan.
+
+## Final operational evidence
+
+User preview/activation approval received November 1, 2026. PRs #3 and #4 merged; WBB_SCOUTING_ENABLED=true verified. Real publisher run 41336617069 attempt 1 succeeded; its clean-runner attempt 2 exposed GitHub draft-link rewriting and failed closed. The tested fix preserved that release, repaired only matching verified asset references, and passed 127 tests. Run 41369793756 attempts 1 and 2 both restored from durable Releases and published successfully with zero logical row mutations. HTML/JSON/CSV/summary downloads and checksums verified. Workflow is active with approved Pacific M/W/F 06:17 and conditional 08:17 schedules; first actual scheduled invocation is future November 2. See docs/recurring_scouting/verification.md for exact links, counts and limits.
+
+External source limits: current 2027 boxes/PBP and verified NET are pending; selected cohort is 18 ACC teams, with no invented top-50 ranks or current report editions. Historical gaps remain explicitly withheld. These limitations do not prevent verification of the operating refresh and durable recovery.

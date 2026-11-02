@@ -4,19 +4,19 @@ This independent pipeline collects the SDV ESPN women's college basketball famil
 
 ## Operator commands
 
-Use Python 3.12 and install \`requirements-scouting.txt\`. Run from the repository root:
+Use Python 3.12 and install `requirements-scouting.txt`. Run from the repository root:
 
-\`\`\`sh
+```sh
 python -m wbb_scouting audit --season 2027
 python -m wbb_scouting refresh --season 2027
 python -m wbb_scouting build --season 2027
-\`\`\`
+```
 
-The initial delivery is a downloaded, self-contained \`index.html\`, with full \`reports.json\`, \`reports.csv\`, and \`players.csv\` exports. The interactive view includes the past 14 days and all upcoming reports; every edition remains in exports and earlier release dashboards. The HTML needs no server, login, API key, or network after download.
+The initial delivery is a downloaded, self-contained `index.html`, with full `reports.json`, `reports.csv`, and `players.csv` exports. The interactive view includes the past 14 days and all upcoming reports; every edition remains in exports and earlier release dashboards. The HTML needs no server, login, API key, or network after download.
 
 ## Durable state and recovery
 
-Public GitHub Releases tagged \`scouting-v1-2027-*\` retain canonical Parquet partitions, original changed source bytes, report editions, and checksummed manifests. These files are publicly visible, like this repository. Do not add private scouting notes or credentials.
+Public GitHub Releases tagged `scouting-v1-2027-*` retain canonical Parquet partitions, original changed source bytes, report editions, and checksummed manifests. These files are publicly visible, like this repository. Do not add private scouting notes or credentials.
 
 A fresh runner enumerates scouting releases for the requested season, independently of generic latest releases or caches. It verifies the manifest checksum, active canonical partitions, report assets, and current raw versions needed by the collector. Historical raw versions remain remotely archived under immutable, checksummed links and are not all downloaded on each run. A damaged latest release can fall back to an older verified checkpoint; if scouting checkpoints exist but none verify, collection fails closed instead of pretending to start empty.
 
@@ -38,7 +38,7 @@ See [source inventory](source_inventory.md), [metric conventions](../metric_conv
 
 The publisher workflow is `.github/workflows/wbb-scouting.yml`. Monday, Wednesday, Friday checks run at 06:17 America/Los_Angeles, with an 08:17 conditional retry on those same days. The retry checks both GitHub's actual latest primary workflow result and the persisted primary status; a missing primary, failed publication, or pending source can trigger collection. A complete successful primary skips it.
 
-The approved design requires review of a concrete source/coverage preview before activation. Until review, repository Actions variable WBB_SCOUTING_ENABLED is unset and the publisher is disabled. After approval, merge the reviewed PR to the default branch, set WBB_SCOUTING_ENABLED=true, then use Actions → WBB scouting → Run workflow. The scoped Actions token publishes release assets. Confirm a real run, fresh-runner restore, and an unchanged rerun before calling the service operational.
+The concrete dashboard and source coverage were approved on November 1, 2026. PR #3 and the draft-link recovery fix in PR #4 are merged to the default branch, and repository Actions variable `WBB_SCOUTING_ENABLED=true` enables the schedule. To request an extra refresh, use Actions → WBB scouting → Run workflow on main. The scoped Actions token publishes release assets. See [activation verification](verification.md) for cloud-run evidence and current source limitations.
 
 GitHub schedules run only from the default branch, can be delayed, and public repository schedules can be disabled after 60 days without repository activity. Next-check/overdue warnings use the M/W/F calendar, including the weekend and daylight saving; report age is displayed separately. Concurrency serializes publishers without cancelling an in-progress publication. Success/no-change details go to run summaries and failures to standard GitHub notifications. No separate messages are sent.
 
