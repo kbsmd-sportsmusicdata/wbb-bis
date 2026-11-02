@@ -81,7 +81,7 @@ def package_pilot(root,config):
         output.writestr("config.json",json_text(config,indent=2))
         output.writestr("README.txt","Six-team historical scouting pilot, season "+str(config["season"])+
             "\nExtract this folder and open index.html in a browser. The report works offline; CSV and Parquet files are saved in their named layers.\n"+
-            "raw/extracted contains the four original-column six-team extracts. National source snapshots are retained in the local build folder; source URLs and SHA-256 checksums are listed in raw/sources.json.\n"+
+            "raw/extracted contains the four original-column six-team extracts. National source snapshots remain in the source cache used for this build; source URLs and SHA-256 checksums are listed in raw/sources.json.\n"+
             "Opponent support rows are separate from the six featured teams. Incomplete shot groups remain documented in quality/shot_groups.csv and are excluded from shooting features.\n"+
             "Roster box-only labels describe snapshot coverage; they do not establish current eligibility or availability.\n")
     temporary.replace(archive)
@@ -95,6 +95,9 @@ def run_pilot(config,output,now=None,raw_dir=None):
     raw_root=Path(raw_dir) if raw_dir else root/"raw"
     if raw_dir is None:download_sources(config,raw_root)
     raw,provenance=load_pilot_sources(raw_root,config)
+    # Every output carries the source record verified for this build, including external-cache rebuilds.
+    (root/"raw").mkdir(parents=True,exist_ok=True)
+    (root/"raw/sources.json").write_text(json_text(provenance,indent=2))
     previous=json.loads((root/"manifest.json").read_text()) if (root/"manifest.json").exists() else {}
     prior=previous.get("tables",{});tables={}
     featured={t["team_id"] for t in config["teams"]}

@@ -65,7 +65,7 @@ Rates use summed numerators/denominators and the existing documented 0.44 box po
 
 ## Portable delivery
 
-Open index.html in the local preview or extract six_team_pilot_2026.zip and open its index.html in a browser. The archive includes the four selected-team raw extracts, every clean/processed/feature/quality CSV and Parquet table, manifest, configuration and source provenance. The full national originals remain in the local raw folder and at the source URLs; they are not duplicated in the portable bundle.
+Open index.html in the local preview or extract six_team_pilot_2026.zip and open its index.html in a browser. The archive includes the four selected-team raw extracts, every clean/processed/feature/quality CSV and Parquet table, manifest, configuration and source provenance. The full national originals remain in the source cache (the local raw folder by default, or the supplied --local-input folder) and at the source URLs; they are not duplicated in the portable bundle.
 
 Report JSON and player/map CSV actions export the selected report scope. Dataset links refer to files in the extracted bundle. The report has no external script, font or API dependency.
 

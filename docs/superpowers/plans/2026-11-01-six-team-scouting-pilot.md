@@ -43,9 +43,9 @@
 
 **Files:** wbb_scouting/pilot_dashboard.py, templates/pilot_dashboard.html, tests/scouting/test_pilot_dashboard.py; docs/recurring_scouting/pilot_2026.md.
 **Interfaces:** `pilot_payload(processed,features,quality,config,manifest)` binds actual saved datasets; `render_pilot_dashboard(payload,destination)` embeds safe data and all sections.
-- [ ] Write safe embedding, historical labels and stage/coverage binding tests; observe RED.
-- [ ] Implement all three matchup comparisons, team trends, player/roster table, shot map, zones, selected-player log, sources and filtered downloads.
-- [ ] Verify real browser desktop/mobile interactions, all matchups, filters, downloads, nonempty charts and console; run full tests and diff check; commit Task 3.
+- [x] Write safe embedding, historical labels and stage/coverage binding tests; observe RED.
+- [x] Implement all three matchup comparisons, team trends, player/roster table, shot map, zones, selected-player log, sources and filtered downloads.
+- [x] Verify real browser desktop/mobile interactions, all matchups, filters, downloads, nonempty charts and console; run full tests and diff check; commit Task 3.
 
 ## Task 4: Review and concrete delivery
 
