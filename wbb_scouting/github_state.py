@@ -2,7 +2,7 @@
 from __future__ import annotations
 import copy,hashlib,http.client,json,re,shutil,tempfile,uuid
 from pathlib import Path,PurePosixPath
-from urllib.parse import urlparse,quote
+from urllib.parse import urlparse,quote,unquote
 from .sources import HTTPClient,sha256_file,SourceUnavailable
 from .store import json_text,write_manifest,split_asset
 
@@ -67,6 +67,26 @@ def _safe_url(repository,url):
     if not isinstance(url,str) or not url.startswith(prefix) or urlparse(url).query:raise StateError("Unsafe immutable asset reference")
     return url
 
+def _asset_url(repository,tag,name):
+    _repo(repository)
+    return _safe_url(repository,"https://github.com/"+repository+"/releases/download/"+quote(tag,safe="")+"/"+quote(name,safe=""))
+
+def _repair_draft_urls(repository,manifest,release,assets):
+    # Early v1 checkpoints saved GitHub's pre-publication untagged URLs.
+    # Rebind only to this release's same-name, same-digest published asset.
+    pattern=re.escape("https://github.com/"+repository+"/releases/download/")+r"untagged-[a-fA-F0-9]+/([^/?#]+)"
+    for ref in _references(manifest):
+        for target in [ref,*ref.get("parts",[])]:
+            match=re.fullmatch(pattern,target.get("url",""))
+            if not match:continue
+            name=unquote(match.group(1));asset=assets.get(name)
+            canonical=_asset_url(repository,release["tag_name"],name)
+            if not asset or asset.get("browser_download_url")!=canonical or asset.get("digest")!="sha256:"+_checksum(target["sha256"]):
+                raise StateError("Unverified legacy draft asset reference")
+            if target.get("bytes") is not None and asset.get("size")!=target["bytes"]:
+                raise StateError("Legacy draft asset size mismatch")
+            target["url"]=canonical
+
 def _checksum(value):
     if not isinstance(value,str) or not re.fullmatch("[a-f0-9]{64}",value):raise StateError("Invalid SHA-256")
     return value
@@ -116,6 +136,7 @@ def restore_state(repository,destination,client,season=None):
                 if manifest.get("schema_version")!=1 or manifest.get("status") not in ("complete","partial"):
                     raise StateError("Unsupported or failed checkpoint")
                 if season and manifest.get("season")!=season:raise StateError("Unexpected checkpoint season")
+                _repair_draft_urls(repository,manifest,release,assets)
                 for ref in _references(manifest):
                     _safe_path(ref["path"]);_checksum(ref["sha256"])
                     if ref.get("url"):_safe_url(repository,ref["url"])
@@ -160,7 +181,7 @@ def publish_run(repository,manifest,files,client,commit_sha,max_bytes=512*1024*1
             verify=temporary/("verify-"+checksum)
             client.download(asset["url"],verify,{"Accept":"application/octet-stream"})
             if sha256_file(verify)!=checksum:raise StateError("Uploaded asset verification failed")
-            verify.unlink();uploaded[checksum]=asset["browser_download_url"]
+            verify.unlink();uploaded[checksum]=_asset_url(repository,tag,path.name)
             return uploaded[checksum]
         # Reuse old immutable URLs; upload only new references.
         for ref in _references(m):
