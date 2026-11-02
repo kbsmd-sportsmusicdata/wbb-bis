@@ -27,17 +27,17 @@
 
 **Files:** config/scouting_pilot_2026.json, wbb_scouting/pilot_data.py, tests/scouting/test_pilot_data.py.
 **Interfaces:** `load_pilot_sources(raw_dir,config)` verifies exact source metadata; `normalize_shots(frame,season)` preserves multiset identity; `clean_pilot(raw,config,now)` returns cleaned featured tables, validation context and quality records.
-- [ ] Write tests for repeated FT preservation, reorder-stable row IDs, wrong-season/null-ID rejection, physical coordinates and group shot/box reconciliation; observe RED.
-- [ ] Implement exact sources/config extraction and clean stages, reusing existing source checks and box validation.
-- [ ] Run tests GREEN and a real six-team extraction; inspect counts and missing games; commit Task 1.
+- [x] Write tests for repeated FT preservation, reorder-stable row IDs, wrong-season/null-ID rejection, physical coordinates and group shot/box reconciliation; observe RED.
+- [x] Implement exact sources/config extraction and clean stages, reusing existing source checks and box validation.
+- [x] Run tests GREEN and a real six-team extraction; inspect counts and missing games; commit Task 1.
 
 ## Task 2: Processed and feature datasets
 
 **Files:** wbb_scouting/pilot_features.py, wbb_scouting/pilot.py, tests/scouting/test_pilot_features.py, tests/scouting/test_pilot.py; extend cli.py with independent `pilot` command.
 **Interfaces:** `process_pilot(clean,config)` produces enriched team/player games and roster union; `build_pilot_features(processed,clean,config)` returns team/player summaries, trends and shot-zone tables; `run_pilot(config,output,now)` writes stages/manifests and report payload.
-- [ ] Write tests for opponent-denominator preservation, weighted rates, roster union, player attribution, coverage exclusions and unchanged table hashes; observe RED.
-- [ ] Implement processed/features and independent CLI, with CSV+Parquet outputs and explicit dataset status/grain.
-- [ ] Run GREEN tests and source-backed build twice; inspect each layer, formulas, six-team counts, row IDs and zero changes; commit Task 2.
+- [x] Write tests for opponent-denominator preservation, weighted rates, roster union, player attribution, coverage exclusions and unchanged table hashes; observe RED.
+- [x] Implement processed/features and independent CLI, with CSV+Parquet outputs and explicit dataset status/grain.
+- [x] Run GREEN tests and source-backed build twice; inspect each layer, formulas, six-team counts, row IDs and zero changes; commit Task 2.
 
 ## Task 3: Dashboard sections and interactive verification
 
