@@ -67,8 +67,30 @@ def read_stage(root,stage,names):
     return {name:pd.read_parquet(Path(root)/stage/(name+".parquet")) for name in names}
 
 
+
+def package_pilot(root,config):
+    """Portable selected-team data and HTML; national originals remain source-linked."""
+    import zipfile
+    root=Path(root);manifest=json.loads((root/"manifest.json").read_text())
+    name="six_team_pilot_"+str(config["season"])+".zip"
+    archive=root/name;temporary=root/(name+".tmp")
+    paths={"index.html","manifest.json","raw/sources.json"}
+    for ref in manifest["tables"].values():paths.update((ref["path"],ref["csv_path"]))
+    with zipfile.ZipFile(temporary,"w",compression=zipfile.ZIP_DEFLATED,compresslevel=6) as output:
+        for relative in sorted(paths):output.write(root/relative,relative)
+        output.writestr("config.json",json_text(config,indent=2))
+        output.writestr("README.txt","Six-team historical scouting pilot, season "+str(config["season"])+
+            "\nExtract this folder and open index.html in a browser. The report works offline; CSV and Parquet files are saved in their named layers.\n"+
+            "raw/extracted contains the four original-column six-team extracts. National source snapshots are retained in the local build folder; source URLs and SHA-256 checksums are listed in raw/sources.json.\n"+
+            "Opponent support rows are separate from the six featured teams. Incomplete shot groups remain documented in quality/shot_groups.csv and are excluded from shooting features.\n"+
+            "Roster box-only labels describe snapshot coverage; they do not establish current eligibility or availability.\n")
+    temporary.replace(archive)
+    return archive
+
+
 def run_pilot(config,output,now=None,raw_dir=None):
-    now=now or datetime.now(timezone.utc).isoformat()
+    from .calendar import parse_time
+    now=parse_time(now).isoformat() if now else datetime.now(timezone.utc).isoformat()
     root=Path(output);root.mkdir(parents=True,exist_ok=True)
     raw_root=Path(raw_dir) if raw_dir else root/"raw"
     if raw_dir is None:download_sources(config,raw_root)
@@ -103,6 +125,9 @@ def run_pilot(config,output,now=None,raw_dir=None):
             "features":{k:clean_json(v.to_dict("records")) for k,v in features.items()},
             "quality":{k:clean_json(v.to_dict("records")) for k,v in quality.items()}}
     (root/"report_data.json").write_text(json_text(report))
+    from .pilot_dashboard import pilot_payload,render_pilot_dashboard
+    render_pilot_dashboard(pilot_payload(processed,features,quality,config,manifest),root/"index.html")
+    package_pilot(root,config)
     return manifest
 
 
