@@ -75,7 +75,7 @@ def test_unsafe_references_are_rejected(tmp_path):
  with pytest.raises(StateError):publish_run(REPO,m,files,c,"a"*40)
 
 def test_large_raw_source_is_sharded_and_reassembled(tmp_path):
- c=Fake();m,files=setup(tmp_path);raw=tmp_path/"raw.parquet";raw.write_bytes(b"0123456789"*10)
+ c=GitHubDraftURLs();m,files=setup(tmp_path);raw=tmp_path/"raw.parquet";raw.write_bytes(b"0123456789"*10)
  sha=sha256_file(raw);m["sources"]={sha:{"path":"raw/"+sha+".parquet","sha256":sha,"bytes":100}}
  publish_run(REPO,m,files+[raw],c,"a"*40,max_bytes=31)
  out=tmp_path/"restored";restored=restore_state(REPO,out,c)
@@ -125,3 +125,49 @@ def test_restore_does_not_materialize_obsolete_raw_archive(tmp_path):
  out=tmp_path/"fresh";restored=restore_state(REPO,out,c)
  assert len(restored["sources"])==8
  assert [p.name for p in (out/"raw").iterdir()]==[active+".parquet"]
+
+
+class GitHubDraftURLs(Fake):
+ """GitHub exposes untagged download URLs until a draft is promoted."""
+ def upload(self,url,name,path):
+  asset=super().upload(url,name,path)
+  canonical=asset["browser_download_url"]
+  draft=canonical.replace(self.releases[-1]["tag_name"],"untagged-fc772f04fa96b5ab6753")
+  self.contents[draft]=self.contents.pop(canonical)
+  asset["browser_download_url"]=draft
+  asset["digest"]="sha256:"+sha256_file(path)
+  asset["size"]=path.stat().st_size
+  return asset
+ def request(self,method,url,body):
+  row=super().request(method,url,body)
+  if method=="PATCH" and body.get("draft") is False:
+   for asset in row["assets"]:
+    draft=asset["browser_download_url"]
+    canonical="https://github.com/"+REPO+"/releases/download/"+row["tag_name"]+"/"+asset["name"]
+    self.contents[canonical]=self.contents.pop(draft)
+    asset["browser_download_url"]=canonical
+  return row
+
+def test_published_manifest_uses_final_links_not_github_draft_links(tmp_path):
+ c=GitHubDraftURLs();m,files=setup(tmp_path)
+ published=publish_run(REPO,m,files,c,"a"*40)
+ assert all("/untagged-" not in r["url"] for r in published["manifest"]["partitions"]+published["manifest"]["artifacts"])
+ restored=restore_state(REPO,tmp_path/"fresh",c,2027)
+ assert (tmp_path/"fresh/objects/x.parquet").read_bytes()==b"canonical"
+ assert restored["state_release"]==published["tag_name"]
+
+def test_first_checkpoint_draft_links_are_recovered_only_from_matching_assets(tmp_path):
+ c=GitHubDraftURLs();m,files=setup(tmp_path)
+ published=publish_run(REPO,m,files,c,"a"*40)
+ release=c.releases[0];assets={a["name"]:a for a in release["assets"]}
+ manifest_url=assets["manifest.json"]["browser_download_url"]
+ legacy=json.loads(c.contents[manifest_url])
+ for ref in legacy["partitions"]+legacy["artifacts"]:
+  ref["url"]=ref["url"].replace(release["tag_name"],"untagged-fc772f04fa96b5ab6753")
+ payload=json.dumps(legacy).encode();c.contents[manifest_url]=payload
+ c.contents[assets["manifest.sha256"]["browser_download_url"]]=hashlib.sha256(payload).hexdigest().encode()
+ restored=restore_state(REPO,tmp_path/"fresh",c,2027)
+ assert all("/untagged-" not in r["url"] for r in restored["partitions"]+restored["artifacts"])
+ assert (tmp_path/"fresh/objects/x.parquet").read_bytes()==b"canonical"
+ assets["x.parquet"]["digest"]="sha256:"+"0"*64
+ with pytest.raises(StateError):restore_state(REPO,tmp_path/"unverified",c,2027)
