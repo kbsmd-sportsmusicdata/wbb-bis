@@ -17,3 +17,5 @@ The single whole-branch review found one Important issue: rebuilding from an ext
 Review boundaries were explicitly ruled: browser download completion remains a disclosed QA limitation; current eligibility/availability and 2027 projections are outside this historical pilot; production deployment is outside this request. The pilot retains historical labels and data-quality exclusions.
 
 Generated data, portable bundle and verification screenshots are local ignored artifacts under data/scouting/pilot_2026. The PR contains the reproducible pipeline, dashboard template, tests and operator documentation.
+
+Final build: 2026-11-02T10:08:52.354360+00:00, zero changed tables. The 7,865,516-byte ZIP contains 49 verified members. Draft PR: https://github.com/kbsmd-sportsmusicdata/wbb-bis/pull/6.

@@ -50,6 +50,6 @@
 ## Task 4: Review and concrete delivery
 
 **Files:** verification notes and completed plan.
-- [ ] Request one fresh whole-branch review after implementation; reproduce and fix Important findings with regressions.
-- [ ] Rebuild from saved source snapshots; inspect fresh logs, table fingerprints and output links; finish relevant tests.
-- [ ] Open and attach a scoped reviewable PR, preserve local dashboard/data preview, record exact coverage and limitations. Production remains on the approved live version until concrete-result approval.
+- [x] Request one fresh whole-branch review after implementation; reproduce and fix Important findings with regressions.
+- [x] Rebuild from saved source snapshots; inspect fresh logs, table fingerprints and output links; finish relevant tests.
+- [x] Open and attach a scoped reviewable PR, preserve local dashboard/data preview, record exact coverage and limitations. Production remains on the approved live version until concrete-result approval.
